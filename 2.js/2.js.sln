@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37111.16 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.js", "2.js\2.js.csproj", "{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ABCF108-BB20-4A5E-A409-B316A2E7F538}
+	EndGlobalSection
+EndGlobal

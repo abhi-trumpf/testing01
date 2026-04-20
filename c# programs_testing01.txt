@@ -585,3 +585,43 @@ public class p_string{                      // no bracket
 }
 */
 
+/27.Remove whitespace from string
+/*
+using System;
+class whitespace{
+public static void Main(string[] args){
+    string s6;
+    string s7 = "";
+    Console.WriteLine("enter the string");
+    s6 = Console.ReadLine();
+    if(!string.IsNullOrEmpty(s6)){    //INOE CAPS plse  //IMP
+        Console.WriteLine("s6 is not empty");
+    }
+    else{
+        return ;// exit program safely
+    }
+    //Console.WriteLine(s6);
+    //s7 = s6.Trim();
+    s7 = s6.Replace(" ","");
+    Console.WriteLine(s7);
+    }
+}*/
+//28 .Count words in a sentence
+/*
+using System;
+public class words{
+    public static void Main(string[] args){
+        string s8;
+        Console.WriteLine("enter the string");
+        s8 = Console.ReadLine();
+        int count4=0;
+        string[] s9 = s8.Split();//.Split is imp S caps with the ()
+        foreach(string c in s9){
+            //Console.WriteLine(c);
+            count4+=1;
+        }
+        Console.WriteLine(count4);
+    }
+}
+*/
+

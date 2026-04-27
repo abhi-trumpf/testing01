@@ -940,4 +940,20 @@ change github branch from master to main
 git branch -m master main
 git push -u origin main
 
+pull the remote changes into your local files, resolve any conflicts, and then push.
+
+git pull origin main --rebase
+
+git push origin main
+
+In Git, origin is just a nickname (an alias) for the URL of your GitHub repository. Even if your folder or project is named testing01, the connection to your GitHub repository is almost certainly named origin.
+
+You can verify this by running:
+
+Bash
+git remote -v
+This command will show you the name (usually origin) and the web address (https://github.com/abhi-trumpf/testing01.git).
+
+Why we use the name origin
+
 

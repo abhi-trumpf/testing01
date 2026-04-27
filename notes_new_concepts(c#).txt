@@ -110,7 +110,7 @@ public class Solution {
     public int[] Intersection(int[] nums1, int[] nums2) {
         HashSet<int> s1 = new HashSet<int>(nums1);             // S caps //after new use a backspace 
         HashSet<int> s2 = new HashSet<int>(nums2);
-        s1.IntersectWith(s2);   //IW
+        s1.IntersectWith(s2);   //IW             s1.Add(x); (within a for loop)
         return s1.ToArray();        //TA     
 
     }
@@ -824,4 +824,118 @@ You need it only when you use LINQ methods like:
 ✔ Where()
 ✔ Select()
 ✔ Max()
+
+if (int.TryParse(input, out num) && num > 0) - 1st part - converts string to integer and returns true only if the conversion is successfull.
+                                         2nd part - checks if number is greater than 0.
+
+
+string sentence = "I love programming in Csharp";
+
+        string[] words = sentence.Split(' ');
+
+        foreach (string word in words)
+        {
+            Console.WriteLine(word);
+        }
+
+Python - higher order programming language
+
+
+int *tmp = malloc(4 * sizeof(int));
+
+This is allocating memory for an array of 4 integers, and tmp is a pointer to the first element of that array.
+
+Break it down:
+malloc(4 * sizeof(int))
+Allocates enough memory to store 4 integers
+Returns a void* pointer to the beginning of that block
+int *tmp
+Declares a pointer to int
+So tmp will point to the first integer in that allocated block
+So what is it exactly?
+
+👉 Both, in a way:
+
+tmp → is a pointer
+The memory it points to → behaves like an array of 4 integers
+You can use it like an array:
+tmp[0] = 10;
+tmp[1] = 20;
+tmp[2] = 30;
+tmp[3] = 40;
+
+int *tmp = malloc(4 * sizeof(int));
+
+tmp → points to first integer
+✔️ tmp[0] → first integer
+✔️ *tmp → also first integer
+
+👉 Meaning:
+
+tmp[0] == *tmp
+Example:
+tmp[0] = 10;
+
+printf("%d\n", *tmp);    // 10
+printf("%d\n", tmp[0]);  // 10
+Simple memory view:
+tmp ──► [10][20][30][40]
+         ↑
+        *tmp
+
+printf("%d\n", *(tmp + 1));  // 20
+
+if you use malloc you should always free up spacee.
+
+stdio.h - printf,scanf
+
+stdlib.h - list values
+malloc()
+calloc()
+realloc()   - by  default  will  return 0.  will allocate 4 bytes/n no of bytes then it will 
+what memeory has been allocated to u in the past.
+free()
+
+
+free(list)
+tmp[3] = 4;
+free(list) 
+
+you are freeing up memory in different list locations (temp[0] to temp[2] then we are moving to temp[3])
+
+Meta-data - helps you maintain data you care about.
+
+Linked List is called Vector in other languages.
+
+(*n) - dereferance n and then go inside it.
+*n.number // is called dereferancing it.
+
+* n is the same as n->next = NULL;
+n->number = 5; // or u can use get_int("enter number");
+
+node * n = malloc(sizeof(node)); 
+
+|__|------>|_|
+ n         |_| node 
+
+
+list = the starting node (head) of the linked list
+node *ptr = list ;
+
+
+"The ptr != NULL",
+                                        check acts as a guardrail, preventing the program from crashing by
+ ensuring you don't try to access data once you've run out of nodes."
+
+
+hiiii
+
+
+| Header     | Purpose                        |
+| ---------- | ------------------------------ |
+| `stdio.h`  | input/output                   |
+| `stdlib.h` | memory, utilities, conversions |
+
+
+
 

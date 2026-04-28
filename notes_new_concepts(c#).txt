@@ -956,4 +956,19 @@ This command will show you the name (usually origin) and the web address (https:
 
 Why we use the name origin
 
+// If in middle of list
+if (m->number < ptr->next->number)
+{
+    m->next = ptr->next;
+    ptr->next = n;
+    break;
+}
+
+unload(list) -  free memory
+
+leaf node - no children.
+
+Bst- Binary search tree - ez to add new nodes cuz no need to copy data 1 by 1.Downsise - less speed and dynamism.More Memory 
+
+Array of linked List - Hash Table 
 

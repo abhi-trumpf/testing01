@@ -972,5 +972,12 @@ Bst- Binary search tree - ez to add new nodes cuz no need to copy data 1 by 1.Do
 
 Array of linked List - Hash Table 
 
-adding new content for ref
+adding new content for ref\
 
+string[] myData = { "apple", "apple", "banana" }; is the standard way to declare and initialize a fixed-size array in C#.
+
+string[] result = myData.Distinct();   returns something called an IEnumerable<T>.
+
+Distinct() not as a "physical box," but as a smart magnifying glass or a filter that you place over your existing data.
+
+pointer (the IEnumerable) that knows how to show you only the unique ones when you start looking.

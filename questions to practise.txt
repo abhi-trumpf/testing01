@@ -1,0 +1,329 @@
+1–25: Basic Programming (Very Easy)
+
+Focus: loops, conditions, fundamentals
+
+Check if number is even or odd
+Find largest of 3 numbers
+Swap two numbers
+Reverse a number
+Check palindrome number
+Count digits in a number
+Sum of digits
+Find factorial
+Print Fibonacci series
+Check prime number
+Print multiplication table
+Find GCD (Euclid)
+Find LCM
+Check Armstrong number
+Print all primes up to N
+Sum of first N numbers
+Power of a number   // 17th question
+
+Check leap year
+Convert Celsius to Fahrenheit
+Find ASCII value of char
+Count vowels in string
+Reverse a string
+Check palindrome string
+Remove whitespace from string
+Count words in a sentence
+🟡 26–50: Arrays (Core Logic)
+
+Focus: indexing, traversal
+
+Find max in array
+Find min in array
+Reverse an array
+Sum of array elements
+Average of array
+Count even/odd numbers 
+Find second largest element
+Find second smallest element
+Remove duplicates
+Move zeros to end
+Check if array is sorted
+Merge two arrays
+Find missing number (0 to n)
+Find duplicate element
+Find intersection of two arrays
+Find union of two arrays
+Rotate array left
+Rotate array right
+Find frequency of elements
+Find all pairs with given sum
+Two Sum problem
+Majority element
+Best time to buy and sell stock
+Kadane’s algorithm (max subarray)
+Contains duplicate
+🟠 51–75: Strings (Very Important)
+
+Focus: patterns & manipulation
+
+Reverse string
+Reverse words in string
+First unique character
+Check anagram
+Longest common prefix
+Implement strStr()
+Valid palindrome
+Remove duplicates from string
+Count frequency of characters
+Convert string to integer (atoi)
+Convert integer to string
+Check rotations of string
+Remove vowels
+Reverse vowels
+Count substrings
+Find longest substring without repeat
+Check valid parentheses
+Add binary strings
+Roman to integer
+Integer to Roman
+Length of last word
+Count and say
+Check isomorphic strings
+Find difference between two strings
+Ransom note problem
+🔵 76–90: Hashing / Dictionary (Important for Interviews)
+Two Sum (using dictionary)
+First repeating character
+Count duplicates in string
+Group anagrams
+Top K frequent elements
+Intersection of arrays (hash set)
+Happy number
+Subarray sum equals K
+Longest consecutive sequence
+Contains nearby duplicate
+Find all anagrams in string
+Word pattern
+Isomorphic strings
+Frequency sort string
+Find common characters
+🟣 91–100: Easy Math + Mixed
+Climbing stairs
+Pascal’s triangle
+Plus one (array increment)
+Power of 2
+Power of 3
+Square root (binary search)
+Excel column number
+Excel column title
+Find the difference (extra char)
+Missing number
+
+🔹 Arrays (101–120) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Find all subarrays
+Subarray with given sum
+Maximum product subarray
+Sort 0s, 1s, 2s (Dutch flag)
+Rearrange array alternately
+Leaders in array
+Longest subarray with sum K
+Minimum platforms problem
+Trapping rain water
+Container with most water
+Product of array except self
+Find pivot index
+Equilibrium index
+Kth largest element
+Merge intervals
+Insert interval
+Non-overlapping intervals
+Meeting rooms
+Gas station problem
+Jump game
+🔹 Strings (121–140)
+Longest palindromic substring
+Palindromic substrings count
+String compression
+Decode string
+Minimum window substring
+Valid anagram (optimized)
+Longest repeating character replacement
+Group shifted strings
+Check subsequence
+Interleaving string
+Word break
+Edit distance (intro)
+Zigzag conversion
+Compare version numbers
+Multiply strings
+Simplify path
+Reverse words in-place
+Reorganize string
+Remove duplicate letters
+Smallest window containing chars
+🔹 Hashing / Dictionary (141–160)
+Subarray sum = K
+Longest substring with K distinct
+Count subarrays with equal 0s & 1s
+Find duplicate files
+Longest consecutive sequence
+Top K frequent words
+Randomized set
+LRU cache (intro)
+Design hash map
+Design hash set
+Find all duplicates
+Majority element II
+Subdomain visit count
+Bulls and cows
+Unique number of occurrences
+Find town judge
+Partition labels
+Check if array pairs divisible by k
+Continuous subarray sum
+Equal row-column pairs
+🔹 Stack / Queue (161–180)
+Valid parentheses
+Min stack
+Next greater element
+Daily temperatures
+Largest rectangle histogram
+Sliding window maximum
+Implement queue using stack
+Implement stack using queue
+Baseball game
+Backspace string compare
+Remove K digits
+Decode string (stack)
+Simplify path
+Evaluate postfix expression
+Monotonic stack basics
+Asteroid collision
+Stock span problem
+Reverse stack
+Circular queue
+Design browser history
+🔹 Linked List (181–200)
+Reverse linked list
+Detect cycle
+Middle of linked list
+Merge two sorted lists
+Remove nth node
+Palindrome linked list
+Intersection of two lists
+Add two numbers
+Copy list with random pointer
+Flatten linked list
+Rotate list
+Remove duplicates
+Partition list
+Odd-even list
+Swap nodes in pairs
+Reverse in k-group
+Sort linked list
+Merge k lists
+Delete node in list
+Design linked list
+🔴 201–300 (Strong Problem Solver Level)
+
+Focus: patterns + thinking like interviewer
+
+🔹 Recursion & Backtracking (201–230)
+Generate subsets
+Permutations
+Combination sum
+Letter combinations of phone number
+N-Queens
+Sudoku solver
+Word search
+Palindrome partitioning
+Generate parentheses
+Restore IP addresses
+Combinations
+Subsets II
+Permutations II
+Combination sum II
+Partition equal subset sum
+Target sum
+Unique paths
+Unique paths II
+Rat in maze
+Knight tour
+Word break II
+Expression add operators
+Restore array
+Beautiful arrangements
+Tile possibilities
+Generate binary strings
+Count paths recursion
+Maze paths
+Balanced parentheses recursion
+All paths source to target
+🔹 Trees (231–260)
+Binary tree traversal (all)
+Maximum depth
+Minimum depth
+Diameter of tree
+Balanced binary tree
+Path sum
+Same tree
+Symmetric tree
+Lowest common ancestor
+Binary search tree insert
+Delete node in BST
+Validate BST
+Kth smallest in BST
+Level order traversal
+Zigzag traversal
+Right side view
+Flatten binary tree
+Serialize/deserialize tree
+Construct tree from inorder/postorder
+Construct tree preorder/inorder
+Count nodes
+Sum of left leaves
+Invert tree
+Range sum BST
+Merge trees
+Subtree of another tree
+Path sum II
+Binary tree paths
+House robber III
+Maximum path sum
+🔹 Graphs (261–280)
+Number of islands
+Flood fill
+Clone graph
+Course schedule
+Course schedule II
+Detect cycle in graph
+BFS traversal
+DFS traversal
+Shortest path (BFS)
+Dijkstra intro
+Number of provinces
+Surrounded regions
+Pacific Atlantic water flow
+Rotting oranges
+Word ladder
+Minimum height trees
+Reconstruct itinerary
+Graph valid tree
+Bipartite graph
+Network delay time
+🔹 Dynamic Programming (281–300)
+Climbing stairs
+House robber
+House robber II
+Coin change
+Coin change II
+Longest increasing subsequence
+Longest common subsequence
+Edit distance
+Partition equal subset sum
+Target sum
+Unique paths
+Unique paths II
+Minimum path sum
+Decode ways
+Jump game
+Jump game II
+Maximal square
+Word break
+Best time to buy/sell stock II
+Best time to buy/sell stock III

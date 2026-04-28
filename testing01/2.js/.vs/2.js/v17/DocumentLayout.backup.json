@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\narayanasamiab\\source\\repos\\2.js\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}|2.js\\2.js.csproj|c:\\users\\narayanasamiab\\source\\repos\\2.js\\2.js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BAECFE2-62E0-4CD1-ADD4-74CC4EFBD5B8}|2.js\\2.js.csproj|solutionrelative:2.js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\narayanasamiab\\source\\repos\\2.js\\2.js\\Program.cs",
+              "RelativeDocumentMoniker": "2.js\\Program.cs",
+              "ToolTip": "C:\\Users\\narayanasamiab\\source\\repos\\2.js\\2.js\\Program.cs",
+              "RelativeToolTip": "2.js\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:51:11.784Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

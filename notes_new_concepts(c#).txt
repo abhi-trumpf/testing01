@@ -981,3 +981,79 @@ string[] result = myData.Distinct();   returns something called an IEnumerable<T
 Distinct() not as a "physical box," but as a smart magnifying glass or a filter that you place over your existing data.
 
 pointer (the IEnumerable) that knows how to show you only the unique ones when you start looking.
+
+
+using System;
+
+class ResourceHandler
+{
+    // Constructor
+    public ResourceHandler()
+    {
+        Console.WriteLine("Object created: Resource initialized.");
+    }
+
+    // Destructor (Finalizer)
+    ~ResourceHandler()
+    {
+        Console.WriteLine("Object destroyed: Resource cleaned up.");
+    }
+}
+
+
+Default Constructor: When constructors do not have parameters, then it is called the default constructor. These types of constructors have all its instance initialized with the same value.
+
+Parameterized Constructor: When any constructor has at least one parameter, it is called the parameterized constructor.
+
+Copy Constructor: When the constructor is used to create an object just by copying all of its variables from another object, such constructors are called copy constructor. They are used for initializing a new instance from an existing one.
+
+Private Constructor: When a constructor is produced with a private access modifier, it is called Private Constructor. It does not make it possible for other classes to inherit any data from this class.
+
+Static Constructor: When a constructor needs to be invoked only once, and when that constructor needs to be invoked at creating the first reference, then those constructors are made static and are called static constructors.
+
+
+using System;
+
+public class Person
+{
+    public string Name;
+
+    // Constructor
+    public Person(string name)
+    {
+        Name = name;
+        Console.WriteLine("Constructor executed for: " + name);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Constructor is called here when creating the object
+        Person p1 = new Person("Alice");
+        Person p2 = new Person("Bob");
+    }
+}
+
+
+
+
+
+Destructor is another method that uses the class-name but is preceded with a ~ (tilde) operator/symbol. Destructors are used to de-initialize objects, and the memories occupied when constructors are created. You can consider them as the opposite of constructors.
+
+public class EmpGkr
+{
+    int start;
+    //constructor
+    public EmpGkr()
+    {
+        val = 10;
+    }
+
+    //destructor
+    ~ EmpGkr()
+    {
+        val = 0;
+    }
+}

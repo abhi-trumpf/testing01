@@ -972,3 +972,5 @@ Bst- Binary search tree - ez to add new nodes cuz no need to copy data 1 by 1.Do
 
 Array of linked List - Hash Table 
 
+adding new content for ref
+

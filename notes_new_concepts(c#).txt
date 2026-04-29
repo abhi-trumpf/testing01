@@ -1104,11 +1104,4 @@ Manually Managed
 
 
 
-git checkout master
-git status
-git pull origin master
-git merge <branch-with-conflicts>
-git add .
-git commit -m "Merged <branchname> into master and resolved conflicts"
-git push origin master
 

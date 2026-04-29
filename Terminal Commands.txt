@@ -195,9 +195,21 @@ TO GET OUT OF MERGE STATE ,
 There is no such thing as a "conflicted branch" or a "non-conflicted branch." There is only a merge result and its called MERGE STATE .
 
 
+SO checkout is basically a better version of switch 
+checkout deals with files commits and branches
+
+switches only deal with branches.
+
 git add .
 git commit -m "Merged <branchname> into master and resolved conflicts"
 git push origin master
+
+
+When you run git diff, it compares two things:                     // write code and practice 
+
+The code currently in your files (what you see on your screen right now).
+
+The code as it existed in your last commit (the "clean" version that Git has saved
 
 
 

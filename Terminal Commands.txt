@@ -31,6 +31,90 @@ git init (initialize .git file its hidden)
 glob pattern - .git is hidden 
  
 
+here’s a clean, no-nonsense reset sequence to fix your repo in one go. This will get you perfectly synced with GitHub.
+
+⚠️ This will delete ALL your local changes (uncommitted + messy rebase state).
+If that’s fine, proceed.
+
+Your repo is inside OneDrive, which causes all these issues.
+
+👉 Best move:
+
+C:\projects\testing01
+
+Then:
+
+git clone https://github.com/abhi-trumpf/testing01.git
+
+
+Find the real Git root ,
+
+Run this:
+
+git rev-parse --show-toplevel
+
+👉 This will show the actual folder Git is tracking
+
+
+
+Problem - Your Git repo is initialized at the root of your C drive (C:/), not in your project folder.
+
+Every Git repository has one .git directory.
+
+git branch -m master main // rename your current branch from master to main
+2. Get remote updates safely
+
+PULL AND PUSH 
+git pull origin main --rebase
+3. Push correctly
+git push -u origin main
+
+
+git log - show history of repo
+check for remote branch git remote -v
+
+git remote add name <GitHub link>       //no
+git remote add origin <GitHub link>
+
+git remote rename <old> <new>
+git remote remove <name>
+
+git remote -v shows the mapping between your local repository and the remote server.
+
+git fetch / git fetch origin -  shows all the changes made to your directory by other people.
+
+
+To switch from one branch to another. //   cs-bc
+  
+git checkout <branchname>     // switch to an existing branch
+
+git checkout -b <new-branch-name>  // create a new one and switch to it
+
+
+git switch <branchname>     // switch to an existing branch 
+
+git switch -c <new-branch-name>  //create a new one n switch immediately 
+
+
+git branch      -  show current branch of repo
+
+git branch -a   -  show all branches in repo 
+
+git remote -v -  To remove the connection between your local repository and a remote repository (like GitHub)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

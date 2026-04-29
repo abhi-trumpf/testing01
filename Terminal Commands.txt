@@ -211,6 +211,18 @@ The code currently in your files (what you see on your screen right now).
 
 The code as it existed in your last commit (the "clean" version that Git has saved
 
+git checkout master
+git status
+git pull origin master
+git merge <branch-with-conflicts>
+git add .
+git commit -m "Merged <branchname> into master and resolved conflicts"
+git push origin master
+ uhh  
+
+
+
+
 
 
 

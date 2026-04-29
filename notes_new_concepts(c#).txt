@@ -1007,6 +1007,38 @@ Parameterized Constructor: When any constructor has at least one parameter, it i
 
 Copy Constructor: When the constructor is used to create an object just by copying all of its variables from another object, such constructors are called copy constructor. They are used for initializing a new instance from an existing one.
 
+ex
+
+public class MachinePart
+{
+    public string Name { get; set; }        // { get; set; }  This is the "magic" part that makes them Auto-Properties:
+
+get: Allows other parts of your code to read the value. Example: string myName = myPart.Name; set: Allows other parts of your code to change the value. Example: myPart.Weight = 2.5;
+
+    // Standard constructor
+    public MachinePart(string name, double weight)
+    {
+        Name = name;
+        Weight = weight;
+    }
+
+    // The Copy Constructor
+    public MachinePart(MachinePart other)
+    {
+        // Copying values from the 'other' object to the new instance
+        this.Name = other.Name;
+        this.Weight = other.Weight;
+    }
+}
+
+// Usage:
+MachinePart originalPart = new MachinePart("Laser Nozzle", 0.5);
+
+// Creating a new instance using the Copy Constructor
+MachinePart clonedPart = new MachinePart(originalPart);
+
+// Now clonedPart has the same values as originalPart
+
 Private Constructor: When a constructor is produced with a private access modifier, it is called Private Constructor. It does not make it possible for other classes to inherit any data from this class.
 
 Static Constructor: When a constructor needs to be invoked only once, and when that constructor needs to be invoked at creating the first reference, then those constructors are made static and are called static constructors.
@@ -1057,3 +1089,16 @@ public class EmpGkr
         val = 0;
     }
 }
+
+
+C# is single inheritance        
+. C# (Object-Oriented Language)  oops concept 
+C# is built from the ground up to support the Object-Oriented Programming (OOP) paradigm. It provides specific keywords and structures—like class, interface, inheritance, and encapsulation—that automatically manage objects for you.
+Garbage Collected (Automatic)
+         
+
+C is multiple inheritance concept
+C (Procedural / Structured Language)
+C does not have class or object keywords.
+Manually Managed
+

@@ -78,14 +78,14 @@ git remote remove <name>: This deletes the connection to a specific remote repos
 Rename local branch -m <old-name> <new-name>                  //all of this is with respect to branch
 Delete local branch git branch -d <branch-name>
 
+git remote rename <old> <new>        //change repo name (remote na le - with respect to repo)
+git remote remove <name>     // deletion of repo.
+
 git log - show history of repo
 check for remote branch git remote -v
 
 git remote add name <GitHub link>       //no
 git remote add origin <GitHub link>
-
-git remote rename <old> <new>        //change repo name (remote na le - with respect to repo)
-git remote remove <name>
 
 git remote -v shows the mapping between your local repository and the remote server.
 
@@ -110,6 +110,11 @@ git branch -a   -  show all branches in repo
 
 git remote -v -  To remove the connection between your local repository and a remote repository (like GitHub)
 
+git branch <new branch> - create a new branch 
+
+git branch -m <branch name> - delete a branch
+
+git merge <branchname> - the changes from GitHub will get updated to your local files ?
 
 ddddd
 

@@ -94,12 +94,12 @@ git fetch / git fetch origin -  shows all the changes made to your directory by 
 
 To switch from one branch to another. //   cs-bc
   
-git checkout <branchname>     // switch to an existing branch
+git checkout <branchname>     // switch to an existing branch   CHEKOUT IS imp
 
 git checkout -b <new-branch-name>  // create a new one and switch to it
 
 
-git switch <branchname>     // switch to an existing branch 
+git switch <branchname>     // switch to an existing branch ex                  git switch master
 
 git switch -c <new-branch-name>  //create a new one n switch immediately 
 
@@ -114,9 +114,90 @@ git branch <new branch> - create a new branch
 
 git branch -m <branch name> - delete a branch
 
-git merge <branchname> - the changes from GitHub will get updated to your local files ?
+git merge <branchname> - the changes from GitHub will get updated to your local files ?   remote repo to local repo 
 
-ddddd
+git checkout master
+git status
+git pull origin master  Exit Code 0: This means "Success" (like returning true).
+
+                       Exit Code 1 (or higher): This means "Error/Conflict" (like returning false).
+
+git checkout master - Switch my local view to the branch named master."
+
+The rule is simple: Git merges "Whatever branch I am currently on" with "Whatever branch name I type in the command."
+
+1. The "Current Branch" (The Destination)
+Before you run a merge, you must be "checked out" on the branch where you want the code to land.
+
+If you want to merge into master, you must first run: git checkout master
+
+If you want to merge into main, you must first run: git checkout main
+
+2. The "Target Branch" (The Source)
+You can then merge from any other branch into that destination.
+
+Examples of valid commands:
+
+git merge main (Merging the main branch into your current branch).
+
+git merge master (Merging the master branch into your current branch).
+
+git merge testing01 (Merging your testing01 branch into your current branch).
+
+git merge <branch name> 
+
+. It only checks for clashes the moment you try to bring them together.
+When you run git merge, you are merging two different timelines into one.
+
+Think of it this way:
+
+Branch A (Your destination): Where you are right now (usually master or main). This is your "official" record.
+
+Branch B (Your source): The branch you are typing in the command. This is your "new work."
+
+   A + B gives correct c or C with conflicts 
+
+Correct C  - successful or complete 
+
+C with conflicts - unsuccessful or incomplete
+
+In the Git world, we don't usually call them "incomplete merge branches"; instead, we say you are in a "Merge State" or a "Conflict State."   //imp
+
+Here is a quick way to keep those three concepts organized in your head:
+
+The State (Pausing): Git has stopped the train. It won't move forward until you manually fix the tracks.
+
+The List (Flagging): This is your To-Do List. Any file you see when you type git status is a file that must be cleaned up before the train can start moving again.
+
+The Mess (Dirty Files): This is the physical evidence of the conflict. The <<<<<<< and >>>>>>> markers are Git's way of showing you exactly where the two branches disagree.
+
+If you leave your repository in that "Merging" (or conflict) phase, nothing terrible happens to your computer, but it does prevent you from doing other Git work.
+
+Here is exactly what "stuck" means in practice:  --------------------------- MERGE STATE 
+
+1. You cannot perform other Git operations
+If you try to do other things while in this state, Git will stop you. For example:
+
+You cannot switch branches: If you try git checkout <other-branch>, Git will say, "I can't let you switch until you finish resolving the conflicts in this current merge."
+
+You cannot pull updates: If you try git pull, Git will say, "You have unmerged files."
+
+2. Your project won't build (if it’s a C# project)
+As we discussed, those <<<<<<< and >>>>>>> markers are not valid C# code. If you try to run your project, the compiler will see those symbols and say, "Syntax error," and your code won't run.
+
+TO GET OUT OF MERGE STATE ,
+
+1.Finish it: Resolve the markers, git add, and git commit. (This creates the "Merge Commit" and officially finishes the merge).
+
+2.Cancel it: Run git merge --abort. (This cleans up the mess and puts the train back to where it started).
+
+"Conflict" isn't a type of branch
+There is no such thing as a "conflicted branch" or a "non-conflicted branch." There is only a merge result and its called MERGE STATE .
+
+
+git add .
+git commit -m "Merged <branchname> into master and resolved conflicts"
+git push origin master
 
 
 

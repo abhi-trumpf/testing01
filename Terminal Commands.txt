@@ -220,9 +220,7 @@ git commit -m "Merged <branchname> into master and resolved conflicts"
 git push origin master
  uhh  
 
-
-
-
+new things
 
 
 

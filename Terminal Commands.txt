@@ -1,6 +1,8 @@
 Terminal Commands
 
 
+just have the correct directory n have the correct files ready to commit
+
 cd .. -  go back directory 
 
 dir -  show list of all directories
@@ -70,13 +72,19 @@ git pull origin main --rebase
 git push -u origin main
 
 
+git remote remove <name>: This deletes the connection to a specific remote repository entirely from your local configuration.
+//with relation to repository
+
+Rename local branch -m <old-name> <new-name>                  //all of this is with respect to branch
+Delete local branch git branch -d <branch-name>
+
 git log - show history of repo
 check for remote branch git remote -v
 
 git remote add name <GitHub link>       //no
 git remote add origin <GitHub link>
 
-git remote rename <old> <new>
+git remote rename <old> <new>        //change repo name (remote na le - with respect to repo)
 git remote remove <name>
 
 git remote -v shows the mapping between your local repository and the remote server.
@@ -103,7 +111,7 @@ git branch -a   -  show all branches in repo
 git remote -v -  To remove the connection between your local repository and a remote repository (like GitHub)
 
 
-
+ddddd
 
 
 

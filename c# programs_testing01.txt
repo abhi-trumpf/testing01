@@ -899,18 +899,23 @@ public class HelloWorld
 
 //38.merge
 
- using System;
-
+using System;
+using System.Linq; // Fix 1: Required for .Concat() and .ToArray()
 public class HelloWorld
 {
     // This is the Main method
     public static int Main(string[] args)
     {
        int[] array1 = { 1, 2, 3 };
-int[] array2 = { 4, 5, 6 };
-
-int[] merged = array1.Concat(array2).ToArray();
+       int[] array2 = { 4, 5, 6 };
+       int[] merged = array1.Concat(array2).ToArray();
+       for(int i =0;i<merged.Length;i++){  //.Length is a property
+           Console.WriteLine(merged[i]);
+       }
+       return 0;
+    }
 }
-}
 
+
+//39.
 

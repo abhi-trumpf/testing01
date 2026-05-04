@@ -1282,7 +1282,28 @@ Access Method:
 Array: Supports Random Access. You can jump straight to index\[99] in one step.
 Linked List: Only supports **Sequential** Access. To find the 100th item, you must start at the head and follow the pointers 99 times.
 
+Array A: [1, 2, 3]
+Array B: [4, 5, 6]
 
+A.Concat(B) creates a virtual sequence: 1 → 2 → 3 → 4 → 5 → 6.
+int[] merged = array1.Concat(array2).ToArray();
+//Concat is "lazy"—it doesn't actually create a new list until you force it to. ToArray() is the force. It calculates the total size needed, allocates a new block of memory, and copies the numbers into it.
+
+Actually, it's the other way around! While strings do have a .Length property, .Length is the standard way to get the size of any Array in C#.
+int [] x = [1,2,3,4,5];
+for(int i=0;i<x.Length;i++) //.Length does not have () 
+{
+   ...code
+}
+
+.Length   - property
+.Length() - method
+
+[1, 2, 3, 4, 5] is called a Collection Expression.
+If you assign it to an int[], C# treats it exactly as an array.
+C#
+int[] myArray = [1, 2, 3, 4, 5];      //becomes an array 
+Arrays should be assosiated with [].
 
 
 

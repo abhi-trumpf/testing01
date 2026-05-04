@@ -954,14 +954,42 @@ public class HelloWorld
 
 
 
+// 40.Find duplicate element
+
+using System;
+using System.Collections.Generic; // Don't forget this!
+public class HelloWorld
+{
+    // This is the Main method
+    public static int Main(string[] args)
+    {
+        int[] arr2 = new int[1000];
+        int n =0; //the total no of inputs
+        int next=0; // the number I typed.
+        Console.WriteLine("enter the number 1 by 1 \n");
+        while(n<1000 && int.TryParse(Console.ReadLine(),out next))
+        //n is automatically the number of inputs user is typing till q ah 
+        //a big while looP
+        {
+            arr2[n] = next; // Put number in the current slot
+            n++; // This is what makes n "automatically" count
+        }
+        Array.Sort(arr2,0,n); //sort array
+        HashSet <int>repeatingnumbers = new HashSet <int>();
+        //creating a guest hashset for repeating numbers 
+        for(int i=0;i<n;i++){
+            int currentnumber = arr2[i];
+            bool newoutput = repeatingnumbers.Add(currentnumber);
+            // // Try to add the number and save the result (True or False) if num doesnt exist it adds and returns true else it doesnt add and returns false
+            if(newoutput == false) //all small
+            {
+                Console.WriteLine($"{currentnumber} is repeating");
+                // need to call {currentnumber} as value of it will be respective to that particular loop n not newoutput cuz that will only give true or false
+            }
+        }
+        return 0;
+    }
+}
 
 
-
-
-
-
-
-
-
-Find duplicate element
 

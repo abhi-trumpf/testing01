@@ -1157,6 +1157,189 @@ AC	      0 	    2	              2	                      2
 BB	      1	            1	         2 (Collision!)	           101 (Unique!)
 CA	      2	            0	         2 (Collision!)	           200 (Unique!)
 
+public class Solution {
+
+&#x20;   public int\[] Intersection(int\[] nums1, int\[] nums2) {
+
+&#x20;       HashSet<int> s1 = new HashSet<int>(nums1);             // S caps //after new use a backspace 
+
+&#x20;       HashSet<int> s2 = new HashSet<int>(nums2);
+
+&#x20;       s1.IntersectWith(s2);   //IW             s1.Add(x); (within a for loop)
+
+&#x20;       return s1.ToArray();        //TA     
+
+
+
+&#x20;   }
+
+}
+
+
+
+array and linked list similarities
+
+
+
+While arrays and linked lists are structurally very different, they share a common purpose in computer science. Since you’ve been exploring software development in C# and C lately—specifically through your testing01 project—understanding these similarities will help you choose the right tool for the job.
+
+
+
+1\. They are both "Linear" Data Structures
+
+The most fundamental similarity is that both are linear collections. This means they store elements in a specific order (a sequence).
+
+
+
+In an Array, the order is determined by the physical memory slots (0, 1, 2, ...).
+
+
+
+In a Linked List, the order is determined by pointers (node A points to node B).
+
+
+
+2\. They Store the Same Data Type
+
+Both structures are typically homogeneous.
+
+
+
+If you declare an int array, it only holds integers.
+
+
+
+If you define a struct node that contains a char \*word, every node in that linked list will store that same type of data.
+
+
+
+3\. They Support the Same Basic Operations
+
+Regardless of which one you use, you can perform the same "CRUD" operations on them:
+
+
+
+Insertion: Adding a new element.
+
+
+
+Deletion: Removing an element.
+
+
+
+Traversal: Visiting every element from start to finish (like using a for loop).
+
+
+
+Search: Looking for a specific value.
+
+
+
+4\. They Both Use Memory
+
+While their memory allocation styles differ (arrays use one big block; linked lists use scattered nodes), they both ultimately occupy space in your computer's RAM.
+
+
+
+In C#, the Garbage Collector handles this memory for both structures.
+
+
+
+In C, you have to be more mindful of how much memory each is consuming, especially as your project grows.
+
+
+
+Summary Table
+
+Feature	Array	Linked List
+
+Logic	Linear Sequence	Linear Sequence
+
+Access	Sequential or Random	Sequential
+
+Data Types	Uniform (Homogeneous)	Uniform (Homogeneous)
+
+Goal	Storing a list of items	Storing a list of items
+
+Think of them like two different ways to store a grocery list: an array is a single piece of paper with numbered lines, while a linked list is a series of post-it notes where each one tells you where the next one is hidden. They both hold the same list of groceries!
+
+
+
+how are they structurally different show in diagram
+
+
+
+The main structural difference lies in how they occupy your computer's memory: Arrays are a solid block, while Linked Lists are scattered pieces connected by "addresses."
+
+
+
+The Structural Diagram
+
+Plaintext
+
+MEMORY LAYOUT: ARRAY (The "Spine")
+
+     +-------+-------+-------+-------+
+
+Address| 0x100 | 0x104 | 0x108 | 0x112 |  <-- Contiguous (Next to each other)
+
+    +-------+-------+-------+-------+
+
+Data   |  'A'  |  'B'  |  'C'  |  'D'  |  <-- Same size, fixed slots
+
+     +-------+-------+-------+-------+
+
+Index  |   0   |   1   |   2   |   3   |
+
+
+
+
+
+      MEMORY LAYOUT: LINKED LIST (The "Branches")
+    +-------+----+      +-------+----+      +-------+------+
+
+Node 1 |  'A'  |Ptr\*+----->|  'B'  |Ptr\*+----->|  'C'  | NULL |
+
+  +-------+----+      +-------+----+      +-------+------+
+
+Address|   0x205           |   0x880           |   0x412
+
+Key Structural Differences
+
+Memory Arrangement:
+
+
+
+Array: Stored in **contiguous memory locations**. You can calculate the **exact location of any element instantly.**
+
+
+
+Linked List: Stored in scattered memory locations. **Each node must store a "pointer" (the address) to find the next neighbor.**
+
+
+
+Size Flexibility:
+
+
+
+Array: Has a **fixed size**. To add more items than the array can hold, you usually have to create a brand new, larger array and copy everything over.
+
+
+
+Linked List: **Dynamic**. You can add a new "branch" or node at any time just by using malloc in C or creating a new object in C#.
+
+
+
+Access Method:
+
+
+
+Array: Supports Random Access. You can jump straight to index\[99] in one step.
+
+
+
+Linked List: Only supports **Sequential** Access. To find the 100th item, you must start at the head and follow the pointers 99 times.
+
 
 
 

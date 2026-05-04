@@ -1108,3 +1108,58 @@ Manually Managed
 =======
 >>>>>>> 
 
+node *list = null ,pointer of node is null 
+
+pointer variable name of node is list
+
+HEAD
+      (Pointer)
+        |
+        V
++-------------+      +-------------+      +-------------+
+|    Node 1   |      |    Node 2   |      |    Node 3   |
+|-------------|      |-------------|      |-------------|
+| Data: 10    |      | Data: 20    |      | Data: 30    |
+| Link: [*]---+----->| Link: [*]---+----->| Link: NULL |  <-- End of List
++-------------+      +-------------+      +-------------+
+
+
+x = 10;	The integer 10.
+sizeof(int)	The size of the Integer blueprint (usually 4).
+sizeof(node)	The size of the Node blueprint (usually 12 or 16).
+
+node *list = NULL;
+node *ptr = list ; set node called pointer to BEGINNING of list/beginning of struct - same thing (imp)
+
+A linked list is simply a collection of struct node instances.
+
+node *temp = ptr  // ptr value store to pointer temp variable of node .
+
+
+Hash table is basically an array.
+Each array is a linked list.
+
+By combining an array of linked lists you get the speed of an array with the flexibility of a linked list. 
+
+soo array act as the SPINE and linked list are the branches of the spine -  Hash TABLE 
+
+char *word: This is a pointer that holds the address of the start of the string. Start of the string orthe start address of the first char(both are the same thing).
+points to start of a string
+
+The function isalpha() is designed to check a single character (char), not an entire string or a pointer.
+
+There is no string keyword in the C langauge.
+
+ bucket number after combining 2 letters should be unique
+
+Word	Letter 1 (c1)	Letter 2 (c2)   Simple Addition (c 1+ c2)  The Formula (c1*100) + c2
+AC	      0 	    2	              2	                      2
+BB	      1	            1	         2 (Collision!)	           101 (Unique!)
+CA	      2	            0	         2 (Collision!)	           200 (Unique!)
+
+
+
+
+
+
+

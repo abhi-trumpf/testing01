@@ -897,7 +897,7 @@ public class HelloWorld
     }
 }
 
-//38.merge
+//38.merge 2 int arrays
 
 using System;
 using System.Linq; // Fix 1: Required for .Concat() and .ToArray()
@@ -908,8 +908,8 @@ public class HelloWorld
     {
        int[] array1 = { 1, 2, 3 };
        int[] array2 = { 4, 5, 6 };
-       int[] merged = array1.Concat(array2).ToArray();
-       for(int i =0;i<merged.Length;i++){  //.Length is a property
+       int[] merged = array1.Concat(array2).ToArray();          //Concat is "lazy"—it doesn't actually create a new list until you force it to. ToArray() is the force. It calculates the total size needed, allocates a new block of memory, and copies the numbers into it.
+       for(int i =0;i<merged.Length;i++){                       //.Length is a property not a method.
            Console.WriteLine(merged[i]);
        }
        return 0;
@@ -917,5 +917,51 @@ public class HelloWorld
 }
 
 
-//39.
+//39.Find missing number (0 to n)
+
+using System;
+public class HelloWorld
+{
+    // This is the Main method
+    public static int Main(string[] args)
+    {
+        int[] arr2 = new int[1000];
+        int n =0,next=0;
+        Console.WriteLine("enter the number 1 by 1 \n");
+        while(n<1000 && int.TryParse(Console.ReadLine(),out next))// T caps
+        // ADDED "n < 1000 &&" TO PREVENT CRASHES
+        {
+            arr2[n++]=next; //index starts from 0,1,2.....
+        }
+        Array.Sort(arr2, 0, n); //  faster n more efficent 
+        Console.Write("Sorted array is: ");
+        for(int i = 0; i < n; i++) Console.Write(arr2[i] + " ");
+        Console.WriteLine("\n");
+        //3.highest number 
+        int highest = arr2[n-1];
+        //4.find missing gaps 
+        // Loop from 0 to highest
+        // if i is not found in sorted part of array ,
+        for (int i = 0; i <= highest; i++){
+            if(Array.IndexOf(arr2, i, 0, n) == -1) // o caps 
+            {
+                Console.WriteLine($"{i}th index is missing");
+            }
+        }
+        return 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Find duplicate element
 

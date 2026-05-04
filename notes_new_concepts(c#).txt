@@ -1305,6 +1305,13 @@ C#
 int[] myArray = [1, 2, 3, 4, 5];      //becomes an array 
 Arrays should be assosiated with [].
 
+// 
+int n = 0, next;
+while (n < 1000 && int.TryParse(Console.ReadLine(), out next)) arr2[n++] = next;
+
+Expression,Index used for arr2,Final value of n,Effect on arr2[0]
+arr2[n++] (Post),0,1,Gets the value (Current index used)
+arr2[++n] (Pre),1,1,Skipped (Index updated first)
 
 
 

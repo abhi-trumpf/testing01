@@ -301,8 +301,19 @@ History,Moves you back to an old point (Time Travel).,Adds a new point (commit) 
 Safety,"Puts you in ""Detached HEAD"" (temporary/ghost state).",Safe; you stay on your current active branch.
 GitHub,Usually not pushed (used for local viewing only).,Pushed to GitHub like a normal update/fix.
 
+"Reflog" (a secret history) of everywhere you’ve been.
 
+Your Current Workflow SuccessYou successfully moved from a Detached HEAD $\rightarrow$ to a New Branch (my-fixed-code) $\rightarrow$ to a Clean Push to GitHub. That is exactly how a pro handles it.
 
+how to get detached head ??? 
+
+Find your history:
+git log --oneline
+
+Checkout the hash:
+git checkout <hash> (e.g., git checkout 11db4d9)
+
+detached head-> new branch -> clean push
 
 
 

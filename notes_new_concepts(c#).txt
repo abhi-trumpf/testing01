@@ -28,7 +28,7 @@
 
  *     int[] n2 = new int[] {2,2,1};
 
- *    using System.Collections.Generic;
+ *    using System.Collections.Generic;   // we need to include for using .Add()
       List<int> list = new List<int>();
       list.Add(3);    // ✅ Works
 
@@ -1159,23 +1159,12 @@ CA	      2	            0	         2 (Collision!)	           200 (Unique!)
 
 public class Solution {
 
-&#x20;   public int\[] Intersection(int\[] nums1, int\[] nums2) {
+public int\[] Intersection(int\[] nums1, int\[] nums2) {
+HashSet<int> s1 = new HashSet<int>(nums1);             // S caps //after new use a backspace 
+ HashSet<int> s2 = new HashSet<int>(nums2);
+s1.IntersectWith(s2);   //IW             s1.Add(x); (within a for loop)
 
-&#x20;       HashSet<int> s1 = new HashSet<int>(nums1);             // S caps //after new use a backspace 
-
-&#x20;       HashSet<int> s2 = new HashSet<int>(nums2);
-
-&#x20;       s1.IntersectWith(s2);   //IW             s1.Add(x); (within a for loop)
-
-&#x20;       return s1.ToArray();        //TA     
-
-
-
-&#x20;   }
-
-}
-
-
+    return s1.ToArray();        //TA     
 
 array and linked list similarities
 
@@ -1314,5 +1303,72 @@ arr2[n++] (Post),0,1,Gets the value (Current index used)
 arr2[++n] (Pre),1,1,Skipped (Index updated first)
 
 
+for (int i = 0; i < n; i++) 
+{
+    if (arr2[i] == 0) 
+    {
+        continue; // <--- Jumps straight to i++.
+    }
+}
+
+
+for (int i = 0; i < n; i++) 
+{
+    if (arr2[i] == 0) 
+    {
+        break; // <--- Completely jumps out of for loop.
+    }
+}
+
+int[] arr3; only creates a pointer (a name).
+int[] arr3 = new int[1000]; // this is only correct.
+
+/tmp/y0gUPU4rLG/Main.cs(25,50): error CS0103: The name 'i' does not exist in the current context - means i is outside for loop.
+
+numbers = [1,2,3,4444,1];
+Array.Sort(numbers);                 //S caps  dont use 
+Array.Sort(arr2,i,0,n)
+
+
+full code -> if (Array.IndexOf(arr2, i, 0, n) == -1)
+============================================================
+C# Array.IndexOf Syntax Breakdown: (arr2, i, 0, n)
+============================================================
+
+1. arr2  -> The "WHERE"
+            The array variable name we are searching through.
+
+2. i     -> The "WHAT"
+            The specific value we want to find (our current loop number).
+
+3. 0     -> The "START"
+            The index where the search begins (the very first slot).
+
+4. n     -> The "LIMIT" (Count)
+            How many slots to check. This ensures we ONLY search 
+            the numbers you entered and ignore the empty 0s at 
+            the end of the 1000-slot array.
+
+LOGIC:
+If IndexOf returns -1, it means the number was NOT found.
+============================================================
+
+Array.IndexOf(...) — The Searcher
+This is a built-in "Find" tool. Its only job is to look through the array and tell you where a value is.
+
+If found: It returns the Index Number (0, 1, 2, etc.).
+
+If NOT found: It returns -1.
+
+Collection	Command	What it does	         Result/Return
+HashSet	.Add(x)	Adds only if x is new.	         Returns true/false
+List	.Add(x)	Adds x to the very end.	         Returns nothing
+Dictionary	.Add(k, v)	Links a key to a value.	 Crashes if key exists
+
+
+
+bool isNewNumber = seenNumbers.Add(currentNum);
+
+// Try to add the number and save the result (True or False) if num doesnt exist it adds and returns true else it doesnt add and returns false 
 
 

@@ -312,3 +312,5 @@ from the Map entry.*/
 
 👉 But cd is ONLY for folders (directories)
 Not files.
+
+.bind - returns a new function 

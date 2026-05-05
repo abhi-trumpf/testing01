@@ -121,7 +121,9 @@ git branch <new branch> - create a new branch
 
 git branch -m <branch name> - delete a branch
 
-git merge <branchname> - the changes from GitHub will get updated to your local files ?   remote repo to local repo 
+git merge <branchname> - the changes from GitHub will get updated to your local files ?   remote repo to local repo // IMPORTANT 
+
+git push -u origin <name>  //local repo to remote repo
 
 git checkout master
 git status
@@ -255,19 +257,29 @@ Working directory - unsaved drafts of your code.
 
 git add of working directory gives staging area.
 
-git commit of staging area - local repo ( this is where current COMMIT lives)
+git commit of staging area - local repo (this is where current COMMIT lives)
 
 git push of local repo - remote repo.
  
-
 can lose shared history - 
 
-git revert- historical state of previous commit 
+git revert <commit hash>- historical state of previous commit 
 
-very sumilat to git reset.
+very similar to git reset.
  
+git switch -c <name> = Create a new branch and Switch to it immediately. This turns a temporary "Detached HEAD" state into a permanent, named branch.
 
+let’s start a brand new timeline right here and call it 'new-feature-name'." 
 
+you are standing at an old point in history (11db4d9).
+
+git switch -c my-fixed-code
+
+git push -u origin my-fixed-code
+
+The Main Road (master): This is still sitting further ahead, where you most recently worked on your testing01 repository.
+
+The Side-path (my-fixed-code): When you run git switch -c my-fixed-code, you are creating this new road starting from that old spot.
 
 
 

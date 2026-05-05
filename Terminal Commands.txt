@@ -121,7 +121,14 @@ git branch <new branch> - create a new branch
 
 git branch -m <branch name> - delete a branch
 
-git merge <branchname> - the changes from GitHub will get updated to your local files ?   remote repo to local repo // IMPORTANT 
+git merge <branchname> - the changes from GitHub will get updated to your local files ?   remote repo to local repo // IMPORTANT related to branch Git takes the changes you made in that side-path and pulls them into master.
+
+<branchname> - side branch gets added to whatever current Mainbranch is.
+
+Command,Direction,Relationship
+git push,Local → Remote,Sends your branch's changes to GitHub.
+git pull,Remote → Local,Grabs updates from GitHub and puts them in your local branch.
+git merge,Local ↔ Local,Merges one branch (side-path) into another branch on your PC.
 
 git push -u origin <name>  //local repo to remote repo
 

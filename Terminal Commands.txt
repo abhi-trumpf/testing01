@@ -28,7 +28,14 @@ Microsoft owns GitHub
 
 git status ( to make sure folder is not a repository)
 
-git init (initialize .git file its hidden)
+git init (initialize .git file its hidden)    --- create a new GitHub repository.
+
+git add <filename.txt> // single file is added.  aka gets added to the STAGING AREA.
+
+to unstage <file.txt>,
+
+git restore --staged <file.txt>
+           //gap   //gap
 
 glob pattern - .git is hidden 
  
@@ -222,6 +229,43 @@ git push origin master
 
 When inside vim black static screen,
 Shift + ZZ
+
+git log -> tell everything 
+
+git log --oneline -> just the highlights.
+
+
+branch which points to a commit 
+
+git checkout <branchname> - switch current branch to a different one.
+
+git checkout <commit hash> - view your past safe point without making changes to the current work. (while maintaining the remaining commits)
+
+git restore <filename> - basically a ctrl + Z // only to the last checkpoint.
+
+git reset <particular commit/particular hash>   // resets back to particular checkpoint.  Changes to current files remains unchanged and Reset the commit only (if u commited to wrong branch)
+
+            Repositioning the HEAD pointer to a different commit hash
+Reset Type,Moves Local Repo?        Keeps Staged Code?     Keeps File Content?
+--soft            Yes                 Yes                      Yes
+--mixed           Yes                 No                       Yes
+--hard            Yes                 No                       No
+
+Working directory - unsaved drafts of your code.
+
+git add of working directory gives staging area.
+
+git commit of staging area - local repo ( this is where current COMMIT lives)
+
+git push of local repo - remote repo.
+ 
+
+can lose shared history - 
+
+git revert- historical state of previous commit 
+
+very sumilat to git reset.
+ 
 
 
 

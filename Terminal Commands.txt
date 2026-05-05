@@ -3,6 +3,8 @@ Terminal Commands
 
 just have the correct directory n have the correct files ready to commit
 
+git checkout <branchname>
+
 cd .. -  go back directory 
 
 dir -  show list of all directories
@@ -260,6 +262,8 @@ Reset Type,Moves Local Repo?        Keeps Staged Code?     Keeps File Content?
 --mixed           Yes                 No                       Yes
 --hard            Yes                 No                       No
 
+
+4 step process  ---------
 Working directory - unsaved drafts of your code.
 
 git add of working directory gives staging area.
@@ -267,8 +271,10 @@ git add of working directory gives staging area.
 git commit of staging area - local repo (this is where current COMMIT lives)
 
 git push of local repo - remote repo.
+
+
  
-can lose shared history - 
+can lose shared history - git reset --hard	You force the branch to an older commit and "delete" everything after it. 
 
 git revert <commit hash>- historical state of previous commit 
 
@@ -290,8 +296,10 @@ The Side-path (my-fixed-code): When you run git switch -c my-fixed-code, you are
 
 
 
-
-
+Feature,git checkout <hash>,git revert <hash>
+History,Moves you back to an old point (Time Travel).,Adds a new point (commit) to the end of the line.
+Safety,"Puts you in ""Detached HEAD"" (temporary/ghost state).",Safe; you stay on your current active branch.
+GitHub,Usually not pushed (used for local viewing only).,Pushed to GitHub like a normal update/fix.
 
 
 

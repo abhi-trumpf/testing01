@@ -1,4 +1,0 @@
-C:\Users\narayanasamiab\source\repos\2.js\2.js\obj\Debug\net8.0\2.js.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\narayanasamiab\source\repos\2.js\2.js\obj\Debug\net8.0\2.js.AssemblyInfoInputs.cache
-C:\Users\narayanasamiab\source\repos\2.js\2.js\obj\Debug\net8.0\2.js.AssemblyInfo.cs
-C:\Users\narayanasamiab\source\repos\2.js\2.js\obj\Debug\net8.0\2.js.csproj.CoreCompileInputs.cache

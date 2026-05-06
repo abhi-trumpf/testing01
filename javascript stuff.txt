@@ -314,3 +314,41 @@ from the Map entry.*/
 Not files.
 
 .bind - returns a new function 
+
+integer array input 
+
+let numbers = [], input;
+
+while (input = prompt("Enter a number (or leave blank to stop)")) {
+    numbers.push(Number(input));
+}
+
+console.log(numbers);
+
+open correct file in visual studio code not the folder.
+
+Symbol Meaning  d-----It's a Directory (Folder).
+Node cannot run this.-a----It's an Archive (File). 
+This is what Node needs.
+
+notepad 3.js in command prompt in correct location.
+
+const args = process.argv.slice(2); 
+console.log("Input received from terminal:", args); // ADD THIS LINE
+
+const numArray = args.map(Number);  // number is the constructor 
+
+"10" becomes 10.
+
+"abc" becomes NaN (Not a Number).
+
+console.log("Converted to numbers:", numArray);
+
+1 2 3 44 55 66 i i o p po - for this ip 
+
+process.argv - takes a list of inputs.
+
+map()
+The Loop: Think of .map() as a built-in "For Each" loop. It tells JavaScript: "Go through every single item in the args array one by one".
+
+you get , [1, 2, 3, 44, 55, 66, NaN, NaN, NaN, NaN, NaN]

@@ -352,3 +352,50 @@ map()
 The Loop: Think of .map() as a built-in "For Each" loop. It tells JavaScript: "Go through every single item in the args array one by one".
 
 you get , [1, 2, 3, 44, 55, 66, NaN, NaN, NaN, NaN, NaN]
+
+
+
+args (The Caller)
+This is your starting array. In many JavaScript environments (like Node.js), args represents input data. These inputs are almost always strings by default, even if they look like numbers (e.g., ["1", "2", "3.5"]).
+
+
+.map() loops through the elements of args 1 by 1, adds the elements to the new array called numArray() n 
+const numArray = args.map(Number);
+
+Number        - function             //   Number("10") results in the value 10. 
+
+What you write	What JavaScript executes internally
+args.map(Number)	for each element, do: Number(element)   
+
+
+const numArray = args.map(Number);  numArray - the modified elements gets added to it. Number does the conversion.
+Index,Original Item (args),The Worker's Action,Result in numArray
+0,"""10""","Number(""10"")",10
+1,"""20""","Number(""20"")",20
+2,"""orange""","Number(""orange"")",NaN
+3,"""40""","Number(""40"")",40
+
+
+Number is the tool.
+
+Number() is the act of using the tool.
+
+.map() needs the tool, because it wants to be the one to use it on every item.         
+
+new Number    - Constructor function   //  new Number("10") results in [Number: 10].
+
+
+const poll = {
+  question: 'What is your fav language?',
+  options: ['0: JavaScript', '1: C#', '2: nothing'],
+  answers: [0, 0, 0], 
+
+  registerNewAnswer() {
+    // ... code for asking question ...
+  }, // <--- Comma separates methods
+
+  displayResults() {
+    // ... code for scoreboard ...
+  } // <--- Last method doesn't need a comma
+}; // <--- THIS is where you close the poll object!
+

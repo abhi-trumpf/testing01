@@ -315,5 +315,42 @@ git checkout <hash> (e.g., git checkout 11db4d9)
 
 detached head-> new branch -> clean push
 
+on being whichever temp branch you want,
+git Stash - when you cant warrant a full commit from working directory to staging area , also called as temporary shelves or stashes.  // like putting things inside a box
+
+git switch main 
+git stash pop                     // box is being opened.
+
+git remote  - kinda like bookmark.
+
+git remote -v git connections n url.
+
+git remote add <name><url>
+
+directory_name/ - ignore everything in directory.
+
+*.sql - ignore everything ending with .sql
+
+pull requests is similar to git merge.
+in open pull request,
+
+Action,Command/Location,What it actually does
+Pull,git pull origin,Moves code: Cloud → Your Laptop.
+Push,git push origin,Moves code: Your Laptop → Cloud.
+Pull Request,GitHub Website,Asks the owner to merge your code into theirs.
+
+1. The Command (git pull) = Taking  remote repo to local repo.
+
+2. The Pull Request (PR) = Giving
+A "Pull Request" is a proposal. You are going to the original owner and saying:
+
+"I have made some cool changes. Would you like to pull them into your project?"
+
+The YAML file is essentially the "Rulebook" or "Instruction Manual" for GitHub's robots.
+Only really useful for big projects with a lot of activity that needs to be done automatically - GitHub Actions
+
+ create pull request ---  basically I have made some changes and I want to add them to your branch of repo.
+
+
 
 

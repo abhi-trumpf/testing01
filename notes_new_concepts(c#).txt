@@ -1510,6 +1510,16 @@ toolkit/workbench/workspace - register
 
 task to do - opcode.
 
+If the OpCode (001) is the command, the Control Signal is the physical execution of that command. It is the "voice" of the Control Unit (The Boss).
+
+OpCode (001): The instruction (The Work Order).
+
+Decoding: The CU realizes 001 = Addition.
+
+Control Signal: The CU sends a voltage pulse down the wire.
+
+Activation: That pulse hits the ALU and physically opens the "Addition Path."
+
 1. RAM: The Warehouse (Storage)
 RAM holds everything—your code, your photos, your testing01 project files. But RAM is "far away" from the CPU. The CPU cannot do math directly on a number while it is sitting in the warehouse.
 

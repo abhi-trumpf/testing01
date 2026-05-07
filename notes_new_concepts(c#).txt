@@ -1491,13 +1491,34 @@ Tick 3: The function triggers the math circuit. Register C changes its value to 
 
 Tick 4: Move the value from Register C back to RAM.
 
-python file that has code -> bytecode->functions from python.exe - > op code (bridges the gap btw hardware and software).the OpCode is the specific electrical instruction that tells the CPU which part of its brain to use.
+python file that has code ->C program -> interpreter inside of it-> bytecode->functions from python.exe - > op code (bridges the gap btw hardware and software).the OpCode is the specific electrical instruction that tells the CPU which part of its brain to use.
 
 So, inside your python.exe file right now, there is a specific "shelf" that holds the 1s and 0s for every possible action (adding, printing, etc.). connection to opcode 
 
 If the CPU is the factory, the OpCode is the Work Order (the "what to do"),
 
 connection btw 0s and 1s and ALU,
+
+It is actually a two-way loop, but the "Command" (the flow of authority) always starts with the Control Unit (CU).Think of it like a Boss (CU) and a Machine Operator (ALU).
+
+Direction,What is moving?,Purpose
+CU → ALU,Control Signals (Voltage),Commanding the hardware to perform a specific task.
+
+This is what we've been discussing. The CU decodes the OpCode and sends Control Signals to the ALU. This is the "Push."
+
+Action: "Hey ALU, turn on the Addition circuit and use the numbers in Register A and B."
+
+Goal: To set the physical path for the electricity.
+ALU → CU,Status Flags (Conditions),Reporting the outcome of the task so the CU can make the next move.
+
+This is the part you were thinking of! The ALU sends information back to the CU, but it doesn't send "commands." It sends Flags or Status Signals.The Zero Flag: If the result of a calculation is 0, the ALU sends a signal to the CU saying "Hey, the result was zero."The Overflow Flag: If a number is too big for the "Workbench" to hold, the ALU alerts the CU.The Comparison: If you write code like if (x == y), the ALU does the math ($x - y$), and if the result is 0, it tells the CU, "They are equal!"\
+
+3. The "Decision" Loop
+Once the CU gets that signal back from the ALU, it decides what to do next in your code.
+
+ALU says: "The result was 0!"
+
+CU says: "Okay, since the result was 0, I will jump to line 50 of the code instead of line 45."
 
 1. The Call-Up (The Switchboard)
 When the Control Unit (CU) receives that 001, it doesn't "think" about addition. Instead, that specific electrical pattern is hard-wired to act as a master key. It sends a pulse down a Control Line that connects directly to the "Addition" part of the ALU.
@@ -1601,4 +1622,6 @@ Python Interpreter (CPython): You need the C program to stay there the entire ti
 
 
 modules na libraries 
+
+script - some basic code
 

@@ -352,5 +352,19 @@ Only really useful for big projects with a lot of activity that needs to be done
  create pull request ---  basically I have made some changes and I want to add them to your branch of repo.
 
 
+git pull origin <branchname>: This is the most direct way. It grabs the changes from the GitHub "Warehouse" and merges them directly into your local "Workbench".
+
+git fetch: This tells the computer: "Go look at GitHub and see if there are any new changes, but don't touch my files yet."
+
+git merge: This tells the computer: "Take the changes I just 'fetched' and combine them into my current work."
+
+git pull: This is a shortcut. It does Fetch + Merge at the same time.
+
+git pull origin <branchname>: This is the most direct way. It grabs the changes from the GitHub "Warehouse" and merges them directly into your local "Workbench".
+"Workbench" is your Local Branch.
+
+git log: show history of all the commits ah // history book of all your savepoints.
+
+
 
 

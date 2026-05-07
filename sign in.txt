@@ -26,3 +26,7 @@ latest upcoming holiday ->  14-9-26
 
 
 Pedantic means being overly concerned with small details, rules, or correctness, especially in a way that can feel unnecessary or annoying.
+
+cryptic - In the context of the programming and computer science world we've been discussing, cryptic refers to something that is mysterious, hidden, or very difficult to understand without a "key" or specialized knowledge.
+
+interpolated - plugged in.

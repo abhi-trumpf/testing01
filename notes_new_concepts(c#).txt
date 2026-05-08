@@ -1541,6 +1541,19 @@ task to do - opcode.
                                                                                                PyList_New constructor function.  constructor function - automatically assign variables to memory location when function is called acting like a constructor along with variable initialization.
 python script -> bytescript -> opcode-> vm decoding ->convert number into meaningful action -> call function - > cu->alu->cu ->memory->ssd->physical states ->reading->conversion->voltage->file saving ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Python Script (The Idea)
+
+Bytecode (The Sentence)
+
+Opcodes (The Words)
+
+VM Decoding (The Understanding)
+
+Constructor Functions (The Building)
+
+CU/ALU (The Physics/Action)
+
+SSD/Memory (The Storage)
 VM: "I just fetched the number 23 from the bytecode."
 
 Decoder: "Checking the dictionary... 23 means BINARY_ADD."
@@ -1747,7 +1760,8 @@ Inheritance,                                  None,                   Multiple, 
 Memory                 Manual,              Manual (mostly)                               Automatic                                                  Automatic
 Classes?                No,                               Yes,                                                         Yes,                                                              Yes
 Execution             ,Machine Code   ,Machine Code,                             Intermediate (CL)                           Interpreted (Bytecode)
-
+Level                low level                                                            High Level
+variables        must declare explicitly                                              dynamically assigned
 
 The Game (Your Script): This is the character moving around and the story you wrote.
 
@@ -1798,4 +1812,88 @@ allows you to write modular code,
 exceptions - listen to errors inside functions without having to rely on return value.
 
 
+a Python dictionary is an implementation of a Hash Table. - they have key:value pairs. 
+dictname[key] - it gives the value.
+
+so dictionary is a hash table which is also Associative Array. --- each dictionary is a key-value pair.
+                                             key :val              dictname[key] - it gives the value.
+
+every single time you type {} or dict() in Python, the C-engine is spinning up a new PyDictObject.
+
+return 0 on success
+return 1 on error
+
+writer = csv.writer(file) - object equals csv library contains .writer mehod to which filename 
+
+You provide the info.
+
+The Writer formats it.
+
+The File saves it.
+
+The Dict: people = {"Abhii": "123"} (Your fast-lookup storage).
+
+The File: open("file.csv", "a") (Your physical storage).
+
+The Writer: csv.writer(file) (The smart assistant).
+
+The Action: writer.writerow([name, number]) (The final handshake).
+
+writer = csv.writerow([name, number]) - less no of input 
+
+writer = csv.DictWriter(file, fieldnames=["name", "number"])  - more no of inputs 
+
+
+key:value same as key:data 
+Why we use the word "Value" instead of "Data"
+The only reason programmers use the word "Value" is that the data can be anything.
+
+It could be a String (text).
+
+It could be an Integer (number).
+
+It could even be another List or another Dictionary!
+writer.writerow([name,number]).
+
+import csv
+
+# 1. Get the user's input (storing them in variables)
+name = input("Name: ")
+number = input("Number: ")
+
+# 2. Open the file in "append" mode (so it adds to the list instead of deleting)
+with open("phonebook.csv", "a") as file:
+    
+    # 3. Hire the "Label-Reading Assistant" (DictWriter)
+    # We tell it the column names are "name" and "number"
+    writer = csv.DictWriter(file, fieldnames=["name", "number"])                 // imp SYNTAX
+ 
+    # 4. Write the data as a Dictionary (Key:Value pair)
+    # The first "name" is the label, the second name is your variable!
+    writer.writerow({"name": name, "number": number})
+
+
+Feature,C Array,Python List
+Change Size?,No (Immutable size),Yes (Mutable size)
+Change Values?,Yes (Mutable contents),Yes (Mutable contents)
+Memory Location,Stays in one spot.,Moves around in the background.
+
+for i in range(3)
+->0,1 and 2
+
+b = range(1,3,2) - up to but not including 3 , starting from 1 , jump in numbers of 2.
+
+file_reader returns everything in a file ( meaning all dictionaries)
+
+var.fieldnames returns all the names.
+
+with open("phonebook.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        # Instead of all values, just grab the one under the "number" label
+        print(row["number"])
+
+
+for (Keyword) song (Loop Variable) in (Keyword) reader (The Object):
+for var in object:
 

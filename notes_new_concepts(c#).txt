@@ -1097,10 +1097,17 @@ C# is built from the ground up to support the Object-Oriented Programming (OOP) 
 Garbage Collected (Automatic)
          
 
-C is multiple inheritance concept
+C is peer to peer connection concept
 C (Procedural / Structured Language)
 C does not have class or object keywords.
 Manually Managed
+
+
+
+C++ is the one that supports multiple inheritance.
+
+
+In Python, everything is already an object—even a simple number like 5 or a function.
 
 :wq
 
@@ -1531,6 +1538,70 @@ toolkit/workbench/workspace - register
 
 task to do - opcode.
 
+python script -> bytescript -> opcode-> vm decoding ->convert number into meaningful action -> call function - > cu->alu->cu ->memory->ssd->physical states ->reading->conversion->voltage->file saving ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+VM: "I just fetched the number 23 from the bytecode."
+
+Decoder: "Checking the dictionary... 23 means BINARY_ADD."
+
+Action: "I will now call the C function PyNumber_Add. This function will tell the CPU to move electrons through its ALU circuits to add the values in the Registers."
+
+Without the VM decoding those opcodes, the CPU would just see a bunch of random numbers and wouldn't know they were meant to be a Python program. The VM is what gives those "numbers" meaning!
+then connected to cpu physical circuits which is then connected to memory location of file where output is stored (SSD)
+
+The CPU to RAM: The Control Unit sends the result from a high-speed Register back to a specific address in RAM (Random Access Memory). This is where your "Box" (THE PyListObject) lives while the program is running.
+
+The RAM to Disk (The File): If your code says to "save" or "write" to a file, the VM calls another set of C functions (like fwrite). This tells the Operating System to move that data from the volatile RAM to the permanent Hard Drive or SSD.
+
+Physical Storage: The SSD translates those "numbers" into physical states(0s and 1s)—either trapped electrons (in flash memory) or magnetic shifts.
+
+Where is it?,"The ""1"" Physical State","The ""0"" Physical State"
+In the CPU,"High Voltage (e.g., 1.2V)",Low/No Voltage (0V)
+In the RAM,A Capacitor is Charged,A Capacitor is Empty
+In an SSD,Electrons are Trapped,Electrons are Removed
+In a Fiber Optic Cable,A pulse of Light,Darkness (No pulse)
+In an Old HDD,Magnetic North is Up,Magnetic North is Down
+
+What happens to those physical states depends entirely on the type of storage you are using. Essentially, the computer finds a way to "freeze" a 1 or a 0 into a physical material so that it stays there even when you turn the power off.
+
+1. In an SSD (Flash Memory)
+SSDs use something called a Floating Gate Transistor.
+
+The Physical State: It traps Electrons inside a microscopic cage made of high-quality insulation (oxide).
+
+What happens to them:
+
+If the "cage" is full of electrons, the sensor reads it as a 0.
+
+If the "cage" is empty, it reads it as a 1.
+
+Persistence: Because the insulation is so strong, those electrons stay trapped in that "physical state" for years. They are literally physically stuck in a tiny piece of silicon.
+
+2. In an HDD (Magnetic Hard Drive)
+The Physical State: It uses Magnetism. The surface of the disk is covered in tiny magnetic grains.
+
+What happens to them: The "Write Head" (which is an electromagnet) flies over the surface and flips the magnetic North/South poles of those grains.
+
+North pointing "Up" might be a 1.
+
+North pointing "Down" might be a 0.
+
+Persistence: Like a refrigerator magnet, once the grains are aligned, they stay that way until another magnetic force flips them back.
+
+3. How does it become a "File" again?
+When you want to open your Python code later, the process happens in reverse:
+
+Reading: The hardware senses the physical state (the trapped electrons or the magnetic field).
+
+Conversion: A controller chip converts those physical "pulses" back into Binary (1s and 0s).
+
+To RAM: Those 1s and 0s are sent back to the RAM as electrical voltages.
+
+To the VM: The Python Virtual Machine reads those numbers from RAM, recognizes them as the Opcodes we discussed, and starts the whole "meaning" process all over again.
+
+
+impppppppppppppppppppp
+
 If the OpCode (001) is the command, the Control Signal is the physical execution of that command. It is the "voice" of the Control Unit (The Boss).
 
 OpCode (001): The instruction (The Work Order).
@@ -1620,8 +1691,103 @@ C Compiler: You run a compiler once. It produces a permanent .exe file. You can 
 
 Python Interpreter (CPython): You need the C program to stay there the entire time the code is running. If you close the interpreter, the Python code stops. The interpreter is like a Live Translator who has to stand next to you and repeat everything you say in real-time.
 
+       
+
+
 
 modules na libraries 
 
 script - some basic code
+
+an array requires all items to be the same type (all integers, all strings, etc.) and often has a fixed size.
+
+In the world of Python, that is a bit of a "trick" question because of how the language is designed. The short answer is: An input is always an object, which you then usually assign to a variable.
+
+To clear this up, we have to look at how Python handles data behind the scenes.
+
+1. The Input is always an Object
+In Python, everything is an object. When a user types something into a prompt using input(), Python immediately turns that text into a String object.
+
+Even if the user types the number 42, Python sees it as the characters "4" and "2" wrapped in a string object. It stays an object regardless of whether you give it a name or not.
+
+2. The Variable is just the "Label"
+A variable is simply a name that refers to that object. Think of the object as a balloon and the variable as the string you use to hold onto it.
+
+The Object: The actual data (e.g., "Hello World") sitting in your computer's memory.  // the actual value 
+
+The Variable: The name (e.g., user_name) you use to find that data later.                          // word that is used to refer to the object.
+
+print("Hello " + input("Enter your name: ")), you are dealing with what we call an anonymous object or a temporary object.
+
+# Here, "Alice" is the Object. 
+# 'user_input' is the Variable.
+user_input = input("Enter your name: ")   
+
+so python objects are classified based on how long it lives,
+
+1. Temporary Objects (Unbound)
+These are objects that are created, used, and destroyed in a single line of code because they have no "handle" (variable).
+
+Analogy: A disposable coffee cup. You drink the coffee and throw it away immediately.
+
+Example: print("Hello " + input("enter name")). The string from the input is "thrown away" as soon as print finishes.
+
+2. Persistent Objects (Bound)
+These are objects that stay in your computer's memory (RAM) because you tied them to a variable name.   // imp
+
+Analogy: A ceramic mug. You put it on the shelf (variable name), and you can go back and refill it or use it again whenever you want.
+
+Example: name = input(). The object stays in memory as long as name exists.
+
+
+Feature                ,C,                                    C++                                                      ,C#,                                                              Python
+Paradigm                                   Procedural    Multi-paradigm,                                    OOP,                                                      OOP (Multi-paradigm)
+Inheritance,                                  None,                   Multiple,                                            Single,                                                        Multiple
+Memory                 Manual,              Manual (mostly)                               Automatic                                                  Automatic
+Classes?                No,                               Yes,                                                         Yes,                                                              Yes
+Execution             ,Machine Code   ,Machine Code,                             Intermediate (CL)                           Interpreted (Bytecode)
+
+
+The Game (Your Script): This is the character moving around and the story you wrote.
+
+The Game Engine (CPython): This is the underlying software (like Unreal Engine or Unity) that handles the physics, the gravity, and the graphics.
+
+
+Every time you create a list in Python, the C-code under the hood is actually running a command called PyList_New which stores values inside 
+PyListObject.
+
+The "Under the Hood" Mechanics
+When you write my_list = [1, 2, 3] in Python, the C-engine performs several steps:
+
+Creation: It calls the C function PyList_New.      // THIS is called a constructor function
+
+The Container: It creates a PyListObject in your RAM.
+
+The Storage: Inside that PyListObject, there is a pointer (a memory address) to an actual array of pointers. These pointers look at the objects you put in the list (the integers 1, 2, and 3).
+
+shorta ccs.
+
+
+Exactly! When you write my_list = [] in Python, you aren't just "typing a bracket." You are sending a request to the Python interpreter to run a specific piece of C code.
+
+Think of Python like a Manager and C as the Worker.
+
+Python (The Manager): "I need a new list called my_list!"
+
+C (The Worker): "Right away! I'll call the PyList_New function."
+
+Is it a "Call Function of List"?
+Not exactly a "function of the list," but rather a constructor function.
+
+Python is the steering wheel (easy for you to turn).
+
+C functions (like PyList_New) are the engine (doing the heavy mechanical work under the hood).
+
+python from python.org is called python runtime or cpython interpreter.
+
+
+The Compiler: It takes your .py file and turns it into Bytecode (a simpler version of your code that humans can't really read, but computers love).
+
+The Virtual Machine (PVM): It then "interprets" that bytecode using those C functions we talked about (like PyList_New) to actually do the work on your hardware.
+
 

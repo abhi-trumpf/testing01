@@ -32,3 +32,7 @@ Pedantic means being overly concerned with small details, rules, or correctness,
 cryptic - In the context of the programming and computer science world we've been discussing, cryptic refers to something that is mysterious, hidden, or very difficult to understand without a "key" or specialized knowledge.
 
 interpolated - plugged in.
+
+Succinct means expressing something clearly and in a few words.
+
+Summation is just a fancy mathematical word for adding a sequence of numbers together.  

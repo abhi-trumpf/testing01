@@ -1537,7 +1537,8 @@ Giant Warehouse - RAM
 toolkit/workbench/workspace - register 
 
 task to do - opcode.
-
+  bytecode is the sentence and op code is the word 
+                                                                                               PyList_New constructor function.  constructor function - automatically assign variables to memory location when function is called acting like a constructor along with variable initialization.
 python script -> bytescript -> opcode-> vm decoding ->convert number into meaningful action -> call function - > cu->alu->cu ->memory->ssd->physical states ->reading->conversion->voltage->file saving ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 VM: "I just fetched the number 23 from the bytecode."
@@ -1789,5 +1790,12 @@ python from python.org is called python runtime or cpython interpreter.
 The Compiler: It takes your .py file and turns it into Bytecode (a simpler version of your code that humans can't really read, but computers love).
 
 The Virtual Machine (PVM): It then "interprets" that bytecode using those C functions we talked about (like PyList_New) to actually do the work on your hardware.
+
+if __name == "main"
+main()   // call main function
+allows you to write modular code, 
+
+exceptions - listen to errors inside functions without having to rely on return value.
+
 
 

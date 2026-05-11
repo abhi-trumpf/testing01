@@ -368,6 +368,33 @@ git log: show history of all the commits ah // history book of all your savepoin
 
 ren "oldname.txt" "newname.rtf" - rename file_name and format.
 
+Override your version over the cloud/remote repo
+git checkout --ours "myrtffile_c#notes.rtf"
+git add "myrtffile_c#notes.rtf"
+git commit -m "Resolved conflict by keeping local version"
+git push
+
+1. --ours (Your Local Version)
+This refers to the version of the file sitting on your laptop right now.
+
+It is the code/notes you were just working on before you tried to pull.
+
+In your case, this is the version that contains your "Abhishek" name and whatever you recently typed.
+
+2. --theirs (The Remote/GitHub Version)
+This refers to the version coming from the server (GitHub).
+
+Since you are doing a git pull, "they" are the people (or the other version of you) who pushed changes to the cloud earlier.
+
+git checkout --theirs "myrtffile_c#notes.rtf"
+git add "myrtffile_c#notes.rtf"
+git commit -m "Resolved conflict by keeping remote version"
+git push
+
+override remote repo over local files
+
+when conflict arises btw local and remote repo ^
+
 
 
 

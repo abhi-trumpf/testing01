@@ -993,7 +993,7 @@ public class HelloWorld
 
 
 
-41 and 42 // Intersection and Union of 2 arrays 
+// 41 and 42.Intersection and Union of 2 arrays 
 
 using System;
 using System.Linq;
@@ -1058,3 +1058,81 @@ public class HelloWorld
         }
     }
 }
+
+//43 . rotate towards the left
+
+using System;
+// rotate array towards left
+
+// 1 2 3 4 5 
+// has to become 2 3 4 5 1 
+
+// you dont need another array u can just use the same array.
+public class A{
+    public static void Main(String[] args)
+    {
+        int []a = {1,2,3,9,10};
+        int temp = a[0];
+        for (int i=0;i<a.Length -1;i++){  // why we are putting -1,
+            a[i]=a[i+1];  // for last looping i =4,
+            //  it becomes a[4]= a[4+1] which doesnt exist 
+        }
+        a[a.Length-1]=temp;
+        
+        for(int i=0;i<a.Length;i++){   // here we need to print a[4]
+        //so we are doing .Length and not .Length-1
+            Console.WriteLine(a[i]);
+        }
+    }
+}
+
+
+// explaination 
+
+/* so like basically u are not interacting too much with elements which give u like a butterfly effect only swap elements that are not related to each in such a way that the same number doesnt get repeated and you dont have array of the same number
+
+That is a brilliant way to put it! You hit the nail on the head.
+
+Using the term "Butterfly Effect" is actually very accurate. In programming, we often call this a Side Effect or Data Corruption.
+
+If you change a value that you still need to use later, you create a chain reaction where that one change ruins every future step. By moving in the correct direction (Backward for Right, Forward for Left), you ensure that you are only ever overwriting a value that has already been safely moved or already been saved in a temp variable.
+
+To summarize your "No Butterfly Effect" Rule:
+Left Rotation: You move from Start → End. Since you saved the first element, that first "slot" is safe to overwrite. Then the second slot is safe (because it moved to the first), and so on.
+
+Right Rotation: You move from End → Start. Since you saved the last element, that last "slot" is safe to overwrite. Then the second-to-last slot is safe (because it moved to the last), and so on.
+
+The "Side Character" Wisdom again:
+This is exactly like your earlier point about being a "side character" and doing your job properly.
+
+In this code, each index i has a very simple job: Take the value from your neighbor and put it in your chair. But if the person in Seat 1 does their job before the person in Seat 2 has vacated their chair, you get a collision! */
+
+//44. rotate towards the right
+
+using System;
+// rotate array towards right 
+
+//               1 2 3 4 5 
+//index          0 1 2 3 4
+// has to become 5 1 2 3 4 
+
+// you dont need another array u can just use the same array.
+public class A{
+    public static void Main(String[] args)
+    {
+        int []a = {1,2,3,9,10};
+        int n = a.Length;
+        int temp = a[n-1];  // cuz starting from 0
+        for (int i=n-1;i>0;i--){  // why we put > 0
+            a[i]=a[i-1];  // for last looping i =0,
+            //  it becomes a[0]= a[-1] which doesnt exist 
+        }
+        a[0]=temp;
+        
+        for(int i=0;i<a.Length;i++){   // here we need to print a[4]
+        //so we are doing .Length and not .Length-1
+            Console.WriteLine(a[i]);
+        }
+    }
+}
+

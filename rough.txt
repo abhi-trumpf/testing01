@@ -1,0 +1,54 @@
+rough
+
+
+a)Completed 4 problems 
+Remove duplicates
+move zeros towards the end.
+Check if array is sorted
+Merge two arrays
+
+nc - numerical control 
+
+
+
+char *name is a string in c 
+
+
+
+1. Array Syntax Error
+Error: int a = [1,2,3,9,10];
+Fix: In C#, you must use curly braces {} to initialize an array, and you must include the square brackets [] after the variable type.
+
+int[] a = {1, 2, 3, 9, 10};
+Case Sensitivity: C# is very strict. It must be .ToArray(), not .toarray().
+
+arr3.Length - property - exists
+
+arr3.Length() - method - does not exist
+
+Use .Count (no parentheses) for Lists.
+
+Use .Count() only when you have a complex LINQ query (like arr1.Where(x => x > 10).Count()) where you don't already have a simple array or list.
+
+arr1.Sort(); ->Error (This only works for List<T>).Array.Sort(arr1); -> Correct for Arrays.
+
+Yes, you can think of .Count() as a slower, "heavier" version of .Length when you're dealing specifically with arrays.
+
+
+
+
+
+Chapter 5 - Sheet Metal
+parts of Sheet Metal - ram drive ,machine drive hydraulic punching head and tool adapter
+Removing the parts
+Tools and workpiece 
+Machine Costs
+
+
+
+
+Part Name,What it does
+Punching Head,The overall container for the punching mechanism.
+Hydraulic Drive,The power source (Machine Drive) that generates the force.
+Ram,The moving part that transmits that force to the tool.
+Tool Adapter,The part that physically holds and clicks the tool into place.

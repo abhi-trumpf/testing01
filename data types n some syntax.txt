@@ -85,3 +85,4 @@ arr1.Sort(); ->Error (This only works for List<T>).Array.Sort(arr1); -> Correct 
 Yes, you can think of .Count() as a slower, "heavier" version of .Length when you're dealing specifically with arrays.
 
 
+hiii

@@ -366,5 +366,8 @@ git pull origin <branchname>: This is the most direct way. It grabs the changes 
 git log: show history of all the commits ah // history book of all your savepoints.
 
 
+ren "oldname.txt" "newname.rtf" - rename file_name and format.
+
+
 
 

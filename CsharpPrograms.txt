@@ -1087,9 +1087,9 @@ public class A{
 }
 
 
-// explaination 
+// explanation 
 
-/* so like basically u are not interacting too much with elements which give u like a butterfly effect only swap elements that are not related to each in such a way that the same number doesnt get repeated and you dont have array of the same number
+/* so like basically u are not interacting too much with elements which give u like a butterfly effect only swap elements that are not related to each in such a way that the same number doesn't get repeated and you don't have array of the same number
 
 That is a brilliant way to put it! You hit the nail on the head.
 
@@ -1125,7 +1125,7 @@ public class A{
         int temp = a[n-1];  // cuz starting from 0
         for (int i=n-1;i>0;i--){  // why we put > 0
             a[i]=a[i-1];  // for last looping i =0,
-            //  it becomes a[0]= a[-1] which doesnt exist 
+            //  it becomes a[0]= a[-1] which doesn't exist 
         }
         a[0]=temp;
         
@@ -1135,4 +1135,6 @@ public class A{
         }
     }
 }
+
+//45. 
 

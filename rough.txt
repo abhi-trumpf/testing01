@@ -36,3 +36,70 @@ Punching Head,The overall container for the punching mechanism.
 Hydraulic Drive,The power source (Machine Drive) that generates the force.
 Ram,The moving part that transmits that force to the tool.
 Tool Adapter,The part that physically holds and clicks the tool into place.
+
+
+
+
+
+
+
+using System;
+
+
+namespace CodingPractise.CsharpCoding
+{
+    public class SwapNumbers
+    {
+        public static void Run()
+        {
+            Console.WriteLine("enter n1");
+            int n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter n2");
+            int n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Values before swapping are {n1} and {n2}\n");
+            n1 = n2;
+            Console.WriteLine($"Values after swapping are {n1} and {n2}\n");
+        }
+    }
+}
+
+
+
+
+
+using System;
+
+namespace CodingPractise.CsharpCoding
+{
+    public class SwapNumbers
+    {
+        public static void Run()
+        {
+            Console.WriteLine("Enter n1:");
+            int n1 = int.Parse(Console.ReadLine() ?? "0");
+
+            Console.WriteLine("Enter n2:");
+            int n2 = int.Parse(Console.ReadLine() ?? "0");
+
+            Console.WriteLine($"Values before swapping are: {n1} and {n2}");
+
+            // The actual swap logic
+            int temp = n1;
+            n1 = n2;
+            n2 = temp;
+
+            Console.WriteLine($"Values after swapping are: {n1} and {n2}");
+        }
+    }
+}
+
+
+C:\NewProject\CodingPractise\CodingPractise\CsharpCoding
+
+file path
+
+
+
+
+
+

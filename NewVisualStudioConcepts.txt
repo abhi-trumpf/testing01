@@ -1,0 +1,345 @@
+(Project Properties > Application) and set the Startup object back to (Not set).
+
+Setting it to (Not set): By doing this in image_e1dd15.png, you are telling Visual Studio to stop looking for a formal "Startup Object."
+
+
+
+
+
+int n1 = int.Parse(Console.ReadLine() ?? "0"); means?
+
+Console.ReadLine()
+This part grabs whatever the user types into the terminal. However, the compiler knows that a user might press Ctrl+Z or that the input might be empty, which would return null.
+
+?? "0" (The Null-Coalescing Operator)
+This is a safety net. It says: "If the stuff on the left is null, use the string "0" on the right instead".
+
+This removes the "Possible null reference" green squiggle you were seeing in image_e177b1.png because it guarantees that a string (even if it's just "0") is passed forward.
+
+int.Parse(...)
+This takes that string (like "10" or our safety "0") and converts it into an actual integer number that you can use for math or logic (like n1 > n2).
+
+
+using System;
+
+namespace CodingPractise.CsharpCoding
+{
+    public class EvenOrOdd
+    {
+        // Added 'static' so you can call it easily from Program.cs
+        public static void Run() 
+        {
+            Console.WriteLine("Enter a number:");
+
+            // Use the ?? "0" safety net to prevent null crashes
+            string input = Console.ReadLine() ?? "0";
+            
+            // TryParse is even safer, but for now, the safety net is a great start
+            int n = int.Parse(input);
+
+            if (n % 2 == 0) 
+            {
+                Console.WriteLine("Even");
+            }
+            else 
+            {
+                Console.WriteLine("Odd");
+            }
+        }
+    }
+}
+How the "Safety Net" WorksThe ?? operator acts like a fork in the road for your data:Path A: User types "10" $\rightarrow$ Console.ReadLine() is "10" $\rightarrow$ Use "10".Path B: User types nothing $\rightarrow$ Console.ReadLine() is null $\rightarrow$ Use "0".
+
+
+
+In C#, there is no strict rule like in Java where the file name must match the class name. However, in the professional world, the answer is a very strong yes.
+
+
+The "Invisible" Input (Most Common)
+If your code uses Console.ReadLine() or Console.ReadKey(), the program will stay "running" forever until you type something and press Enter. If you don't see a prompt, it looks like it's frozen.
+
+The Fix: Always add a Console.WriteLine before your input so you know the program is waiting for you.
+
+C#
+Console.WriteLine("Please enter a number:"); // Tell the user what to do
+string input = Console.ReadLine(); 
+2. The Infinite Loop
+If you are using a while or for loop to check for even/odd numbers, you might have created a loop that never ends because the exit condition is never met.
+
+Broken Code:
+
+C#
+int i = 1;
+while (i > 0) { // This is always true!
+    // logic here
+}
+The Fix: Ensure your loop variable changes or use a specific exit condition.
+
+3. Terminal Persistence in IDEs
+In some environments (like Visual Studio), the console window stays open after the code finishes so you can read the output. It isn't actually "running"; it's just "waiting to close."
+
+
+
+How to Force Stop
+If your program is currently stuck:
+
+In the Terminal: Press Ctrl + C.
+
+In Visual Studio: Press Shift + F5.
+
+In VS Code: Click the Red Square on the floating debug toolbar.
+
+
+
+Looking strictly at our progress today, you moved past simple logic and into the territory of **Software Architecture** and **Professional Environment Management**.
+
+Here are the specific new concepts you mastered today:
+
+### **1. Structural Organization (The "Toolbox" Pattern)**
+
+* **Decoupling Logic:** You moved away from putting all your code in one place. Instead, you learned to wrap specific tasks (like `SwapNumbers` or `ReverseNumber`) into their own dedicated **Classes**.
+* **Static Method Invocation:** You used `public static void Run()` to make your code accessible without needing to create new object instances every time, which is a key step in understanding memory and access modifiers.
+* **Namespace Management:** You learned how to organize these classes under a single **Namespace** (`CodingPractise.CsharpCoding`) so they can "see" each other and work together.
+
+### **2. The Entry Point Concept**
+
+* **Entry Point Resolution:** You solved the **CS5001** error by understanding that a program needs one (and only one) "Leader" file—your `Program.cs`— to call your other classes.
+* **Top-Level Statements:** You learned that code living outside of a class is a special "Top-Level" instruction that tells the computer where to start.
+
+### **3. Advanced Input Safety**
+
+* **The Null-Coalescing Operator (`??`):** You learned to use the "Safety Net" (`?? "0"`) to prevent **NullReferenceExceptions** when `Console.ReadLine()` returns nothing.
+* **Input Validation Logic:** You explored the difference between simply parsing data and using `int.TryParse` to check if input is "garbage" before the program tries to process it.
+
+### **4. Git Environment Cleanup**
+
+* **Permission Conflict Resolution:** You learned that IDEs like Visual Studio lock files (like those in the `.vs` folder), preventing Git from indexing them.
+* **The `.gitignore` File:** You discovered the professional way to keep your GitHub repository clean by telling Git to ignore temporary, computer-specific files.
+
+### **5. Comparative Logic**
+
+* **Math Library Efficiency:** You learned that built-in methods like `Math.Max` can replace complex `if-else` chains, making your code more readable and less prone to errors with equal numbers.
+
+
+
+
+
+Visual Studio Project Hierarchy Notes    ---- look at HierarchyOfVisualStudio in Screenshots,
+LEVEL: Solution
+
+ITEM: CodingPractise
+
+ICON: Purple "SLN" icon at the very top
+
+LEVEL: Project
+
+ITEM: CodingPractise
+
+ICON: Green C# box icon
+
+LEVEL: Folder
+
+ITEM: CsharpCoding
+
+ICON: Traditional yellow folder icon
+
+LEVEL: File
+
+ITEM: SwapTwoNumbers.cs
+
+ICON: Paper icon with a small C# logo
+
+LEVEL: Class
+
+ITEM: SwapTwoNumbers & Program
+
+ICON: Blue/Cyan box icon (inside the file)
+
+
+
+
+Solution	CodingPractise	Purple "SLN" icon at the very top
+Project	CodingPractise	Green C# box icon
+Folder	CsharpCoding	Traditional yellow folder icon
+File	SwapTwoNumbers.cs	Paper icon with a small C# logo
+Class	SwapTwoNumbers	Blue/Cyan box icon (inside the file)
+
+
+
+
+MOST OPTIMISED - 1 class 1 Main 1 Run  - this itself has 2 ways.
+
+
+class Program 
+{
+    public static void Main(string[] args) {
+        Run(); // No class name needed since it's in the same class
+    }
+
+    public static void Run() {
+        // Swap logic here
+    }
+}
+
+
+2 ways to do it in Visual Studio 
+
+Direct call 
+
+using System;
+
+namespace CodingPractise.      //<solutionname>,<foldername>
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // DIRECT CALL: Just use the method name
+            RunSwap(); 
+
+            Console.ReadKey();
+        }
+
+        // The keyword 'static' makes this a Direct Call method
+        public static void RunSwap()
+        {
+            int a = 10, b = 20;
+            Console.WriteLine("--- Static / Direct Call ---");
+            Console.WriteLine($"Swapping {a} and {b}...");
+            
+            int temp = a;
+            a = b;
+            b = temp;
+
+            Console.WriteLine($"Result: a = {a}, b = {b}");
+        }
+    }
+}
+
+
+The Object Call
+
+using System;
+
+namespace CodingPractise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // OBJECT CALL:
+            // 1. Create the object using 'new'
+            Program myApp = new Program(); 
+
+            // 2. Use the object to call the method
+            myApp.RunSwap(); 
+
+            Console.ReadKey();
+        }
+
+        // No 'static' keyword here. This belongs to the OBJECT.
+        public void RunSwap()
+        {
+            int a = 10, b = 20;
+            Console.WriteLine("--- Instance / Object Call ---");
+            Console.WriteLine($"Swapping {a} and {b}...");
+
+            int temp = a;
+            a = b;
+            b = temp;
+
+            Console.WriteLine($"Result: a = {a}, b = {b}");
+        }
+    }
+}
+
+
+change branch from main to GreatestOfThreeNumbers , make changes and commit back to GreatestOfThreeNumbers.
+
+git fetch origin
+
+git checkout feature/GreatestOfThreeNumbers  ---- 
+
+
+errors
+The Missing Bracket (CS1022) 
+
+
+
+Ctrl + K then Ctrl + D --- for fixing current syntax in the prompt.
+
+Create a separate class called Program or whatvr but call all your programs within that class.
+
+we will start with normal switch case then move onto dictionaries ig ?
+
+
+
+Empty String (""): You have a box, but it’s empty inside.
+
+Null String (null): You don't even have a box.
+
+
+
+
+string choice = Console.ReadLine() ?? "";
+
+Exactly. Think of it as a safety net.  ---- to prevent program from crashing .
+
+User Action,ReadLine() Result,choice value,Program Outcome
+"Types ""1""","""1""","""1""",Swaps numbers
+"Types ""yes""","""yes""","""yes""","Shows ""Invalid selection"""
+Hits Enter,""""" (Empty)","""""","Shows ""Invalid selection"""
+System Error,null,""""" (Backup)","Shows ""Invalid selection"" (No Crash!)"
+
+
+The message "exited with code 0 (0x0)" is the computer's way of telling you that the program ran exactly as intended, with zero errors or crashes.
+
+
+1. Console.ReadLine()
+This captures whatever the user types as a string. Even if they type 10, the computer sees it as text (a "string") first, not a number
+
+2. int.TryParse(..., out int n1)
+This is the "Safety Guard." It tries to convert that text into an actual integer.
+
+The "Try" part: If the user types a valid number like 5, it succeeds.
+
+The "out int n1" part: If it succeeds, it creates a new integer variable named n1 and puts the value 5 inside it.
+
+The "False" part: If the user types "hello" or leaves it empty, it doesn't crash; it simply returns false.
+
+3. if (! ... ) return;
+The ! means NOT. This part handles the "What if it fails?" scenario.
+
+Logic: "If the conversion was NOT successful, then return (stop everything)."
+
+The "return" command: This immediately exits the current method. In your code, if someone types "abc" instead of a number, the program will just stop or go back to the menu instead of exploding with an error.
+
+
+Code Style,"If user types ""abc""",Result
+int n = int.Parse(Console.ReadLine());,CRASH,Program stops with an exception.
+"if (!int.TryParse(..., out int n1)) return;",STABLE,Program exits the method safely.
+
+
+if (!int.TryParse(Console.ReadLine(), out int a)) 
+{
+    Console.WriteLine("Invalid input for a. Please enter a number.");
+    return; // Stops the method safely
+}
+
+ye if input is correct -> true -> !true ->false -> the statement inside condition wont get executed and only the value will be assigned aka from string to integer ( conversion happens)
+
+Creating and changing branch ,
+
+Switch to Main: git checkout main
+
+Update Local Code: git pull origin main
+
+after creating a new branch,
+Create New Branch: git checkout -b EvenOrOdd  // imp syntax.
+
+if one branch is deleted from remote repo but it still exists in local repo, 
+Switch to main first: git checkout main
+
+Delete the local branch: git branch -D EvenOrOdd
+
+

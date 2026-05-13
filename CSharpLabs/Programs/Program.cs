@@ -20,6 +20,8 @@ class Program
         {
             Console.WriteLine("correct input");
         }
+    }
+}
             /*
             string choiceInput = Console.ReadLine();
             int choice;

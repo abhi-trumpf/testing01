@@ -334,12 +334,22 @@ Switch to Main: git checkout main
 
 Update Local Code: git pull origin main
 
-after creating a new branch,
+after creating a new branch,   // in GitHub branch area type feature/branchname to create a new Branch. 
+
 Create New Branch: git checkout -b EvenOrOdd  // imp syntax.
+
+//The -b part (The Creation): It tells Git to take the exact code from your current branch and create a brand-new branch named EvenOrOdd.
+
+The checkout part (The Move): It immediately moves your HEAD pointer (your "active workspace") from where you were (likely main) onto this new branch.
+
+
 
 if one branch is deleted from remote repo but it still exists in local repo, 
 Switch to main first: git checkout main
 
 Delete the local branch: git branch -D EvenOrOdd
+
+
+git remote add origin https://github.com/abhi-trumpf/CodingPractise.git - assuming that codingpractise is the name of my local FOLDER.
 
 

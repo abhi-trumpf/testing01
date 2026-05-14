@@ -355,108 +355,39 @@ Delete the local branch: git branch -D EvenOrOdd
 git remote add origin https://github.com/abhi-trumpf/CodingPractise.git - assuming that codingpractise is the name of my local FOLDER.
 
 
-It looks like you've been doing some serious "under the hood" comparisons! You’ve captured the transition from the strict, manual world of C and C# into the more flexible, readable world of Python perfectly.
 
-Here is a refined version of your notes, organized for quick reference and technical clarity.
-
----
-
-1. Programming Paradigms: C vs                                                                       . Python
-While both can follow a procedural flow (step-by-step instructions),they handle execution and data very differently.
-Feature,C (Strict Procedural),                                                                    Python (Hybrid/Multi-Paradigm)
-Primary Focus,Functions & Procedures. Data is separate from the logic.                           ,Objects & Functions. Data and logic are often bundled together.
-Execution,Compiled. Converted to machine code before running. High speed.                        ,Interpreted. Code is read line-by-line at runtime. Highly portable.
-Memory,"Manual. You allocate and free RAM yourself (e.g., malloc)."                               ,"Automatic. Uses a ""Garbage Collector"" to manage memory for you."
-Structure,Requires a main() function to start.                                                ,Can run scripts top-to-bottom without a main() function.
-
----
-
-/* 
- * ------------------------------------------------------------------------------------------
- *  PROGRAMMING LANGUAGES COMPARISON CHEAT SHEET
- * ------------------------------------------------------------------------------------------
- *  Feature       | C                 | C++               | C#                | Python
- * ------------------------------------------------------------------------------------------
- *  Paradigm      | Procedural        | Multi-paradigm    | OOP               | OOP (Multi)
- *  Inheritance   | None              | Multiple          | Single            | Multiple
- *  Memory        | Manual            | Manual (mostly)   | Automatic (GC)    | Automatic (GC)
- *  Classes?      | No                | Yes               | Yes               | Yes
- *  Execution     | Machine Code      | Machine Code      | Intermediate (IL) | Interpreted
- *  Level         | Low Level         | Mid/High Level    | High Level        | High Level
- *  Variables     | Explicit Declare  | Explicit Declare  | Explicit Declare  | Dynamic
- * ------------------------------------------------------------------------------------------
- */
+# --- THIS LINE SKIPS THE FIRST ROW ---
+    next(reader)
 
 
-
-Garbage Collection in python example,
-How the Garbage Collector Works
-The GC is like a background cleanup crew that follows two main rules:
-
-Reference Counting: Python keeps track of how many things are "pointing" to an object.
-
-If you create a list my_list = [1, 2, 3], the count is 1.
-
-If you then say my_list = None, the count drops to 0.
-
-The Cleanup: Once the count hits zero, the Garbage Collector realizes no one is using that data anymore. It immediately "sweeps" it away and frees up that RAM for other parts of your program.
+.DictReader() - no need to use next(reader) cuz 1 st row automatically gets skipped.
 
 
-## 2. Object-Oriented Programming (OOP) Essentials
+Instead of saying "Give me the second item in the list," which is confusing, we use the label.
 
-Even though Python is procedural, it treats everything as an **Object**. You noted the core mechanics of how these are born:
+Without labels: favorite = row[1] (The Chef has to remember that the language is in slot #1).
 
-* **Object Creation:** In low-level terms (like the `PyList_New` example you found), it's a two-part act:
-1. **Memory Allocation:** The system carves out a spot in the **RAM**.
-2. **Initialization:** The **Constructor** sets the starting values for variables.
+With labels: favorite = row["language"] (The Chef just reads the sign on the shelf).
 
 
-* **Constructors:**
-* **C#:** Uses the class name (e.g., `public MyClass()`).
-* **Python:** Uses the special `__init__` method.
+this row is organized like a ---------------------------------------------LABELLED SHELF ----------------------------------->  row["language"]
+
+format as f string
+print(f"hi {name}");
+
+favourite = row["language"]
+labelled shelf version of keys in dictionaries
+
+The term "labelled shelf version" is not a standard industry term in computer science or software engineering. However, it is a fantastic analogy for understanding how dictionaries work under the hood.
 
 
-* **Hardware Flow:** You’ve correctly identified the data pipeline:
-> **RAM** (Storage) $\rightarrow$ **Memory Register** (Waiting Room) $\rightarrow$ **CPU** (Execution/Calculation).
+Database - piece of software that stores a whole bunch of data.
+
+
+Exactly! sqlite3 is the command-line interface (and the name of the engine version) used to interact with SQLite databases. When you see someone type sqlite3 my_database.db in a terminal, they are telling the computer: "Open the SQLite version 3 engine and point it at the file named my_database.db."
 
 
 
----
-
-## 3. Syntax Comparison: Python vs. C#
-
-Python is designed to be "executable pseudocode." It removes the "boilerplate" (extra symbols) required by C#.
-
-| Feature | **C# / C (The "Strict" Style)** | **Python (The "Readable" Style)** |
-| --- | --- | --- |
-| **Typing** | `int x = 5;` (Static) | `x = 5` (Dynamic) |
-| **End of Line** | Semicolons are mandatory (`;`) | New line ends the command |
-| **Code Blocks** | Defined by curly braces `{ }` | Defined by **Indentation** and `:` |
-| **Logic** | `&&`, ` |  |
-| **Boolean** | `true` / `false` | `True` / `False` |
-
----
-
-## 4. Data Structures: Lists vs. Arrays
-
-This is where your work on **Linked Lists** and **Arrays** connects to high-level languages.
-
-* **Fixed vs. Dynamic:** In C#, a standard `Array` is fixed in size. In Python, a `List` is dynamic; it grows and shrinks automatically as you add items.
-* **Python "Lists":** Python doesn't call them arrays by default because they can hold different types of data at once (a string, an int, and a float all in one list).
-* **Iteration (Loops):**
-* **C#:** `foreach (var item in list)`
-* **Python:** `for item in list:` (Much closer to plain English).
-
-
-
----
-
-## 5. Key Concept Bridges
-
-* **Header Files $\rightarrow$ Modules:** In C/C#, you use `#include` or `using`. In Python, you `import` modules.
-* **Compiled vs. Interpreted:** This is why Python feels "slower" but "easier." C# is compiled into an intermediate language (IL), while Python is translated on the fly.
-
----
 
 
 

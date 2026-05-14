@@ -371,6 +371,23 @@ Structure,Requires a main() function to start.                                  
 
 ---
 
+/* 
+ * ------------------------------------------------------------------------------------------
+ *  PROGRAMMING LANGUAGES COMPARISON CHEAT SHEET
+ * ------------------------------------------------------------------------------------------
+ *  Feature       | C                 | C++               | C#                | Python
+ * ------------------------------------------------------------------------------------------
+ *  Paradigm      | Procedural        | Multi-paradigm    | OOP               | OOP (Multi)
+ *  Inheritance   | None              | Multiple          | Single            | Multiple
+ *  Memory        | Manual            | Manual (mostly)   | Automatic (GC)    | Automatic (GC)
+ *  Classes?      | No                | Yes               | Yes               | Yes
+ *  Execution     | Machine Code      | Machine Code      | Intermediate (IL) | Interpreted
+ *  Level         | Low Level         | Mid/High Level    | High Level        | High Level
+ *  Variables     | Explicit Declare  | Explicit Declare  | Explicit Declare  | Dynamic
+ * ------------------------------------------------------------------------------------------
+ */
+
+
 
 Garbage Collection in python example,
 How the Garbage Collector Works

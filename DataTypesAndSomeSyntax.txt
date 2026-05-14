@@ -725,3 +725,13 @@ row: This is the current row the Magnifying Glass is looking at. Since we used D
 ["language"]: The Chef reaches onto the shelf labeled "language" and grabs whatever is there (e.g., "C" or "Python").
 
 favorite = ...: He puts that value into the favorite room so he can use it for the print() command on the next line.
+
+
+
+
+
+'h%' → Starts with h. (Matches "hello", "hashing", "heart")
+
+'%h' → Ends with h. (Matches "graph", "math", "search")
+
+'%h%' → Contains h anywhere. (Matches "alphabet", "python", "light")

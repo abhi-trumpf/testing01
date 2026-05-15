@@ -271,6 +271,9 @@ Imagine you are organizing your **Testing01** project:
 Von Neumann Architecture through the lens of a 3D house.
 
 
+Before this, computers were basically giant calculators that had to be physically re-wired to change tasks. John von Neumann came up with a way to store the instructions (your code) and the data (your numbers/text) in the same memory.
+
+
 Here is the **3D Computer House** diagram and the "EZ" explanation to connect every piece we’ve talked about.
 
 ### The 3D House Diagram

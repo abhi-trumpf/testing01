@@ -538,7 +538,9 @@ This is the highway. When the Chef needs to work:
 * **Bulbs:** The raw energy (Electricity).
 * **Parking Slot / Mailbox:** The physical container for 8 bulbs (**Byte**).
 * **Address:** The "Number" painted on the parking slot so the Chef can find it.
-* **Hologram Room:** The "Meaning" (Is it a name? A number? A command?).
+* **Reciple Room:
+* **The Ingredient Room 
+* **Hologram Room:** The "Meaning" (Is it a name? A number? A command?).//
 * **Chef:** The only one who can actually change a bulb from **Off** to **On**.
 * **Conveyor Belt:** How the "Electricity" moves between the outside (RAM) and the inside (CPU).
 
@@ -738,3 +740,22 @@ favorite = ...: He puts that value into the favorite room so he can use it for t
 '%h' → Ends with h. (Matches "graph", "math", "search")
 
 '%h%' → Contains h anywhere. (Matches "alphabet", "python", "light")
+
+
+
+ORDER BY is the command used to sort the results of your query.
+
+1. The Transaction (The Container) ---- // KINDA LIKE SCRATCHPAD
+A Transaction is a boundary you wrap around a group of SQL commands. It tells the database: "Treat all these commands as a single, indivisible unit of work. Either all of them succeed, or none of them do."
+•	When you type BEGIN TRANSACTION;, you are essentially opening up a private scratchpad.
+•	Nothing you do inside this transaction is permanent yet, and no one else in your team or application can see your changes.
+2. Locking a Row (The Protection)
+The moment you try to update or delete a specific row inside your active transaction, the database automatically steps in and places a Lock on that specific row.
+•	Why? To prevent a double-booking nightmare. If you are changing a show's rating in row #5, the lock tells other users: "Hands off! I am modifying this right now. You have to wait."
+•	If another teammate tries to update row #5 at the same exact time, their SQL query will pause and wait patiently for your lock to be released.
+3. Committing (The Final Push)
+A Commit is the final step that ends the transaction. When you run the COMMIT; command, two things happen instantly:
+•	The changes become permanent: Your edits are officially written to the database disk for everyone to see.
+•	The locks are released: The database removes the lock on the row, allowing other people's waiting queries to finally go through.
+
+Lil bit of SQL

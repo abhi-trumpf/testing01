@@ -874,7 +874,7 @@ Here is the **100% Pakka, corrected version** of your exact workflow and explana
 
 ### 🌟 THE CORRECTED WORKFLOW & EXPLANATION
 
-#### 1. The Stack Room (The Fast Notepad)
+#### 1. The Stack Room (The Fast Notepad)  - Untouched by the Garbage Collector: The Garbage Collector robot only patrols the Heap floor. It never touches, scans, or cleans the Stack room.
 
 * **Corrected Concept:** You **ARE** 100% allowed to change and modify memory inside the Stack!
 * **Explanation:** When you write a loop like `for (int i = 0; i < 10; i++)` or change a variable like `rem = 5;`, that data is living on the Stack and you are changing it constantly.

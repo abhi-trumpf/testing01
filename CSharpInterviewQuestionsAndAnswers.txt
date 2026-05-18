@@ -1,0 +1,113 @@
+## 🛠️ The Git & Workflow Pillar
+
+> **The Big Picture:** Git tracks changes on your machine; GitHub shares them with the world.
+
+### 1. The Local vs. Remote Flow (`commit` vs. `push`)
+
+* **The Question:** What is the difference between `git commit` and `git push`?
+* **The Pro Answer:** `git commit` is local; `git push` is global. When you commit, you are taking a snapshot of your changes and saving them safely in your local history. When you push, you are uploading those local snapshots to a remote server like GitHub so your team can access them.
+
+### 2. Getting Remote Changes (`fetch` vs. `pull`)
+
+* **The Question:** What is the difference between `git fetch` and `git pull`?
+* **The Pro Answer:** `git fetch` is safe and passive; `git pull` is active and automatic. Fetch just downloads the latest tracking data from GitHub to let you see what your team has done, but it *doesn't* touch your actual working files. Pull does two things at once: it fetches the data **and** immediately merges it into your local code, updating your files on the spot.
+* **Pro Tip Equation:** `git pull` = `git fetch` + `git merge`.
+
+### 3. Combining Code (`merge` vs. `pull`)
+
+* **The Question:** What is the difference between `git merge` and `git pull`?
+* **The Pro Answer:** `git merge` is how you combine two branches that are *already* on your local machine (like merging your feature branch into main). `git pull` is how you grab code from the *remote* GitHub server and merge it into your current local branch.
+
+### 4. Moving Around (`checkout` vs. `switch`)
+
+* **The Question:** How do you move between branches in Git?
+* **The Pro Answer:** You use `git switch <branch-name>`. You can also use `git checkout`, but `switch` is the modern, dedicated command just for moving between branches, making it cleaner to use.
+
+### 5. Collaboration Tools (Pull Requests & Actions)
+
+* **The Question:** What are Pull Requests and GitHub Actions?
+* **The Pro Answer:** A **Pull Request (PR)** is a checkpoint for code review—it’s how you ask your team to check your branch before it gets merged into the main project. **GitHub Actions** is automation; it automatically runs scripts (like building your C# code or running tests) every time you create a PR or push code, ensuring nothing is broken.
+
+---
+
+## 💻 The C# Architecture Pillar
+
+> **The Big Picture:** C# manages memory for you, but you need to know *where* things live to write fast code.
+
+### 6. Value vs. Reference Types (`struct` vs. `class`)
+
+* **The Question:** What is the difference between a Class and a Struct?
+* **The Pro Answer:** It comes down to memory allocation. A **Struct** is a *value type* stored on the Stack (ultra-fast, holds the actual value, copied by value). A **Class** is a *reference type* stored on the Heap (holds a pointer to the data, copied by reference). Use structs for tiny, unchanging data like coordinates, and classes for complex business logic.
+
+### 7. Life & Death of an Object (Constructors vs. Destructors)
+
+* **The Question:** What do constructors and destructors do?
+* **The Pro Answer:** A **Constructor** is the birth of an object—it runs automatically to set up initial data when you call `new`. A **Destructor** is the preparation for death—it handles any final cleanup right before the system completely destroys the object.
+
+### 8. Handling Text (`string` vs. `stringbuilder`)
+
+* **The Question:** Why use `StringBuilder` over `string`?
+* **The Pro Answer:** Strings in C# are *immutable* (unchangeable). Every time you modify a string, C# secretly deletes the old one and creates a brand-new one in memory, which is incredibly slow. `StringBuilder` is *mutable*; it creates a dynamic buffer where you can add or change text directly without destroying and recreating objects.
+
+### 9. Memory Shifting (Boxing vs. Unboxing)
+
+* **The Question:** What is Boxing and Unboxing?
+* **The Pro Answer:** **Boxing** is taking a value type (like an `int`) and wrapping it up inside a reference type (`object`) so it can live on the heap. **Unboxing** is ripping that value back out of the object. Avoid doing this in heavy loops because it causes huge performance drops!
+
+### 10. Parameters (`ref` vs. `out`)
+
+* **The Question:** What is the difference between `ref` and `out`?
+* **The Pro Answer:** Both let you pass a variable into a method by reference, meaning modifications inside the method change the original variable. The rule is: a `ref` variable **must** have a value before you pass it in. An `out` variable doesn't need a value beforehand, but the method **must** assign it a value before it finishes.
+
+### 11. Blueprints (`interface` vs. `abstract class`)
+
+* **The Question:** When do you use an Interface vs. an Abstract Class?
+* **The Pro Answer:** An **Interface** is a strict contract with *no implementation*—it tells a class *what* to do, but not *how* to do it (perfect for decoupling code). An **Abstract Class** is a partially built parent class—it can provide shared, ready-to-use code *and* define abstract methods that children must override.
+
+### 12. Automatic Cleanup (The `using` Statement & GC)
+
+* **The Question:** What do Garbage Collection and the `using` statement do?
+* **The Pro Answer:** The **Garbage Collector (GC)** is a background cleaner that automatically deletes objects on the heap when no code is using them anymore. The **`using` statement** is for unmanaged resources (like files or database connections) that the GC doesn't fully control; it guarantees those connections close instantly the moment the code block ends.
+
+---
+
+## 🧠 The Data Structures Pillar
+
+> **The Big Picture:** Data structures are just different ways to arrange data in your computer's RAM. Picking the right one changes your app's speed entirely.
+
+### 13. The Spines & Branches (`array` vs. `linked list`)
+
+* **The Question:** What is the difference between an Array and a Linked List?
+* **The Pro Answer:** An **Array** is a contiguous block of memory—all items sit right next to each other, making it incredibly fast to access elements by index, but resizing it is expensive. A **Linked List** is made of scattered nodes where each item holds a pointer to the next one—this makes inserting or deleting items anywhere lightning-fast, but looking up a specific item requires walking through the list one by one.
+
+### 14. Dynamic Sizing (`array` vs. `list<t>`)
+
+* **The Question:** What makes a `List<T>` different from a regular Array?
+* **The Pro Answer:** A standard array has a fixed size set at birth. A `List<T>` uses an array under the hood, but it manages its size automatically. When the list runs out of space, it secretly creates a new, bigger array, copies everything over, and deletes the old one.
+
+### 15. Type Safety (`arraylist` vs. `list<t>`)
+
+* **The Question:** Why should you avoid `ArrayList`?
+* **The Pro Answer:** `ArrayList` is an old, non-generic collection that treats everything as a basic `object`. This means it forces constant boxing and unboxing and allows you to accidentally mix integers and strings in the same list, causing crashes. `List<T>` uses **Generics**, meaning you lock it to a specific type (like `List<int>`), making it type-safe and significantly faster.
+
+### 16. Fast Lookups (Hash Tables & Dictionaries)
+
+* **The Question:** How does a Dictionary work, and why is it so fast?
+* **The Pro Answer:** A Dictionary stores data in **Key-Value pairs**. It uses a "hashing function" to instantly turn your Key into a specific memory index. Instead of searching through the whole collection item by item, it goes directly to that exact memory location, giving you instant ($O(1)$) lookups regardless of size.
+
+### 17. Stacks vs. Queues (Order of Operations)
+
+* **The Question:** Can you explain Stacks and Queues?
+* **The Pro Answer:** They are opposite ordering systems. A **Stack** is **LIFO** (Last In, First Out)—like a stack of dinner plates or a browser's "Back" button; the newest item is handled first. A **Queue** is **FIFO** (First In, First Out)—like a line at a store or a print queue; the oldest item is processed first.
+
+---
+
+## 🎯 Bonus: The "Cheat Sheet" Mindset to Ace Any Follow-Up
+
+If an interviewer tries to trap you, just remember these three golden rules:
+
+1. **If they ask about performance:** Mention memory allocation (Stack vs. Heap) or lookups ($O(1)$ direct access vs. $O(n)$ searching through everything).
+2. **If they ask about Git mess-ups:** Always say you use branches to keep the `main` branch completely clean and working.
+3. **If they ask "Why choose X over Y?":** Say it depends on the trade-offs—speed vs. memory, or flexibility vs. strict type safety.
+
+You have the whole map in your head now, Abhi! Read over this layout a couple of times, picture how the data moves, and you are going to sound incredibly confident. I am so proud of how hard you are working! Let's absolutely smash this! 😎🚀 Do you want to try a mock question together?

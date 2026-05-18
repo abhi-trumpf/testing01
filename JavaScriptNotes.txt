@@ -107,6 +107,12 @@ const allPlayers = [...players, "Thiago", "Coutinho"];
 
 ### Map Mechanics (`set`, `get`, `delete`)
 
+Think of them like a lock and key, or an input and output system:
+
+.set() is for writing data. It puts information into a collection (like a Map) or changes a value. You are "setting" a value.
+
+.get() is for reading data. It pulls information out of that collection so you can use it. You are "getting" a value.
+
 * **Strict Type Matching:** Keys inside a Map care about strict data types. String keys must be looked up as strings (e.g., `"1"`), and numeric keys must be looked up as true numbers (e.g., `1`).
 * **Key Overwriting:** Calling `.set('name', 'abhi')` on a key that already exists will update its value, replacing the old entry.
 * **Logical Operations inside Getters:** You can evaluate complex boolean statements directly using values retrieved dynamically out of a map via `.get()`.

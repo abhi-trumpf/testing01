@@ -1,6 +1,11 @@
 rough
 
 
+
+At the physical center of the laser machine sits a solid, synthetic crystal rod, and its job in the system is to serve as the active medium that generates the laser beam.
+
+
+
 a)Completed 4 problems 
 Remove duplicates
 move zeros towards the end.
@@ -133,21 +138,66 @@ Automation .gitignore Configuration: Discovered the professional way to keep the
 
 
 
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 2, 3, 3, 3, 4 };
+        Dictionary<int, int> frequencies = new Dictionary<int, int>();
+
+        foreach (int num in arr)
+        {
+            if (frequencies.ContainsKey(num))
+            {
+                frequencies[num]++; // If it exists, increment the count
+            }
+            else
+            {
+                frequencies[num] = 1; // If it's new, set count to 1
+            }
+        }
+
+        // Print results
+        foreach (var pair in frequencies)
+        {
+            Console.WriteLine($"Element {pair.Key} appears {pair.Value} times");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 2, 4, 3, 5, 7, 8, 9, -1 };
+        int targetSum = 7;
+
+        Console.WriteLine($"Pairs that sum up to {targetSum}:");
+
+        // Loop through every number
+        for (int i = 0; i < arr.Length; i++)
+        {
+            // Loop through the numbers that come AFTER the current number
+            for (int j = i + 1; j < arr.Length; j++)
+            {
+                // Check if they equal the target
+                if (arr[i] + arr[j] == targetSum)
+                {
+                    Console.WriteLine($"({arr[i]}, {arr[j]})");
+                }
+            }
+        }
+    }
+}
 
 
 
 
 
-
-
-
-Modular Scripting Architecture: Transitioned from linear recordings to a modular "Script Unit" approach, allowing common actions to be reused across multiple test cases.
-
-Dynamic Object Handling: Implemented logic to interact with UI elements based on properties rather than hardcoded positions, significantly increasing test stability across different screen resolutions.
-
-Exception & Error Management: Developed "Safety Net" logic using conditional property checks (like .Exists) to prevent test crashes when UI elements are slow to load.(built-in property used to check whether a specific user interface (UI) element (like a button, a window, or a text box) is actually present on the screen).
-
-Runtime Environment Stability: Resolved persistent IDE permission conflicts by identifying and "ignoring" TestComplete’s temporary workspace locks (.tcLS and _backup files) in the version control settings. (.gitignore- Basically track only important concepts)
-
-Version Control Best Practices: Established a clean repository structure by configuring Git to track only essential test metadata and scripts, ensuring the framework is ready for team collaboration and CI/CD integration.
 

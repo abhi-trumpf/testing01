@@ -937,3 +937,59 @@ The junk object just sits silently on the Heap floor. Then, a little later, the 
 * **Where is it when it becomes junk?** Still in the Heap!
 * **What makes it junk?** Losing its pointer arrows (not just finishing a method call, but the whole program completely losing track of it).
 * **Who cleans it?** The Garbage Collector (Janitor) wipes it away directly from the Heap.
+
+
+
+
+
+SECTION 2: DATA DEFINITIONS & CONCEPTS
+(The high-level ideas, vocabulary, and meanings)
+1. Types of Programming Languages
+•	C#: An Object-Oriented Language. It is built entirely around "Classes" and "Objects." It cleans up its own old, unused memory automatically using a Garbage Collector. It is compiled into an intermediate code first.
+•	C: A Procedural Language. It doesn't have classes or objects. You have to write everything step-by-step and clean up your own memory manually.
+•	Python: An interpreted language where everything is an object automatically (even a plain number like 5). It runs line-by-line, which makes it feel simpler but technically slower.
+2. Methods and Functions
+•	Function Overloading: Writing multiple functions with the exact same name, but giving them different inputs (Example: void Print(int x) and void Print(string y)).
+•	Function Overriding: Changing or rewriting the instructions of a function that you took (inherited) from a parent class.
+3. Every Type of Constructor Explained
+(A constructor is the special function that builds a new object)
+•	Default Constructor: Has zero inputs. It sets up every new object with the exact same standard baseline values.
+•	Parameterized Constructor: Takes inputs so you can give your new object custom values right when it is born.
+•	Copy Constructor: Takes an already existing object and makes an exact twin copy of it.
+•	Private Constructor: Locked with the word private. This prevents anyone outside from making objects out of this class.
+•	Static Constructor: Runs automatically only once when the class is touched for the very first time in the program.
+•	Destructor / Finalizer (~) $\rightarrow$ Written with a squiggle line. This is the exact opposite of a constructor. It runs cleanup code right when an object is being destroyed.
+4. Properties ({ get; set; })
+•	Writing public string Name { get; set; } lets you control data.
+o	get means outside code is allowed to read the name.
+o	set means outside code is allowed to change or rewrite the name.
+5. LINQ (Data Tools)
+•	To use tools like .Sum(), .Max(), .Min(), and .Distinct(), you must write using System.Linq; at the top. Note: .Shuffle() is not a built-in LINQ tool.
+•	Lazy Evaluation (The Glass Filter Rule): Tools like .Distinct() do not immediately create a brand new list in the computer's memory. Instead, they act like a virtual magnifying glass or a filter over your old data. It takes up zero extra memory until you force it to become a real list by adding .ToArray() or .ToList() at the end.
+6. High-Level vs Low-Level Memory
+•	malloc(size) (C Language): A low-level tool that asks the operating system for a raw block of memory bytes while the program is running. It gives you back a "pointer" (the address) of the very first slot.
+•	Pointer Pointer Fact: The raw pointer address tmp and the first index slot tmp[0] point to the exact same item (tmp[0] == *tmp).
+•	Memory Leaks: If you use malloc to grab memory and forget to say free(ptr) when you are done, that memory stays locked up forever until the computer resets. C# avoids this because of its automatic Garbage Collector.
+7. Git Architecture (Team Work)
+•	git commit $\rightarrow$ Saves your code changes privately on your own personal computer.
+•	git push $\rightarrow$ Uploads those saved changes to the public cloud so your whole team can see and use them.
+•	origin $\rightarrow$ Just a short nickname for your main GitHub website link.
+________________________________________
+SECTION 3: DATA STRUCTURES COMPARED
+Arrays vs. Linked Lists
+•	How they are SIMILAR:
+1.	Both are Linear (they arrange elements in a straight, sequential line).
+2.	Both are Homogeneous (everything inside must be the exact same data type).
+3.	Both do CRUD (Create, Read, Update, and Delete items).
+•	How they are DIFFERENT:
+o	Memory Layout: An Array sits in one solid, continuous block of memory slots glued together. A Linked List uses separate nodes scattered all over the computer's memory, and each node contains a "pointer arrow" telling it where the next node lives.
+o	Speed of finding items: Arrays have Random Access (you can instantly jump straight to index [99]). Linked Lists have Sequential Access (to find item 100, you must start at the very first node and follow the pointer arrows one-by-one 99 times).
+Dictionaries vs. HashSets
+•	Dictionary<TKey, TValue>: Connects a unique "Key" to a "Value" (like a word to its definition).
+o	.ContainsKey(key) checks if a key exists.
+o	.TryAdd(key, value) adds a pair safely without crashing if it's already there.
+•	HashSet<T>: A specialized list built purely for uniqueness. It completely blocks and ignores duplicates automatically and does lookup checks incredibly fast. You can use s1.IntersectWith(s2) to quickly find matching items between two sets.
+Hash Tables vs. Binary Search Trees (BST)
+•	Hash Tables: A structural mix where a continuous array acts as the central spine, and each slot can grow out into a linked list. It combines the quick jumping speed of arrays with the flexibility of lists.
+•	Binary Search Tree (BST): A tree structure made of connected nodes. Each node can have a maximum of 2 children. It is great for inserting items without moving old data around, but it can become slow if the tree grows lopsided or uneven.
+

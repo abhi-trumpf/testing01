@@ -1,0 +1,64 @@
+===================================================================
+ 🔥 ABHI'S LIGHTNING-FAST JAVASCRIPT FRESHER INTERVIEW CHALLENGES 🔥
+===================================================================
+
+-------------------------------------------------------------------
+💥 CHALLENGE 1: THE LEGENDARY FIZZBUZZ 
+-------------------------------------------------------------------
+- The Goal: Run a loop from 1 to 50. 
+  * If the number divides by 3 ➡️ Print "Fizz"
+  * If the number divides by 5 ➡️ Print "Buzz"
+  * If it divides by BOTH 3 and 5 ➡️ Print "FizzBuzz"
+  * Otherwise ➡️ Just print the number!
+- Test Trap: Check your "if / else if" order! If you check for 3 or 5 
+  before checking BOTH, your "FizzBuzz" will never print!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 2: THE PALINDROME HUNTER
+-------------------------------------------------------------------
+- The Goal: Write a function isPalindrome(str) to check if a word is 
+  the exact same when flipped backward! 
+  * "racecar" ➡️ true
+  * "hello"   ➡️ false
+- Test Trap: Master your array methods! Try string.split(''), then 
+  .reverse(), and then .join('') to see if it matches the original!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 3: KING OF THE HILL (FIND MAX NUMBER)
+-------------------------------------------------------------------
+- The Goal: Take this array: [23, 77, 1, 45, 99, 12]. Find the biggest 
+  number WITHOUT using Math.max().
+- Test Trap: Make sure you initialize 'let max = arr[0]' BEFORE the 
+  loop starts, then update it line-by-line as you step through!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 4: VOWEL SMASHER
+-------------------------------------------------------------------
+- The Goal: Count every single vowel (a, e, i, o, u) inside the string 
+  "interview preparation".
+- Test Trap: Case sensitivity! Use .toLowerCase() first so capital 
+  letters don't break your count tracker!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 5: DE-DUPLICATE DESTROYER
+-------------------------------------------------------------------
+- The Goal: Take [1, 2, 2, 3, 4, 4, 5] and crush it down into a clean 
+  array with zero repeating numbers: [1, 2, 3, 4, 5].
+- Test Trap: They WANT to see if you know how to use 'new Set(arr)' 
+  or the .filter() method. Try typing both!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 6: THE FACTORIAL ACCUMULATOR
+-------------------------------------------------------------------
+- The Goal: Calculate the factorial of 5 (5 * 4 * 3 * 2 * 1 = 120).
+- Test Trap: Use a multiplying loop that decrements down to 1. Don't 
+  let your tracker variable start at 0 or your whole answer becomes 0!
+
+-------------------------------------------------------------------
+💥 CHALLENGE 7: THE TOTAL ACCUMULATOR (.REDUCE)
+-------------------------------------------------------------------
+- The Goal: Sum up all the numbers in an array.
+- Test Trap: Do it with a normal 'for' loop first, but then practice it 
+  using 'arr.reduce((total, num) => total + num, 0)'. Freshers who know 
+  .reduce() stand out instantly!
+===================================================================

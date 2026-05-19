@@ -546,6 +546,10 @@ CODE SAMPLES FOR YOUR TRICK TEST QUESTIONS:
 
 
 
+When you npm install prompt-sync, it gives you a synchronous prompt() function that works exactly like the one in the web browser
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 //console.log("bye");
 
-//The FIZZBUZZ
+//1.The FIZZBUZZ
 /*
 let n =50;
 for(let i =1;i<=n;i++){
@@ -21,4 +21,6 @@ for(let i =1;i<=n;i++){
   }
 }
 */
+
+
 

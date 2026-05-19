@@ -993,3 +993,46 @@ Hash Tables vs. Binary Search Trees (BST)
 •	Hash Tables: A structural mix where a continuous array acts as the central spine, and each slot can grow out into a linked list. It combines the quick jumping speed of arrays with the flexibility of lists.
 •	Binary Search Tree (BST): A tree structure made of connected nodes. Each node can have a maximum of 2 children. It is great for inserting items without moving old data around, but it can become slow if the tree grows lopsided or uneven.
 
+
+3 things
+1)continue = Skip one specific turn and keep counting.
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue; // ⏭️ SKIP THIS ITERATION ONLY!
+  }
+  console.log(i);
+}
+console.log("Outside the loop!");
+
+
+2)break = Destroy the whole loop right then and there.  // : Using break (Leaves the loop, stays in the function)
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    break; // 🛑 SMASH THE BREAKS! EXIT NOW!
+  }
+  console.log(i);
+}
+console.log("Outside the loop!");
+
+
+3)return destroys everything instantly                          //SHUT DOWN THE ENTIRE FUNCTION!
+
+function findTargetNumber() {
+  for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+      return "Found it!"; // 🚀 SHUT DOWN THE ENTIRE FUNCTION!
+    }
+    console.log("Looping number:", i);
+  }
+  
+  console.log("This line is outside the loop."); // Dead code!
+}
+
+let result = findTargetNumber();
+console.log("Function returned:", result);
+
+
+
+
+

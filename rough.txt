@@ -200,4 +200,22 @@ class Program
 
 
 
+var hero = "Batman"; // Global billboard (Out in the city)
+
+function showHero() {
+  x: 42,
+  getX: function() {   //see its getX here
+    return this.x;
+  }
+};
+
+showHero();
+
+// 🟢 LESS WORK = GLOBAL SCOPE
+console.log(unboundGetX());   // 👉 Prints 21! (Just the function name. Super simple, so it goes global)
+
+
+
+two sum , roman to integer
+
 

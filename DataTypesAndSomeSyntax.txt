@@ -1033,6 +1033,38 @@ let result = findTargetNumber();
 console.log("Function returned:", result);
 
 
+char - fixed variable length  char[10] 
+
+if storing hi, it stores hi null null null null ... 10 
+
+
+varchar - variable length string 
+
+if storing hi , hi no null datatype.
+
+ip - uniquely identify computers
+
+tcp -guarentee delivery n allow us to multiplex 
+
+multiplexing means taking multiple separate signals, data streams, or pieces of information, combining them together, and sending them down a single, shared pathway at the same time.
+
+
+At its core, Error 404 (Not Found) is a standard website status code that means: "We found the computer server you were looking for, but the specific page or file you requested doesn't exist on it."  - universally known
+
+Error 2404 usually means: "The thing you are trying to change or disconnect is currently busy or being used by something else."
+
+
+<html lang = "en">  - is an element(contains a start tag and end tag).
+
+ul - unordered list
+
+bulleted list
+
+
+li - list items 
+
+
+
 
 
 

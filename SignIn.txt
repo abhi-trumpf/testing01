@@ -1,13 +1,6 @@
 sign in 
 
-I signed in @9:00 am so logout around 18:05 pm- Tuesday  . yes
-
-
-FOCUS ON JAVASCRIPT CONCEPTS - I have a test next week.  // FRESHER LEVEL.
-
-
-
-
+I signed in @9:00am so logout around 18:05 pm- FRIDAY 
 
 
 
@@ -17,14 +10,19 @@ focus on c# 4 programs and javascript course and see interview questions.
 
 
 
+focus on JAVASCRIPT CODING AND MCQ QUESTIONS
 
 TURN ON AC as you update this.
 
-open classic outlook n keep  // done - 	Tuesday.
+open classic outlook n keep  // done - FRIDAY  
 
-note down vol thing. need to do. // done - Tuesday.
 
-DATE : 19-5-26 
+
+
+
+note down vol thing. need to do. // done - FRIDAY
+
+DATE : 22-5-26 
 
 
 
@@ -56,3 +54,8 @@ Succinct means expressing something clearly and in a few words.
 Summation is just a fancy mathematical word for adding a sequence of numbers together.  
 
 preceptor" is just a fancy, old-school way of saying teacher, tutor, or mentor.
+
+Sentient means having the capacity to feel, perceive, or experience subjectively.
+
+
+deep learning - via code where you dont even have humans interact with it

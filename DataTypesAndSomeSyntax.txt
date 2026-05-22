@@ -1068,7 +1068,7 @@ ol - ordered list
 tld - follow a set of protocol.
 
 
-Regular Expression - . , * , +, ? and {n}  - used to do certain actions.  // aka metacharacters or quantifiers.
+Regular Expression - . , * , +, ? and {n}  - used to do certain actions.  // AKA metacharacters or quantifiers.
 
 
 div - kinda like p (paragraph) but for like bunch of random words put together.
@@ -1108,6 +1108,47 @@ any element has a style property associated with it.
 
 
 
+
+
+using CodingPractise.CsharpCoding
+
+
+CodingPractise/ (The Main Folder/Namespace)
+│
+├── Program.cs
+│
+└── CsharpCoding/ (The Sub-folder)
+    ├── SwapTwoNumbers.cs
+    ├── FindGreatestNumber.cs
+    └── EvenOrOdd.cs
+
+
+tr - table row
+
+td - table data
+
+
+<table>
+  <tr>
+    <th>Project Name</th>
+    <th>Status</th>
+  </tr>
+
+  <tr>
+    <td>SwapNumbers</td>
+    <td>Completed</td>
+  </tr>
+
+  <tr>
+    <td>EvenOrOdd</td>
+    <td>In Progress</td>
+  </tr>
+</table>
+
+able to dynamically change td value - javascript
+
+
+innerHTML is a property in JavaScript that lets you read or change the actual content inside an HTML element.
 
 
 

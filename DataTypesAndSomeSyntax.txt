@@ -1063,6 +1063,50 @@ bulleted list
 
 li - list items 
 
+ol - ordered list
+
+tld - follow a set of protocol.
+
+
+Regular Expression - . , * , +, ? and {n}  - used to do certain actions.  // aka metacharacters or quantifiers.
+
+
+div - kinda like p (paragraph) but for like bunch of random words put together.
+<div>
+Welcome to Page!
+</div>
+
+
+Projects (Root)
+├── CS50 (Child of Projects)
+│   ├── week1 (Child of CS50)
+│   └── week2 (Child of CS50)
+└── Games (Child of Projects)
+    └── PokeMMO (Child of Games)
+
+
+
+CSS CLASS - key-value pair that you can assosiate with HTML tags.
+ex)  
+.centered
+{
+
+}
+
+.small
+{
+
+}
+
+
+
+browser copy of html and css.
+
+Table tag - rows and columns
+
+any element has a style property associated with it.
+
+
 
 
 

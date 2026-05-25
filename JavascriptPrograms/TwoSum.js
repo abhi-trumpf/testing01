@@ -181,7 +181,7 @@ twosum([2, 7, 11, 15], 9);
 */
 
 
-
+/*
 
 function twosum(nums,target){
     let map = {};         // this is a map.
@@ -208,3 +208,178 @@ function twosum(nums,target){
 
 
 twosum([2, 7, 11, 15], 9);
+
+*/
+
+
+
+function twosum(arr,target){
+    let result = {};
+    for(let i = 0;i<arr.length;i++){
+        let current = arr[i];   // assigning current
+        let compliment = target - current;   // assigning compliment
+        if(compliment in result){
+            return [result[compliment], i];  // everything is happening with respect to i for each loop.
+        }
+        else{
+            result[current]= i;
+        }
+    }
+}
+
+let nums = [2, 7, 11, 15];
+
+let x = twosum(nums,9);
+console.log(x);
+
+
+let actualValues = x.map(index => nums[index]);
+console.log("Actual Values:", actualValues); // Output: [2, 7]
+/*
+
+
+
+```text
+======================================================================
+📊 VISUAL GUIDE: DYNAMIC DICTIONARY STORAGE & RETRIEVAL
+======================================================================
+
+1. HOW THE DATA IS STORED VISUALLY (THE WRITE STEP)
+---------------------------------------------------
+When the line "result[currentNum] = i" runs on the number 2 at index 0,
+think of the dictionary as a storage cabinet with custom-labeled drawers.
+
+JavaScript dynamically builds this infrastructure in RAM:
+
+              result (Object)
+         +-----------------------+
+         |  KEY       |   VALUE  |  <-- (The Drawer Label is the Key)
+         | (Number)   |  (Index) |
+         +------------+----------+
+         |   "2"      |    0     |  <-- [Drawer "2" holds value 0]
+         +------------+----------+
+         |            |          |
+         +-----------------------+
+
+
+2. HOW THE DATA IS TAKEN OUT VISUALLY (THE READ STEP)
+-----------------------------------------------------
+When the loop moves to the number 7, the complement needed is 2. 
+The line "[result[complement], i]" executes. Here is the visual pull:
+
+STEP A: Look Up the Key
+        The code requests: result[2]
+        JavaScript runs straight to the cabinet and checks the labels.
+
+STEP B: Extract the Value
+        It finds the drawer labeled "2", pulls it open, and grabs the 
+        data resting inside: 0.
+
+                 Cabinet Lookup
+               +---------------+
+               |  "2" ───> [0]  |  <-- Value 0 is pulled out!
+               +---------------+
+
+STEP C: Package Into the Return Array Basket
+        The engine takes that pulled value (0) and the current loop index
+        value (i, which is 1), and drops them into the array bracket basket:
+
+               [ result[2] ,  i ]
+                   │          │
+                   ▼          ▼
+               [   0   ,  1 ]  ====> Final Array Output: [0, 1]
+
+
+3. SUMMARY SUMMARY MENTAL IMAGE
+-------------------------------
+* STORING: Putting a piece of paper (Index) into a folder labeled with the Number.
+* TAKING:  Using the Number to find the folder, pulling out the paper (Index), 
+           and passing it to the console.
+======================================================================
+
+```
+
+
+
+
+
+
+
+======================================================================
+📝 STUDY NOTES: THE "TWO SUM" DICTIONARY PATTERN
+======================================================================
+
+1. THE CORE MECHANISM: READING VS. WRITING
+------------------------------------------
+The most critical distinction when handling dynamic dictionary memory is 
+knowing whether you are extracting data or storing data.
+
+* WRITING (Assignment) ➡️ Uses the `=` sign.
+  Syntax: result[currentNum] = i;
+  Action: Creates a brand-new slot in memory. It maps the array 
+          number as the KEY and its position index as the VALUE.
+
+* READING (Lookup) ➡️ No `=` sign.
+  Syntax: [result[complement], i]
+  Action: Reaches into the existing dictionary, looks up the 
+          complement key, and pulls out its previously saved index 
+          value to package it into a return array with the current index.
+
+
+2. SCRIPT TRACE: STEP-BY-STEP MEMORY STATE
+------------------------------------------
+Input Array: [2, 7, 11, 15]  |  Target: 9
+
+◆ Iteration 1 (i = 0)
+  - currentNum = 2
+  - complement = 9 - 2 = 7
+  - Check: Is 7 in result? ❌ No, dictionary is empty {}.
+  - Memory Operation: Save current number and index (WRITE).
+    result[2] = 0; 
+    -> Memory State: { "2": 0 }
+
+◆ Iteration 2 (i = 1)
+  - currentNum = 7
+  - complement = 9 - 7 = 2
+  - Check: Is 2 in result?  Yes! It matches our existing memory key.
+  - Memory Operation: Retrieve old index and pair it with current index (READ).
+    return [result[2], 1]; 
+    -> Evaluates directly to: [0, 1]
+
+
+3. THE FULL COMPLETED PRODUCTION CODE
+-------------------------------------
+function twosum(arr, target) {
+    let result = {}; // Dictionary initialization (Wiped fresh per execution)
+
+    for (let i = 0; i < arr.length; i++) {
+        let currentNum = arr[i];
+        let complement = target - currentNum;
+
+        // STEP A: Look backward into memory (READ)
+        if (complement in result) {
+            return [result[complement], i]; // Returns: [stored_index, current_index]
+        }
+
+        // STEP B: Log forward into memory (WRITE)
+        result[currentNum] = i; 
+    }
+}
+
+// Execution test
+let x = twosum([2, 7, 11, 15], 9);
+console.log(x); // Output: [0, 1]
+======================================================================
+
+/*
+result[currentNum] = i;
+👉 Which means: result[2] = 0;
+
+So right now, our dictionary looks like this under the hood:
+
+JavaScript
+let result = {
+    2: 0   // Key is the number (2), Value is its index (0) - key value pair.
+};
+
+*/

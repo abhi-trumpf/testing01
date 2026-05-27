@@ -1,19 +1,37 @@
-let userinput = [1,1,2,3,55,55,100];
 
-function RemoveDuplicates(n1){
-    let CorrArray = [];  // define inside function so value flushes itself after every run
-    for(let i =0;i<n1.length;i++)
-        {
-            if(!CorrArray.includes(n1[i]))  // .includes() is correct .Contains() is only for c# language.
-                {
-                    CorrArray.push(n1[i]);
-                }
+
+function RemoveDuplivates(arr){
+    let result = {};
+    let correctarray = [];
+    for(let i=0;i<arr.length;i++){
+        let current = arr[i];
+        if(current in result){ // if current is already a part of result object.
+            continue;
         }
-        return CorrArray;
+        else{
+            result[current]= true; // if not result is always going to be empty.
+            correctarray.push(current);  // we need to push
+        }
     }
-let x = RemoveDuplicates(userinput);
-console.log("After removing duplicates:"+x);
+    return correctarray;
+}
 
 
-                
+let a = [1,2,3,4,4,4,5,5,1,6,6];
+let x = RemoveDuplivates(a);
+console.log(x);
 
+//below is by using sets 
+
+
+
+//using Sets
+
+function RemoveDuplivates(arr){
+    let set =   new Set(arr);
+    return [...set];   // convert set into an array.
+}
+
+let a = [1,2,3,4,4,4,5,5,1,6,6];
+let x = RemoveDuplivates(a);
+console.log(x);

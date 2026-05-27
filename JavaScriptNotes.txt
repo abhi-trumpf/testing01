@@ -832,6 +832,37 @@ Here is the complete, full-length document with those simple 1-2 line code examp
 
 [SECTION 1: THE CORE MATRIX]
 
+// --- var ---
+var a = 10;
+a = 20; // OK: var is reassignable
+
+// --- let ---
+let b = 10;
+b = 20; // OK: let is reassignable
+
+// --- const ---
+const c = 10;
+c = 20; // ❌ ERROR: Assignment to constant variable.
+
+
+
+// --- var ---
+var x = 1;
+var x = 2; // OK: var allows redeclaration (not recommended)
+console.log(x); // Output: 2
+
+// --- let ---
+let y = 1;
+let y = 2; // ❌ ERROR: Identifier 'y' has already been declared
+
+// --- const ---
+const z = 1;
+const z = 2; // ❌ ERROR: Identifier 'z' has already been declared
+
+
+
+
+
 Feature            | const                   | let                   | var
 -------------------|-------------------------|-----------------------|-------------------------
 Reassignable       | NO                      | YES                   | YES
@@ -1496,6 +1527,65 @@ JavaScript
 let result = {
     2: 0   // Key is the number (2), Value is its index (0)
 };
+
+
+
+app = flask(__name__)
+
+flask(__name__) - instance of flask class.
+
+flask - class
+
+name - argument being passed through the flask class.
+
+note: only while defining a function we are going to call it as a parameter
+
+
+
+let app1 = { name: "App" }; 
+
+
+{ name: "App" } is the OBJECT itself.
+
+app1 - variable
+
+
+Python: You call them Dictionaries (dict). 🐍
+
+JavaScript: You call them Objects ({}). 🌐
+
+
+request.url["name"] - grabbing from url.
+
+let x = [];
+
+if (x) {
+  console.log("This will definitely print!");
+}
+
+if (x.length > 0) {
+  // This will NOT run because the length is 0
+} else {
+  console.log("The array is empty!"); // This is what you want!
+}
+
+
+name = Backend's label (The key the server uses to find the data). 🖥️
+
+placeholder = Visual hint (The prompt the user sees in the browser). 👁️
+
+
+
+If you wrote let result = new Map();, that would be an "instance of a Map."
+
+Since you wrote let result = {};, you have created an instance of an Object.
+
+
+How Objects workkk , 
+
+object[value] = index    ----- syntax.
+
+
 
 
 

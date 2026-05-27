@@ -235,6 +235,12 @@ console.log(x);
 
 let actualValues = x.map(index => nums[index]);
 console.log("Actual Values:", actualValues); // Output: [2, 7]
+
+
+/*
+// MEMORY CHEAT: .map() converts an array of positions into an array of values
+// [0, 1] ───(translated by nums[index])───> [2, 7]
+let actualValues = x.map(index => nums[index]);
 /*
 
 

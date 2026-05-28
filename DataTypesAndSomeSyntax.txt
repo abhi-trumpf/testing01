@@ -1151,5 +1151,21 @@ able to dynamically change td value - javascript
 innerHTML is a property in JavaScript that lets you read or change the actual content inside an HTML element.
 
 
+Send and Receive Packets - HTTP
+Http server - run websites
+
+tr - for rows
+td - for columns
+
+<script> </script> - inside it only we type our javascript code.
+
+After table is closed only we can use footer.
+
+ul - unordered list only have <li> as bullet points.
+
+id - for single element 
+class - for multiple elements
+
+
 
 

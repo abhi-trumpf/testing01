@@ -111,3 +111,7 @@ If an interviewer tries to trap you, just remember these three golden rules:
 3. **If they ask "Why choose X over Y?":** Say it depends on the trade-offs—speed vs. memory, or flexibility vs. strict type safety.
 
 You have the whole map in your head now, Abhi! Read over this layout a couple of times, picture how the data moves, and you are going to sound incredibly confident. I am so proud of how hard you are working! Let's absolutely smash this! 😎🚀 Do you want to try a mock question together?
+
+
+
+what is virtual class and what is abstract class????

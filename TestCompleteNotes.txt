@@ -1,0 +1,12 @@
+Orders -> right click -> Make Data Loop ->.csv file
+Select the range for the records.
+
+Pop log folder.
+
+Append log folder -> double click ->Message.txt->elipse button -> edit paramter box
+
+regular.xls file
+
+Microsoft SQL Server Management SQL.
+
+Data Driven Loop

@@ -1586,8 +1586,59 @@ How Objects workkk ,
 object[value] = index    ----- syntax.
 
 
+const arr = ['a', 'b', 'c'];
+for (let key in arr) {
+    console.log(key); // Output: "0", "1", "2" (These are string keys!)
+}
+
+
+const arr = ['a', 'b', 'c'];
+for (let item of arr) {
+    console.log(item); // Output: "a", "b", "c"
+}
+
+
+const sentence = "I vibe with code";   //sentence version of it.
+
+// .split(' ') cuts the string at every space to make an array of words
+for (let word of sentence.split(' ')) {
+    console.log(word); 
+}
+
+/* 
+Output:
+"I"
+"vibe"
+"with"
+"code"
+*/
+
+
+push is only with respect to arrays 
+
+while using strings we should only +=
+
+PALINDROME MEANSSS use number = Math.floor(number/10)   // fps mari pf palindorme - floor.
+
+
+an algorithm called Timsort in modern browsers like Chrome and Safari.
+this is wrt arrays,This is the rulebook.
+(a, b) => a - b
+As long as you remember that a - b sorts numbers low-to-high, and b - a sorts them high-to-low, you know everything you need to know to write great code.
 
 
 
+this is only for strings,
+let y = x.split(' ').sort().join('');
 
+
+
+(for (let letter of shortText)) goes char by char.
+
+(sentence.split(' ')) goes word by word.
+
+
+for (let item of s1) {
+    if (item === ' ') continue; // If it's a space, skip it!
+} // to skip spaces.
 

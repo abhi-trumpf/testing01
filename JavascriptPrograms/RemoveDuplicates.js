@@ -9,7 +9,7 @@ function RemoveDuplivates(arr){
             continue;
         }
         else{
-            result[current]= true; // if not result is always going to be empty.
+            result[current]= true; // if not , result is always going to be empty.
             correctarray.push(current);  // we need to push
         }
     }

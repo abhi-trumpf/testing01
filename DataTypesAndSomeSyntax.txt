@@ -1166,6 +1166,26 @@ ul - unordered list only have <li> as bullet points.
 id - for single element 
 class - for multiple elements
 
+if (s.IndexOf(s[i]) == s.LastIndexOf(s[i])) first occurance towards left side and right side. 
+
+
+string sortedS = new string(s.OrderBy(c => c).ToArray()); c => c,
+That c => c part is called a Lambda Expression in C#. You can think of it as a shortcut or a mini-function written on a single line.
+
+s.OrderBy(c => c): C# takes the word "heart", rearranges its letters in alphabetical order (a, e, h, r, t), and makes a new string: "aehrt".
+string sortedT = new string(t.OrderBy(c => c).ToArray());   // t is string t from input.
+
+
+int[] numbers = [ 5, 1, 3 ];
+// "n => n" means: For each number 'n', order it by its own value
+int[] sortedNumbers = numbers.OrderBy(n => n).ToArray();
+
+Flask - Framework (or a library) - acts as the bridge or the middleman between your Python code and the web browser (HTML, CSS, and JavaScript).
+
+Jinja (specifically Jinja2) is the magic engine that lets you inject Python code directly into your HTML files.
+
+return redirect("/registrants") - tells Flask to instantly send the user's browser to a different URL path—in this case, the /registrants page.
+
 
 
 

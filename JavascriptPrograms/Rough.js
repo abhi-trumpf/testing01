@@ -3,7 +3,7 @@
 /*
 function ReverseString(s1){
 
-    let RevString = " ";
+    let RevString = " "; //should add the space here.
     for(let i=s1.length-1;i>=0;i--){
         RevString += s1[i];    // we use += for Strings
     }
@@ -96,7 +96,7 @@ console.log(x);
 
 /*
 // for ascending order 
-let y = x.split(' ').sort().join('');
+let y = x.split(' ').sort().join(''); // ONLY WORKS FOR STRINGS
 console.log(y);
 
 let fruits = ["banana", "apple", "cherry", "date"];
@@ -110,7 +110,7 @@ console.log(reverseSorted);
 
 
 // Count Character Occurrences in a String
-
+/*
 function CountCharacters(s1){
     let result = {};
     for(let item of s1){
@@ -127,4 +127,65 @@ function CountCharacters(s1){
 let x = CountCharacters("I love youu youu youu 3000");
 console.log(x);
 
+*/
 
+
+// Reverse a String
+/*
+function ReverseString(s1){
+    let result = [];
+    for(let i = s1.length-1;i>=0;i--){
+        result.push(s1[i]);
+    }
+    return result;
+}
+
+let a = "hello";
+let y = ReverseString(a);
+console.log(y);
+
+*/
+
+
+// Challenge 2: FizzBuzz
+/*
+function FizzBuzz(number){
+    for(let i=1;i<=number;i++){
+        if(i%3 ==0 && i%5==0){
+            console.log("FizzBuzz");
+        }
+        else if(i%3==0){
+            console.log("fizz");
+        }
+        else if(i%5==0){
+            console.log("buzz");
+        }
+        else{
+            console.log(i);
+        }
+    }
+}
+
+FizzBuzz(20);
+*/
+
+// 4: Remove Duplicates from an Array
+
+
+function RemoveDuplicates(arr){
+    let FinalArr = [];
+    for(let i=0;i<arr.length;i++){
+        let current = arr[i];
+        if(FinalArr.includes(current)){
+            continue;
+        }
+        else{
+            FinalArr.push(current);
+        }
+    }
+    return FinalArr;
+}
+
+let y = [1,2,3,3,3,4,4,4,5,5,5,6]
+let x = RemoveDuplicates(y);
+console.log(x);

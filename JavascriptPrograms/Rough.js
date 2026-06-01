@@ -171,7 +171,7 @@ FizzBuzz(20);
 
 // 4: Remove Duplicates from an Array
 
-
+/*
 function RemoveDuplicates(arr){
     let FinalArr = [];
     for(let i=0;i<arr.length;i++){
@@ -189,3 +189,11 @@ function RemoveDuplicates(arr){
 let y = [1,2,3,3,3,4,4,4,5,5,5,6]
 let x = RemoveDuplicates(y);
 console.log(x);
+
+*/
+
+let s3 = "yoossa";
+
+let s4 = s3.split('').sort().join('');
+
+console.log(s4);

@@ -28,6 +28,10 @@ for(let i=0;i<s2.length;i++)
         }
 }
 
+/*
+so we take consecutive check which one is greater and based on that 
+do addition or subtraction with respect to our total */
+
 console.log(`total is ${total}`);// this braces also imp.
 }
 

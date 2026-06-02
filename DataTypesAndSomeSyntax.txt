@@ -1054,6 +1054,11 @@ At its core, Error 404 (Not Found) is a standard website status code that means:
 Error 2404 usually means: "The thing you are trying to change or disconnect is currently busy or being used by something else."
 
 
+my_list = ["overwatch", "genshin", "pokemon"];    //this is a list
+
+my_tuple = ("chennai", "bengaluru", "mumbai");    //this is a tuple
+
+primary key - Value that is used for uniquely identifying users 
 
 
 

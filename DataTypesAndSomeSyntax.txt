@@ -1187,5 +1187,38 @@ Jinja (specifically Jinja2) is the magic engine that lets you inject Python code
 return redirect("/registrants") - tells Flask to instantly send the user's browser to a different URL path—in this case, the /registrants page.
 
 
+In programming, boilerplate (or "boilerplate code") refers to any section of code that you have to include in multiple places with little or no alteration.
+
+Boilerplate,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    
+    <style>
+        body {
+            /* Your CSS styling goes here */
+            background-color: #f0f0f0; 
+        }
+    </style>
+</head>
+<body>
+
+    </body>
+</html>
+
+
+The </head> tag must close completely before the <body> tag starts. They are next-door neighbors, but they never cross over into each other's property.
+
+margin is on top,
+padding is used for the inside of the table.
+
+
+
+
+
+
 
 

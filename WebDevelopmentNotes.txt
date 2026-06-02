@@ -1,0 +1,246 @@
+<html lang = "en">  - is an element(contains a start tag and end tag).
+
+ul - unordered list
+
+bulleted list
+
+
+li - list items 
+
+ol - ordered list
+
+tld - follow a set of protocol.
+
+
+Regular Expression - . , * , +, ? and {n}  - used to do certain actions.  // AKA metacharacters or quantifiers.
+
+
+div - kinda like p (paragraph) but for like bunch of random words put together.
+<div>
+Welcome to Page!
+</div>
+
+
+Projects (Root)
+├── CS50 (Child of Projects)
+│   ├── week1 (Child of CS50)
+│   └── week2 (Child of CS50)
+└── Games (Child of Projects)
+    └── PokeMMO (Child of Games)
+
+
+
+CSS CLASS - key-value pair that you can assosiate with HTML tags.
+ex)  
+.centered
+{
+
+}
+
+.small
+{
+
+}
+
+
+
+browser copy of html and css.
+
+Table tag - rows and columns
+
+any element has a style property associated with it.
+
+
+
+
+
+using CodingPractise.CsharpCoding
+
+
+CodingPractise/ (The Main Folder/Namespace)
+│
+├── Program.cs
+│
+└── CsharpCoding/ (The Sub-folder)
+    ├── SwapTwoNumbers.cs
+    ├── FindGreatestNumber.cs
+    └── EvenOrOdd.cs
+
+
+tr - table row
+
+td - table data
+
+
+<table>
+  <tr>
+    <th>Project Name</th>
+    <th>Status</th>
+  </tr>
+
+  <tr>
+    <td>SwapNumbers</td>
+    <td>Completed</td>
+  </tr>
+
+  <tr>
+    <td>EvenOrOdd</td>
+    <td>In Progress</td>
+  </tr>
+</table>
+
+able to dynamically change td value - javascript
+
+
+innerHTML is a property in JavaScript that lets you read or change the actual content inside an HTML element.
+
+
+Send and Receive Packets - HTTP
+Http server - run websites
+
+tr - for rows
+td - for columns
+
+<script> </script> - inside it only we type our javascript code.
+
+After table is closed only we can use footer.
+
+ul - unordered list only have <li> as bullet points.
+
+id - for single element 
+class - for multiple elements
+
+if (s.IndexOf(s[i]) == s.LastIndexOf(s[i])) first occurance towards left side and right side. 
+
+
+string sortedS = new string(s.OrderBy(c => c).ToArray()); c => c,
+That c => c part is called a Lambda Expression in C#. You can think of it as a shortcut or a mini-function written on a single line.
+
+s.OrderBy(c => c): C# takes the word "heart", rearranges its letters in alphabetical order (a, e, h, r, t), and makes a new string: "aehrt".
+string sortedT = new string(t.OrderBy(c => c).ToArray());   // t is string t from input.
+
+
+int[] numbers = [ 5, 1, 3 ];
+// "n => n" means: For each number 'n', order it by its own value
+int[] sortedNumbers = numbers.OrderBy(n => n).ToArray();
+
+Flask - Framework (or a library) - acts as the bridge or the middleman between your Python code and the web browser (HTML, CSS, and JavaScript).
+
+Jinja (specifically Jinja2) is the magic engine that lets you inject Python code directly into your HTML files.
+
+return redirect("/registrants") - tells Flask to instantly send the user's browser to a different URL path—in this case, the /registrants page.
+
+
+In programming, boilerplate (or "boilerplate code") refers to any section of code that you have to include in multiple places with little or no alteration.
+
+Boilerplate,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    
+    <style>
+        body {
+            /* Your CSS styling goes here */
+            background-color: #f0f0f0; 
+        }
+    </style>
+</head>
+<body>
+
+    </body>
+</html>
+
+
+The </head> tag must close completely before the <body> tag starts. They are next-door neighbors, but they never cross over into each other's property.
+
+margin is on top,
+padding is used for the inside of the table.
+
+
+Selectors will have properties with respective values.
+
+
+Control flow -> click button on website if done correctly, visually update the values and display the changes.The working behind this website is done in javascript code using onclick()
+function.
+
+I think td values wrt tr changes 
+
+
+
+# #add1 and #add2 are entirely about USER INTERACTION!
+
+# Look at how the JavaScript code physically binds to them:
+# document.querySelector('#add1').onclick = function() { ... }
+#                                ^^^^^^^
+# This '.onclick' means it is actively listening for a real human 
+# hand moving a mouse and pressing a button on the screen!
+
+# 🕵️‍♂️ THE DIVISION OF LABOR:
+# --------------------------------------------------
+# 🛠️ #add1 / #add2    == THE ACTION (User pushes it. It takes input.)
+# 📺 #score1 / #score2 == THE OUTPUT (User looks at it. It shows data.)
+
+echo "💡 TERMINOLOGY CHECK:"
+echo "In web dev, we call #add1 and #add2 'Event Targets'."
+echo "They sit there waiting for a user 'Event' (the click) to happen!"
+
+
+
+🔍 DECONSTRUCTING THE LINE:
+# --------------------------------------------------
+# document.querySelector('#add1').onclick = function()
+# \___________________________/  \_____/   \________/
+#               |                   |          |
+#      CUSTOM TARGET SELECTOR       |    CUSTOM LOGIC
+#                                   |
+#                        PREDEFINED KEYWORD! (Built-in)
+
+echo "💡 THE GOLDEN RULE:"
+echo "1. '#add1', '#score2' = CUSTOM labels you create in your HTML."
+echo "2. 'document', 'querySelector', '.onclick' = PREDEFINED tools built into JS."
+
+
+so seperate synax for innerHtml and onclick.
+
+
+├── index.html   --> JUST the HTML structure (The skeleton)
+#  ├── styles.css   --> JUST the CSS design rules (The clothes)
+#  └── script.js    --> JUST the JavaScript logic (The nervous system)
+
+
+w.x.y.z - ipV4
+
+(0 - 255 Range)
+
+
+s:t:u:v:w:x:y:z - ipV6 (8 stuff)
+
+(0 to ffff)
+
+
+
+┌───────────────────────── LOCAL NETWORK ─────────────────────────────
+                    │                                                                 │
+ [ Your Device ] ───┼─(No Cache? Go to DNS)─> [Access Point] ─(Wire)─> [Router] ──(Out to Internet)──> [DNS / Search Engine]
+ ┌─────────────┐    │                                                     │                                   │
+ │  DNS Cache  │    │ <────────────────────── [Access Point] <─(Wire)─ [Router] <─(Returns IP Address) ───────┘
+ └─────────────┘    │                                                     
+       │            │                                                                 
+ (Has IP? Shortcut!)│                                                                 
+       │            │   ┌─────────────────────────────────────────────────────────────┐
+       └────────────┼──> [Access Point] ─(Wire)─> [Router] ──(Out to Internet)──> [Servers] // That server could literally be anywhere in the world, but it usually sits inside a massive, highly secure building called a Data Center.
+                    │                                        │                                │
+ [ Your Device ] <──┼─── [Access Point] <─(Wire)─ [Router] <─(Sends Page Data) ──────────┘  
+
+Server sends page data to Router // A server doesn't send a fully formed, interactive picture over the internet. Instead, it sends a package of raw code, text, and files.
+
+
+All of this onlt happens cuz there is no cache, If there is only cache only the bottom half gets executed.
+
+
+
+
+

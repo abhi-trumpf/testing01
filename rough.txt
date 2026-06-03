@@ -218,4 +218,25 @@ console.log(unboundGetX());   // 👉 Prints 21! (Just the function name. Super 
 
 two sum , roman to integer
 
+let x;
+console.log(x); // gives undefined
+
+
+
+
+
+Good Afternoon Ma'am, I have a few professional matters and queries regarding my profile 
+that I would like to clarify. Could you please let me know your 
+availability for a brief discussion
+
+
+
+Good Morning Ma'am, I am writing to formally request a half-day leave for the second half of this coming Friday, [03-06-26]. I will be traveling to attend a colleague's wedding. I will ensure that all my priority tasks are completed by the 1 st half of the day. Thank you for your understanding. 
+
+
+
+
+
+
+
 

@@ -1058,7 +1058,46 @@ my_list = ["overwatch", "genshin", "pokemon"];    //this is a list
 
 my_tuple = ("chennai", "bengaluru", "mumbai");    //this is a tuple
 
-primary key - Value that is used for uniquely identifying users 
+primary key - Value that is used for uniquely identifying users
+ 
+
+
+They are HTTP request methods (also commonly called HTTP verbs).
+
+When you use GET, the data is pasted right on the outside of the envelope for everyone to see. When you use POST, the data is sealed inside the envelope.
+
+GET is a Postcard: The mail carrier, the sorting facility workers, and anyone looking at your desk can read what is written on it.
+
+POST is a Sealed Letter: People can see who it is addressed to (the URL), but they have to tear open the envelope to see the message inside.
+
+GET - read only
+
+POST - write and modify the data 
+
+# =================================================================================
+#                         HTTP METHODS MASTER REFERENCE
+# =================================================================================
+
+Method   CRUD Action   Database Op      Safe?* Idempotent?** Privacy Level
+------   -----------   -----------      ------   -------------   -------------
+GET  --> READ      --> Fetch/Select     YES      YES             LOW (Postcard)
+POST --> CREATE    --> Insert Record    NO       NO              HIGH (Sealed)
+PUT  --> UPDATE    --> Replace Record   NO       YES             HIGH (Sealed)
+PATCH--> UPDATE    --> Partial Modify   NO       NO*** HIGH (Sealed)
+DELETE-> DELETE    --> Remove Record    NO       YES             HIGH (Sealed)
+
+# ---------------------------------------------------------------------------------
+# FOOTNOTES & DEFINITIONS:
+# ---------------------------------------------------------------------------------
+# * Safe?       = Does it promise NEVER to alter/modify database data?
+# ** Idempotent? = Does repeating the exact same request yield the same DB state?
+# *** PATCH note = Can be non-idempotent depending on logic (e.g., {"age": "age+1"}).
+# =================================================================================
+
+
+
+
+
 
 
 

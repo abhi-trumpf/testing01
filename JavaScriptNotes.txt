@@ -2643,3 +2643,30 @@ for (let j = 1; j <= 3; j++) {
 }
 
 //gives 123
+
+
+
+/* THE TOPIC: Conceptual Patterns for Using JavaScript Objects */
+
+
+/* Both look 100% identical to the computer (Syntactically).
+   The difference is ONLY how you, the human, think about the data (Semantically). */
+
+/* TYPE 1: THE ENTITY MODEL (Connected)
+   If you delete "city", the profile becomes incomplete. 
+   Every key belongs to the SAME concept: a specific person. */
+let userMap = {
+    name: "Abhishek",    
+    city: "Chennai",     
+    role: "Developer"    
+};
+
+/* TYPE 2: THE JUNK DRAWER (Disconnected)
+   If you delete "theme", the "session_id" still works perfectly.
+   The keys have nothing to do with each other. They are just sharing 
+   the same box because it's convenient to carry them together. */
+let result = {
+    theme: "dark",       
+    user: "Abhishek",    
+    session_id: "xyz123" 
+};

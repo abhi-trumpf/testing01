@@ -165,3 +165,111 @@ Console.WriteLine(tags[0]); // COMPILER ERROR! HashSets have no indices.
 └────────────────────────────┘                    └────────────────────────────┘
 
 
+CodingPractise (Main Folder)
+   └── CsharpCoding (Subfolder)
+          └── FindGreatestNumber.cs (The actual file/class)
+
+namespace CodingPractise.CsharpCoding
+
+	public class FindGreatestNumber // Renamed for clarity
+	{
+		public static void Run()
+                {
+                }
+        }
+
+//location->declare class->run function
+
+
+
+string [] x = ["flower", "flow", "flight"];  
+
+
+(process 25104) exited with code 0 (0x0)
+
+it means zero crashes, zero syntax errors, and zero runtime bugs.
+
+
+using System.Text;
+.Append 
+sb.Append(myChar);
+
+Ah, got it! You mean what other **methods** (or functions) come attached to the `StringBuilder` object besides `.Append`.
+
+Once you create a `StringBuilder` instance, it comes packed with a fantastic set of built-in tools to manipulate your text. Here are the main ones you'll use all the time:
+
+---
+
+### 1. `.AppendFormat()`
+
+Like `.Append()`, but it lets you slide variables directly into the text using placeholders, exactly like `Console.WriteLine` or string interpolation.
+
+```csharp
+sb.AppendFormat("User {0} logged in at {1}.", "Abhishek", "3:30 PM");
+// Result: "User Abhishek logged in at 3:30 PM."
+
+```
+
+### 2. `.AppendLine()`
+
+This appends your text and automatically throws a **new line** (Enter key) onto the end of it. It saves you from manually typing `\n`.
+
+```csharp
+sb.AppendLine("Line 1");
+sb.AppendLine("Line 2");
+
+```
+
+### 3. `.Insert()`
+
+This lets you shove characters or words into the *middle* of your text at a specific index, pushing everything else to the right.
+
+```csharp
+StringBuilder sb = new StringBuilder("I C#");
+sb.Insert(2, "love "); 
+// Result: "I love C#"
+
+```
+
+### 4. `.Remove()`
+
+The opposite of insert. You give it a starting index and tell it exactly how many characters to delete.
+
+```csharp
+StringBuilder sb = new StringBuilder("Hello World");
+sb.Remove(5, 6); // Starts at index 5, deletes 6 characters
+// Result: "Hello"
+
+```
+
+### 5. `.Replace()`
+
+This acts exactly like "Find and Replace" in Microsoft Word. It swaps out every single instance of a specific letter or word with a new one.
+
+```csharp
+StringBuilder sb = new StringBuilder("sadbutsad");
+sb.Replace("sad", "happy");
+// Result: "happybuthappy"
+
+```
+
+### 6. `.Clear()`
+
+Completely wipes the slate clean, resetting the `StringBuilder` back to an empty state without you having to destroy the variable and recreate it.
+
+```csharp
+sb.Clear(); // Empties everything out
+
+```
+
+---
+
+### The Final Step: `.ToString()`
+
+Don't forget this one! While the loop is running, the computer stores everything inside a special `StringBuilder` format. When you are completely done and want to hand the final text over to a normal string or a `Console.WriteLine`, you call:
+
+```csharp
+string finalResult = sb.ToString();
+
+```
+

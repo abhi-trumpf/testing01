@@ -190,7 +190,10 @@ string [] x = ["flower", "flow", "flight"];
 it means zero crashes, zero syntax errors, and zero runtime bugs.
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using System.Text;
+
+
 .Append 
 sb.Append(myChar);
 
@@ -272,4 +275,63 @@ Don't forget this one! While the loop is running, the computer stores everything
 string finalResult = sb.ToString();
 
 ```
+
+
+  
+Index	         0	 1	 2       3       4
+Character	'D'	'i'	'y'	'a'	'a'
+
+char firstLetter = name[0];  // 'D'
+char thirdLetter = name[2];  // 'y'
+
+
+char lastLetter = name[^1];  // 'a' (1st from the end)
+char secondToLast = name[^2]; // 'a' (2nd from the end)
+
+
+string reversed = "";
+cuz reversed will start with a space // if we do string reversed = "  ";
+
+ERROR!
+/tmp/cYxTiQhHwE/Main.cs(18,21): error CS1525: Invalid expression term '='
+means triple equal to does not exist in C#.
+
+only == exists in C#.
+
+C#
+
+string choice = Console.ReadLine() ?? "";
+
+Console.ReadLine(): This is your friend going to the store. It waits for the user to type text.
+
+??: This is the backup plan. It means: "If the thing on my left turned out to be completely empty-handed (null)..."
+
+"": This is the tap water. It's a completely empty string (zero characters).
+
+so null becomes an empty string
+
+
+
+
+Set<char> uniqueChars = new Set<char>(input); // ❌ COMPILER ERROR Set does not exisit in C#.
+
+
+// Think of this as exactly equal to: const uniqueChars = new Set(input);
+
+HashSet<char> uniqueChars = new HashSet<char>(input);       //correct.
+
+
+
+
+
+using System.Collections.Generic; // Required to use HashSet!
+
+ex, HashSet<char> uniqueChars = new HashSet<char>(input);
+
+
+
+
+
+
+
 

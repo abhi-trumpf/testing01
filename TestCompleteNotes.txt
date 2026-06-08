@@ -10,3 +10,5 @@ regular.xls file
 Microsoft SQL Server Management SQL.
 
 Data Driven Loop
+
+Basically record different drawings, you can add delay to objects, Browser Object has a lot of properties, 

@@ -3,7 +3,20 @@ Terminal Commands
 
 just have the correct directory n have the correct files ready to commit
 
+1. Using git checkout (Traditional)
+Switch to an existing branch:
 git checkout <branchname>
+
+Create and switch to a new branch:
+git checkout -b <branchname> (Uses -b)
+
+2. Using git switch (Modern)
+Switch to an existing branch:
+git switch <branchname>
+
+Create and switch to a new branch:
+git switch -c <branchname> (Uses -c)
+git push -u origin new     // first time establishing connection and pushing code
 
 cd .. -  go back directory 
 
@@ -32,7 +45,10 @@ git status ( to make sure folder is not a repository)
 
 git init (initialize .git file its hidden)    --- create a new GitHub repository.
 
-git add <filename.txt> // single file is added.  aka gets added to the STAGING AREA.
+
+git add foldername     // gets added to the STAGING AREA.
+
+git add <filename.txt> // single file is added.  
 
 to unstage <file.txt>,
 
@@ -394,6 +410,29 @@ git push
 override remote repo over local files
 
 when conflict arises btw local and remote repo ^
+
+
+🔴 The Red Section (Minus -)
+The red lines mean "Deleted or Replaced." GitHub is showing you exactly what used to be in the file. It highlights your old commented-out for...of loop and your older, unformatted for loop lines that you just removed or updated.
+
+🟢 The Green Section (Plus +)
+The green lines mean "Newly Added or Formatted."
+This is your brand new, sparkling clean code! GitHub is showing you the exact improvements Prettier made—like adding beautiful indentation spacing, clean quote marks, and semicolons.
+
+
+
+Better version of xcopy,
+
+robocopy "C:\source_folder" "C:\destination_folder" /e                             (copy from source location to destination location)
+
+/e is to copy all contents(sub folders and sub directories) and copy even placeholder folder  (remember left to right slash)
+
+
+Drag-and-Drop: Best for quick, manual, everyday tasks on your local machine.
+
+Robocopy: Best for automation scripts, massive amounts of data, headless servers, and rock-solid reliability.
+
+Robocopy is just a tool, Scripting is how you automate that tool.
 
 
 

@@ -2670,3 +2670,35 @@ let result = {
     user: "Abhishek",    
     session_id: "xyz123" 
 };
+
+
+
+.filter()   - a very fancy for loop that traverses elements 1 by 1.  
+
+x.filter(item => item > 2);
+
+
+const result = x.filter((item, index, array) => {          // x becomes the array
+  return array.indexOf(item) === array.lastIndexOf(item);  //small i caps 0 then caps i then caps o  => iO IO 
+}); // we are having some longg () here
+
+//fancy for loop turned into funcion using => only returns if values of elements from left = values of elements from right 
+
+
+const RemoveDuplicate = x.filter((ClipboardItem, indexedDB, array) => {
+  return array.indexOf(ClipboardItem) === array.lastIndexOf(ClipboardItem);
+});
+
+
+
+IndexOf - case sensitive (0 caps)
+
+
+
+
+---------reduce-----------------------------------------------
+const total = numbers.reduce((total, num) => total + num, 0);
+
+// Using funny names just to prove a point
+const total = numbers.reduce((snowball, snowflake) => snowball + snowflake, 0);
+

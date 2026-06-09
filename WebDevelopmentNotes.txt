@@ -1008,9 +1008,20 @@ these explicit markers to know exactly where the boundary begins and ends:
 * {% endfor %}    --> Stop looping right here and go back to normal.
 
 
-Static class section.
 
-post request with respect to form.
+The Function (The Worker): This is a basic piece of code that does one specific job, like making a webpage that says "Hello World!". By itself, it’s just sitting there waiting to be told what to do.
+The Decorator (The Connector): This is the bridge. It takes your function and hooks it up to Flask. For example, @app.route('/home') is a decorator that tells Flask, "Hey, look at this worker function right here!"
+Flask (The Boss): When Flask starts up, the decorators hand it all the functions. Flask keeps a master list.
+
+
+
+flask app is just a variable
+
+app = Flask(__name__)
+
+
+
+jinja - connect python and html 
 
 
 

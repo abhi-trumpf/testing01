@@ -2,7 +2,7 @@ rough
 
 Product Manager, System Architect, and Quality Inspector all at once, rather than a line-by-line typist.
 
-
+Abs
 
 At the physical center of the laser machine sits a solid, synthetic crystal rod, and its job in the system is to serve as the active medium that generates the laser beam.
 
@@ -237,10 +237,50 @@ Good Morning Ma'am, I am writing to formally request a half-day leave for the se
 
 
 
+binary - 0 and 1 (system)
+
+boolean - true and false  (logic)
 
 
-Two Sum Practise
 
-if(compliment in result){   //ok it only works because we are only trying to compliment for 
-// the elements that are already a part of the result map {}.
-    return[result[compliment],i];    //with respect to result and use square brackets.
+Questions - Javascript 
+
+DE-DUPLICATE DESTROYER
+
+- The Goal: Take [1, 2, 2, 3, 4, 4, 5] and crush it down into a clean 
+  array with zero repeating numbers: [1, 2, 3, 4, 5].
+
+
+
+
+
+prime number and leap year checker.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

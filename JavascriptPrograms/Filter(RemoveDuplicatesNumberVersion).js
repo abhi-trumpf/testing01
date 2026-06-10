@@ -11,4 +11,4 @@ const RemoveDuplicate = x.filter((ClipboardItem, indexedDB, array) => {
   return array.indexOf(ClipboardItem) === array.lastIndexOf(ClipboardItem);
 });*/
 
-//console.log(RemoveDuplicate);
+//filters can work without return statements as well.

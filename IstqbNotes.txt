@@ -1,0 +1,25 @@
+💼 In Project Management
+Purpose is the "Why": It is the ultimate goal, the reason the project exists, or the problem you are trying to solve.
+
+Scope is the "What" and "How much": It sets the exact boundaries. It defines the specific features, tasks, deliverables, and data that will be included in the project—and just as importantly, what is excluded.
+
+
+
+
+
+
+let person = "To track user data"; 
+
+function createUser() {
+    let person = "Abhishek"; 
+    console.log(person); 
+}
+
+createUser();        // This prints: Abhishek
+console.log(person); // This prints: To track user data
+
+
+
+
+
+

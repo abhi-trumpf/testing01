@@ -12,3 +12,24 @@ Microsoft SQL Server Management SQL.
 Data Driven Loop
 
 Basically record different drawings, you can add delay to objects, Browser Object has a lot of properties, 
+
+
+
+Service description hyperlink - WeiXin Markup Language - WXML - WeChat equivalent of HTML
+
+WeChat (known as Weixin 微信 in China) is often called a "super app" because it combines the features of dozens of different apps into a single platform.
+
+
+serialize all the objects into 1 - taking multiple scattered pieces of data from your computer's memory into single, continuous stream of data
+
+
+
+
+
+person = WebServices.SampleWS.GetPerson()
+
+person (Identifier): This is a user-defined variable name, not a keyword.
+
+WebServices / SampleWS (Identifiers): These are names of classes, namespaces, or objects.
+
+GetPerson (Method Identifier): This is the custom name of a function/method being called.

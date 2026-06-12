@@ -2864,6 +2864,56 @@ TestComplete is a product owned and developed by SmartBear Company
 
 
 
+A CI/CD pipeline is an **automated sequence of steps** that takes your code from your local computer all the way to a live, production environment. Its primary goal is to ensure that every change you make is verified, tested, and ready for release without requiring manual intervention for every single step.
+
+---
+
+## 1. The Stages of a CI/CD Pipeline
+
+Think of it as an assembly line for software. Each "station" on the line performs a specific task:
+
+1. **Source (Trigger):** You push code to a version control system (like GitHub or GitLab). This push acts as the "go" signal that starts the pipeline.
+2. **Build:** The system compiles your code, installs dependencies (like running `npm install`), and packages it into an **artifact** (like a Docker image or a compiled binary).
+3. **Test:** The pipeline automatically runs tests (unit tests, integration tests, security scans). If any test fails, the pipeline stops, and you are notified immediately so you can fix the bug.
+4. **Deploy:** Once the code passes all tests, it is automatically moved to an environment (like a staging server for further testing or directly to production for users).
+
+---
+
+## 2. Where is the code actually executing?
+
+When you say "where is the code getting executed," there are two contexts to understand: the **pipeline environment** (where the build/test runs) and the **target environment** (where the app actually runs for users).
+
+### A. The "Pipeline Runner" (Where the automation happens)
+
+When your pipeline runs, it does **not** usually run on your local laptop. It runs on a remote, isolated computer called a **Runner** (or Agent/Worker).
+
+* **What it is:** These are virtual machines or containers provided by your CI/CD service (e.g., GitHub Actions, GitLab CI, Jenkins, CircleCI).
+* **What they do:** They spin up, download your code, execute the build commands (like `npm run build`), run your test suite, and then usually shut down after the job is finished.
+* **Why:** This ensures that the build process is **clean, consistent, and repeatable**. It doesn't matter if your personal laptop is Mac or Windows; the pipeline runs in a standardized, cloud-based environment.
+
+### B. The "Target Environment" (Where your code runs for users)
+
+This is the final destination. Once the pipeline finishes, the *result* of your code (the artifact) is moved to where users can access it:
+
+* **Cloud Platforms:** AWS, Google Cloud, Azure.
+* **Servers:** A Virtual Private Server (VPS) or a dedicated machine.
+* **Container Platforms:** A Kubernetes cluster.
+
+---
+
+## Summary Table
+
+| Context | What is happening? | Where does it run? |
+| --- | --- | --- |
+| **Development** | You write and test code. | Your local computer. |
+| **Pipeline (CI/CD)** | Building, testing, linting, packaging. | **CI/CD Runners** (isolated cloud VMs/containers). |
+| **Production** | The application is serving users. | Your final **hosting environment** (Cloud/Server). |
+
+In short: The pipeline provides a "neutral ground" (the Runner) to test and build your code before it is allowed to move to the "real world" (your production server).
+
+
+
+
 
 
 

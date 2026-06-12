@@ -329,6 +329,34 @@ using System.Collections.Generic; // Required to use HashSet!
 ex, HashSet<char> uniqueChars = new HashSet<char>(input);
 
 
+The answer is: Only if you are trying to Pop!
+Look at the if statement logic again. It only checks stack.Count == 0 when it hits a closing bracket.
+
+If the string is ():
+
+( pushed. Stack is ['('].
+
+) found. stack.Count is 1 (not 0), so it proceeds to Pop().
+
+Pop() removes the (. Stack is now empty.
+
+The foreach loop continues to the next character (or finishes).
+
+The function does NOT return false. It just keeps going.
+
+If the string is ()):
+
+First ): Stack becomes empty.
+
+Second ): Now, the loop looks at the second ).
+
+It hits your if (stack.Count == 0 || ...) check.
+
+NOW the stack.Count == 0 is True.
+
+The function returns false.
+
+
 
 
 

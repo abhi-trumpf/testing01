@@ -2915,6 +2915,24 @@ In short: The pipeline provides a "neutral ground" (the Runner) to test and buil
 
 
 
+JAVASCRIPT (Using the 'in' operator)
+
+if (ch in result) {
+    // True if 'ch' is a key inside the result object
+}
+
+
+
+C# EQUIVALENT (Using the 'ContainsKey' method)
+================================================================================
+if (result.ContainsKey(ch)) {
+    // True if 'ch' is a key inside the result dictionary
+}
+
+
+
+
+
 
 
 

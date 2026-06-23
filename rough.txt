@@ -1,5 +1,6 @@
 rough
 
+
 Product Manager, System Architect, and Quality Inspector all at once, rather than a line-by-line typist.
 
 Abs
@@ -313,6 +314,429 @@ is just a temporary calculation trick?
 
 
 
+Add 2 linked lists ,
+using System;
+
+namespace CodingPractise
+{
+    public class ListNode
+    {
+        public int val;
+        public ListNode? next;
+        public ListNode(int val = 0, ListNode? next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public class AddTwoLists
+    {
+        public static ListNode? AddTwoNumbers(ListNode? l1, ListNode? l2)
+        {
+            ListNode dummyHead = new ListNode(0);
+            ListNode current = dummyHead;
+            int carry = 0;
+
+            while (l1 != null || l2 != null || carry != 0)
+            {
+                int val1 = (l1 != null) ? l1.val : 0;
+                int val2 = (l2 != null) ? l2.val : 0;
+
+                int sum = val1 + val2 + carry;
+                carry = sum / 10;
+
+                current.next = new ListNode(sum % 10);
+                current = current.next;
+
+                if (l1 != null) l1 = l1.next;
+                if (l2 != null) l2 = l2.next;
+            }
+
+            return dummyHead.next;
+        }
+
+        public static void Run()
+        {
+            Console.WriteLine("--- Add Two Lists ---");
+            ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+            ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+
+            Console.Write("List 1: ");
+            PrintList(l1);
+            Console.Write("List 2: ");
+            PrintList(l2);
+
+            ListNode? result = AddTwoNumbers(l1, l2);
+            Console.Write("Result List: ");
+            PrintList(result);
+        }
+
+        private static void PrintList(ListNode? head)
+        {
+            ListNode? temp = head;
+            while (temp != null)
+            {
+                Console.Write(temp.val);
+                if (temp.next != null) Console.Write(" -> ");
+                temp = temp.next;
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
+
+
+/*
+List 1 is 2 -> 4 -> 3. The first loop builds the string "342".List 2 is 5 -> 6 -> 4. 
+The second loop builds the string "465".Your code does normal, elementary-school addition: $342 + 465 = 807$.
+The final loop reads 807 backwards and builds the list: 7 -> 0 -> 8.
+
+ 
+ ==================================================
+        RUNNING: ADD TWO LISTS TRACE
+==================================================
+
+[START] Initializing dummy head to track start of new list...
+        dummyHead created -> (val: 0)
+        current pointer set to dummyHead
+
+--------------------------------------------------
+STEP 1: THE ONES PLACE
+--------------------------------------------------
+Reading current list values:
+ -> List 1 Node Value (l1.val) = 2
+ -> List 2 Node Value (l2.val) = 5
+ -> Active Carry Value (carry) = 0
+
+Calculating:
+ -> Total Sum = 2 + 5 + 0 = 7
+ -> New Node Digit (sum % 10) = 7
+ -> Carry to next column (sum / 10) = 0
+
+[ACTION] Creating new node...
+         Linked: (0) -> [7]
+         current pointer moves forward to node [7]
+         l1 moves forward to 4
+         l2 moves forward to 6
+
+--------------------------------------------------
+STEP 2: THE TENS PLACE
+--------------------------------------------------
+Reading current list values:
+ -> List 1 Node Value (l1.val) = 4
+ -> List 2 Node Value (l2.val) = 6
+ -> Active Carry Value (carry) = 0
+
+Calculating:
+ -> Total Sum = 4 + 6 + 0 = 10
+ -> New Node Digit (10 % 10) = 0
+ -> Carry to next column (10 / 10) = 1
+
+[ACTION] Creating new node...
+         Linked: (0) -> (7) -> [0]
+         current pointer moves forward to node [0]
+         l1 moves forward to 3
+         l2 moves forward to 4
+
+--------------------------------------------------
+STEP 3: THE HUNDREDS PLACE
+--------------------------------------------------
+Reading current list values:
+ -> List 1 Node Value (l1.val) = 3
+ -> List 2 Node Value (l2.val) = 4
+ -> Active Carry Value (carry) = 1
+
+Calculating:
+ -> Total Sum = 3 + 4 + 1 = 8
+ -> New Node Digit (8 % 10) = 8
+ -> Carry to next column (8 / 10) = 0
+
+[ACTION] Creating new node...
+         Linked: (0) -> (7) -> (0) -> [8]
+         current pointer moves forward to node [8]
+         l1 reaches end (null)
+         l2 reaches end (null)
+
+--------------------------------------------------
+[TERMINATE] No more nodes left and carry is 0.
+==================================================
+FINAL RESULT (Skipping the dummy head 0):
+7 -> 0 -> 8
+==================================================
+ */
+
+
+
+
+
+[1] BRANCHING SYNTAX
+--------------------------------------------------------------------------------
+# Traditional Workflow (git checkout)
+$ git checkout <branch>                      # Switch to an existing branch
+$ git checkout -b <new-branch>               # Create a new branch and switch to it
+
+# Modern Workflow (git switch)
+$ git switch <branch>                        # Switch to an existing branch
+$ git switch -c <new-branch>                 # Create a new branch and switch to it
+
+# Shortcuts
+$ git switch -                               # Hop directly back to previous branch
+$ git checkout -                             # Traditional equivalent of hopping back            [2] THE TWO-STEP IMPORT RULE
+--------------------------------------------------------------------------------
+Git cannot track files outside its own repository directory. Moving external 
+folders requires a physical step followed by a logical Git step.                            # Option A: Using traditional xcopy
+  xcopy "C:\source_folder" "C:\repository_folder" /s /e
+
+  # Option B: Using robust robocopy (Reccommended)
+  robocopy "C:\source_folder" "C:\repository_folder" /e                                    [3] File State (Blindly copying) vs Commit History (Preserving past data)
+
+1)Modular Scripting Architecture: Transitioned from linear recordings to a modular "Script Unit" approach, allowing common actions to be reused across multiple test cases.(efficient and reusable code)
+
+2)Dynamic Object Handling: Implemented logic to interact with UI elements based on properties rather than hardcoded positions, significantly increasing test stability across different screen resolutions.
+
+3)Exception & Error Management: Developed "Safety Net" logic using conditional property checks (like .Exists) to prevent test crashes when UI elements are slow to load.(built-in property used to check whether a specific user interface (UI) element (like a button, a window, or a text box) is actually present on the screen).
+
+4)Runtime Environment Stability: Resolved persistent IDE permission conflicts by identifying and "ignoring" TestComplete’s temporary workspace locks (.tcLS and _backup files) in the version control settings. (.gitignore- Basically track only important concepts)
+
+5)Version Control Best Practices: Established a clean repository structure by configuring Git to track only essential test metadata and scripts, ensuring the framework is ready for team collaboration and CI/CD integration.
+
+
+Row 1: C# Development & Architecture Foundations
+Decoupling Logic (The Toolbox Pattern): Moved away from putting all code in one place by wrapping specific algorithmic tasks (like SwapNumbers and ReverseNumber) into dedicated, modular Classes
+
+Static Method Invocation: Utilized public static void Run() to execute logic efficiently without the overhead of creating new object instances, optimizing memory access.
+
+Namespace Management: Organized all development files under a unified Namespace (CodingPractise.CsharpCoding) to establish a clean, interconnected code hierarchy.
+
+Entry Point Resolution: Resolved execution errors (CS5001) by establishing a singular, definitive entry point using Program.cs and C# Top-Level Statements to control program startup.
+
+Advanced Input Safety: Implemented defensive programming techniques, utilizing the Null-Coalescing Operator (??) to prevent NullReferenceExceptions and int.TryParse to validate console data before processing.
+
+
+a)Von Neumann Architecture through the lens of a 3D house(with diagram and store the instructions (your code) and the data (your numbers/text) in the same memory )). aThe Workflow Bulbs-> The raw energy (Electricity)->
+Parking Slot-> Mailbox->Byte->
+->Address->
+->Reciple Room->
+->The Ingredient Room 
+->Hologram Room(Number binary translation,keeping things organize and to keep chef in control // "Project Manager" of the house.)->Conveyer Belt( (The Bus) to bring a specific Mailbox (Byte) from the Main Memory (RAM)) + fundamentals of python,sql,c++ and c 
+
+
+
+
+
+
+
+
+
+
+DevOps, Professional Version Control (Git), & Workspace Management
+
+Modern Git Branching Syntax: Mastering project branch switches and creation via the traditional (git checkout) and modern (git switch) command lines.
+
+Physical Workspace Management: Utilizing local OS command protocols (robocopy and xcopy) to execute physical migrations of external assets into active Git directories without corrupting past commit history data.
+
+
+
+High-Level C# Application Development & Architecture
+
+Memory Optimization: Using static method invocation to execute logic instantly without wasting memory on object instantiation overhead.
+
+Compilation & Code Organization: Resolving build errors (like the CS5001 entry point issue) using C# Top-Level Statements, and grouping files using systematic Namespaces.
+
+Defensive Programming: Securing code against runtime crashes using int.TryParse data validation and the Null-Coalescing Operator (??).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Internship Progress Report
+
+## 1. Technical Learnings & Key Takeaways
+In the technical domain, my experience has focused heavily on shifting from academic programming to handling professional, real-world development workflows and software engineering fundamentals.
+
+### Low-Level System Fundamentals & Computer Architecture
+I have developed a comprehensive, end-to-end understanding of how high-level software instructions physically interface with hardware silicon, tracing execution data across every layer of the computing stack:
+
+* **The Von Neumann Architecture:** I mastered the mechanics of unified memory design, analyzing how processing instructions (code) and variables (data) reside side-by-side within the same physical memory space. In this framework, the Central Processing Unit (CPU) operates as the core execution engine, RAM functions as an addressable grid of storage cells (bytes), and the System Bus serves as the physical communication pathway transferring data between them.
+* **The Fetch-Decode-Execute Loop:** I studied the continuous internal decision loop managed by the CPU's Control Unit (CU). This involves fetching instruction bytes from RAM based on the Program Counter, using hardware demultiplexers to decode binary Opcodes, routing data out of internal storage Registers via electrical Control Signals to the Arithmetic Logic Unit (ALU), and utilizing the ALU's Status Flags (such as the Zero or Carry flags) to dynamically alter runtime logic paths.
+* **Hardware-to-Software Translation & Logic Gates:** I explored how software logic is realized through physical states. High-level programs are compiled or interpreted into binary commands, where High Voltage pulses snap microscopic transistors ON (Binary 1) and Low Voltage states keep them OFF (Binary 0). By organizing these transistors into digital logic gates (AND, OR, XOR, NOT), the hardware executes complex mathematical operations directly on raw electricity.
+* **Persistent Storage & Flash Memory Physics:** I investigated the data pipeline required to safely save files to persistent hardware. When a program triggers a save operation, the OS flushes volatile RAM data down the PCIe/SATA bus to a Solid State Drive (SSD). The drive controller applies voltage spikes to trap electrons within an insulating layer of NAND Flash memory cells (non-volatile permanent storage). These physical, trapped electronic states permanently preserve the data even when powered down, and are converted back into voltage waves and binary strings upon being read.
+* **Cross-Language Syntax Foundations:** I aligned these low-level computer science mechanics with the structural, syntactical, and memory-management basics of core programming languages, including Python, SQL, C++, and C, gaining a deeper appreciation for how different languages abstract hardware realities. This foundation directly informs how object lifecycles—such as Constructors allocating memory and initializing fields—operate at the hardware layer.
+
+### High-Level C# Application Development & Architecture
+* **Memory Optimization:** I practiced utilizing static method invocation to execute algorithmic logic efficiently, avoiding unnecessary system memory overhead caused by redundant object instantiation.
+* **Compilation & Code Organization:** I mastered structural project architecture by resolving complex build errors (such as the CS5001 missing entry point issue) using C# Top-Level Statements, while systematically grouping development files under descriptive Namespaces to maintain a clean code hierarchy.
+* **Defensive Programming & Input Safety:** I focused on securing application runtime environments against unexpected crashes by implementing robust data validation patterns, such as using `int.TryParse` alongside the Null-Coalescing Operator (`??`) to gracefully handle empty or invalid user console inputs.
+
+### Data Structures & Logic Optimization
+* **Data Container Evaluation:** I advanced my understanding of fundamental data structures—including arrays, maps, objects, strings, and HashSet containers—evaluating how each structures data and how choice of container impacts lookup speeds (such as achieving O(1) efficiency with hashes).
+* **Memory Overhead Analysis:** I evaluated the severe memory implications of working with immutable types like strings. I learned to identify where standard string concatenation bogs down computing resources and when to pivot to dynamic buffers like `StringBuilder` to handle heavy repetition inside loop cycles safely.
+
+### Environment & IDE Workspace Navigation
+* **Project Dependency Mapping:** Working within a professional ecosystem taught me how to navigate the background architecture of Visual Studio. I gained clear insight into directory management by learning how Master Solutions (`.sln`) physically link and coordinate separate, underlying local project dependencies (`.csproj`).
+* **Workflow Pathing Resolution:** After initially navigating the complexities of IDE folder structures, I successfully learned how to build safe, organized pathways within my workspace. I mapped individual development programs to their respective functions, routing them through centralized switch statements to run multi-file programs cleanly and effortlessly.
+
+### Professional Version Control (Git) & Workspace Management
+* **Advanced Repository Sanitation:** My Git capabilities expanded far beyond basic commits. I learned how to manage an active local workspace under industrial standards, using commands like `git stash` to protect ongoing tasks and `git reset --hard` to cleanly purge temporary directory clutter without losing valuable historical progress or source code.
+* **Modern Branching & Recovery Syntax:** I mastered team-aligned repository workflows, learning both the traditional (`git checkout`) and modern, function-specific (`git switch`) command syntaxes to safely create, hop between, and manage isolated feature branches.
+* **Physical Workspace Migrations:** I implemented physical directory management workflows by utilizing robust local OS command protocols like `robocopy` and `xcopy`. This taught me to handle the critical "two-step import rule," successfully executing physical migrations of external development assets into active Git repositories without altering or corrupting past repository commit histories.
+* **Collaborative CI/CD Readiness:** I gained strong competencies in professional development naming conventions, code-review structures (Pull Requests), and the fundamentals of automated deployment pipelines via CI/CD utilities like GitHub Actions. While my initial focus has been on mastering these critical foundations, I am fully equipped with the technical readiness and collaborative mindset needed to seamlessly transition into an agile engineering team and contribute directly to live, shared repositories.
+
+---
+
+## 2. Social & Professional (Soft Skills) Takeaways
+Technical skills write the code, but collaboration and an engineering mindset are what deliver it. My key takeaways regarding professional dynamics include:
+
+* **Adaptability under Friction:** When development tools or environments do not behave as expected (such as build file blocks or broken shortcut paths), I have learned to stay composed, isolate the point of failure, and systematically troubleshoot the roadblock rather than losing momentum. I have realized the importance of developing my code according to the required style guidelines, which becomes much natural once fully accustomed to the IDE workspace.
+* **Clear Technical Communication:** I’ve realized the importance of being able to explain programmatic logic clearly. Whether documenting code with precise, descriptive comments or articulating file-path errors, breaking down complex engineering behaviors into simple, actionable concepts is a crucial workplace asset.
+* **Understanding Agile Workspace Structure:** Seeing how code storage, project directories, and local configurations reflect clean workspace design has given me a much stronger understanding of how professional engineering teams organize their code responsibly to avoid conflicts.
+* **Being Part of a Community:** Trumpf Metamation goes beyond just a workplace because I am making close friends and creating wholesome memories. Continuously engaging with others, learning common concepts, and collaborating on mutual projects makes the entire development process much more rewarding and smoother than working in isolation.
+* **Punctuality and Building Discipline:** Doing the right things at the right time holds an immense amount of power. Developing familiarity and discipline over time is a highly underrated concept that can be applied to any domain of life. Through this, I am learning what it truly means to be a dependable and effective employee at Trumpf Metamation.
+
+---
+
+## 3. Looking Forward
+Moving into the next phase of my internship, I am eager to build on this solid foundation by continuing to advance my problem-solving logic in backend languages (like C#) and JavaScript, while taking on more direct project tasks that contribute to the team’s overall workflow.
+
+
+
+
+
+
+The Complete JavaScript Course 2025: From Zero to Expert!
+
+
+Master Git and GitHub in 5 Days: Go from Zero to Hero
+
+
+
+Mastering SmartBear TestComplete
+ISTQB Foundation Level (CTFL) V4.0 + Practice Exams - 2025
+
+
+
+
+## Core Architecture & Memory Concepts
+Value Types vs. Reference Types: Primitives (numbers, strings) sit in Stack memory and compare by raw value (5 === 5 is true). Objects and arrays sit in Heap memory and compare by physical RAM address location ([1,2,3] === [1,2,3] is false)
+
+Implicit Type Coercion & Truthiness: The mechanism where [] == 0 is true because JavaScript forces the array into an empty string "" and then into the number 0. This creates the paradox where [] is structurally truthy on its own, but falsy in loose comparisons.
+
+The Equality Operators (== vs ===): Strict equality (===) checks content and type honestly without alteration. Loose equality (==) forces background conversions and causes transitivity bugs (e.g., "" == 0 and [] == 0 are true, but 0 == null is false).
+
+## Nullish Values & Math Safety
+Nullish Primitives (undefined vs null): undefined is JavaScript’s default state for a variable that has no assigned value. null is a programmer's intentional assignment representing an explicitly empty state or a failed search (like a missing DOM element).
+
+The Missing-Value Shortcut: How variable == null acts as a hardcoded language exception to catch both null and undefined at once, while safely ignoring valid falsy data like 0 or "".
+
+NaN (Not a Number) & Math Safety: NaN belongs to the "number" data type as a mathematical error token. Passing missing data into math (Number(undefined)) outputs NaN, which aggressively infects any further mathematical equations.
+
+## Applied Problem Solving & Objects
+Character Frequency Counter: Built a practical logic algorithm using JavaScript objects to track, map, and count the occurrences of characters within a word string.
+
+Arrays of Objects vs. Dictionaries: Mastered the structural difference between sequentially ordered lists of data objects and key-value pair lookups (hash maps), alongside their specific bracket ([]) and dot (.) data access paths.
+
+Object Methods & Class Constructors: Developed structural templates using constructor functions and methods to dynamically register, manage, and handle application behavior (like answer registration logic in a polling application).
+
+
+
+
+using System;
+using CodingPractise.CsharpCoding; // <--- Add this!
+namespace CodingPractise
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Select a program to run:");
+            Console.WriteLine("1. Swap 2 Numbers");
+            Console.WriteLine("2. Greatest of Three Numbers");
+            Console.WriteLine("3. Even or Odd Numbers");
+            Console.WriteLine("4. Add Two Lists");
+            Console.WriteLine("5. Frequency of Characters in a Word");
+            Console.WriteLine("6. Integer to String");
+            Console.WriteLine("7. Longest Prefix");
+            Console.WriteLine("8. Palindrome");
+            Console.WriteLine("9. Remove Duplicate");
+            Console.WriteLine("10. String to Integer (Atoi)");
+            Console.WriteLine("11. StrStr");
+            Console.WriteLine("12. Valid Parentheses");
+            Console.WriteLine("13. String Rotation or not");
+            Console.WriteLine("14. Remove Vowels");
+            Console.WriteLine("15. Constructors and Deconstructors");
+
+            string choice = Console.ReadLine() ?? "";
+            Console.WriteLine();
+
+            switch (choice)
+            {
+                case "1":
+                    SwapTwoNumbers.Run();
+                    break;
+                case "2":
+                    FindGreatestNumber.Run();
+                    break;
+                case "3":
+                    EvenOrOdd.Run();
+                    break;
+                case "4":
+                    AddTwoLists.Run();
+                    break;
+                case "5":
+                    FrequencyOfCharsInAWord.Run();
+                    break;
+                case "6":
+                    IntegerToString.integerToString();
+                    break;
+                case "7":
+                    LongestPrefix.Run();
+                    break;
+                case "8":
+                    Palindrome.Run();
+                    break;
+                case "9":
+                    RemoveDuplicate.Run();
+                    break;
+                case "10":
+                    StringToInteger.Run();
+                    break;
+                case "11":
+                    IfWordExists.Run();
+                    break;
+                case "12":
+                    ValidParenthesis.Run();
+                    break;
+                case "13":
+                    Rotation.Run();
+                    break;
+                case "14":
+                    RemoveVowels.Run();
+                    return;
+                case "15":
+                    ConstructorOrDeconstructor.Run();
+                    return;
+                
+                default:
+                    Console.WriteLine("Invalid selection. Please pick 1-15.");
+                    break;
+            }
+        }
+    }
+}
 
 
 

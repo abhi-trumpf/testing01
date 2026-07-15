@@ -1,4 +1,14 @@
 C# CORE NOTES: RULES, MEMORY & COLLECTIONS
+
+
+removeDuplicate is camel case 
+public static void removeDuplicate()  --- first small then caps --- for functions and variables in vs  c#
+
+static cuz then only u can call it without instantiating an object inside main()
+
+
+we dont use pascel case for functions n variables.
+
 SECTION 1: C# RULES & SYNTAX NOTES
 (How to write the code correctly so it doesn't crash)
 
@@ -761,5 +771,38 @@ Commit your changes while standing on <branchname>.
 Switch over to main.
 
 Run git merge <branchname> to pull those saved snapshots across.
+
+==================================================
+           HAPPY NUMBER TRACKER v1.0              
+==================================================
+
+[?] Enter a number to check: 19
+
+[STEP 1] Processing digits for: 19
+  -> 1^2 + 9^2 = 1 + 81
+  -> New sum = 82
+
+[STEP 2] Processing digits for: 82
+  -> 8^2 + 2^2 = 64 + 4
+  -> New sum = 68
+
+[STEP 3] Processing digits for: 68
+  -> 6^2 + 8^2 = 36 + 64
+  -> New sum = 100
+
+[STEP 4] Processing digits for: 100
+  -> 1^2 + 0^2 + 0^2 = 1 + 0 + 0
+  -> New sum = 1
+
+==================================================
+[SUCCESS] Target reached: 1
+[RESULT]  19 is a HAPPY NUMBER! :)
+==================================================
+
+
+public static void removeDuplicate()  --- first small then caps 
+
+
+
 
 

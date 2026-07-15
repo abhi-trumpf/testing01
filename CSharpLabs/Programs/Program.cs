@@ -1,10 +1,19 @@
-﻿using System;
+/*📁 CodingPractise(Main Folder)
+│
+└── 📁 CsharpCoding(Subfolder inside it)
+*/
 
-namespace CodingPractise.CsharpCoding
+using System;
+using CodingPractise.CsharpCoding; // <--- Add this!
+                                   //using CodingPractise.CsharpCoding;
+/*we are going to be accessing all the files ,functions and variables stored inside the sub folder*/
+namespace CodingPractise
 {
     public class Program
     {
         public static void Main(string[] args)
+        /*we are only going to call the functions in the main which is a part of the bigger folder not 
+          the sub folder*/
         {
             Console.WriteLine("Select a program to run:");
             Console.WriteLine("1. Swap 2 Numbers");
@@ -19,6 +28,11 @@ namespace CodingPractise.CsharpCoding
             Console.WriteLine("10. String to Integer (Atoi)");
             Console.WriteLine("11. StrStr");
             Console.WriteLine("12. Valid Parentheses");
+            Console.WriteLine("13. String Rotation or not");
+            Console.WriteLine("14. Remove Vowels");
+            Console.WriteLine("15. Constructors and Deconstructors");
+            Console.WriteLine("16. Happy Number or not");
+            Console.WriteLine("17. Add 2 binary numbers");
 
             string choice = Console.ReadLine() ?? "";
             Console.WriteLine();
@@ -41,19 +55,19 @@ namespace CodingPractise.CsharpCoding
                     FrequencyOfCharsInAWord.Run();
                     break;
                 case "6":
-                    IntegerToString.Run();
+                    IntegerToString.integerToString();
                     break;
                 case "7":
-                    LongestPrefix.Run();
+                    LongestPrefix.longestPrefix();
                     break;
                 case "8":
-                    Palindrome.Run();
+                    Palindrome.palindrome();
                     break;
                 case "9":
-                    RemoveDuplicate.Run();
+                    RemoveDuplicate.removeDuplicate();
                     break;
                 case "10":
-                    StringToInteger.Run();
+                    StringToInteger.stringToInteger();
                     break;
                 case "11":
                     IfWordExists.Run();
@@ -61,10 +75,27 @@ namespace CodingPractise.CsharpCoding
                 case "12":
                     ValidParenthesis.Run();
                     break;
+                case "13":
+                    Rotation.Run();
+                    break;
+                case "14":
+                    RemoveVowels.Run();
+                    return;
+                case "15":
+                    ConstructorOrDeconstructor.Run();
+                    return;
+                case "16":
+                    HappyNumber.happyNumber();
+                    return;
+                case "17":
+                    AddBinaryNumbers.addBinaryNumbers();
+                    return;
+
                 default:
-                    Console.WriteLine("Invalid selection. Please pick 1-12.");
+                    Console.WriteLine("Invalid selection. Please pick 1-17.");
                     break;
             }
         }
     }
 }
+
